@@ -80,7 +80,8 @@ Damit sind alle Transitionen (Progressbar, Sticky-CTA, Hover) deaktiviert. Stati
 ## Gefundene Auffälligkeiten und deren Auflösung
 
 1. **Sticky-CTA-Erstmessung widersprüchlich** (Tiefen 60–81 % scheinbar „falsch"): Verursacht durch `scroll-smooth` auf `<html>` — die Messung griff mitten in der Scroll-Animation. **Kein Seitenfehler.** Auflösung: Nachmessung mit `behavior: 'instant'` + Transition-Wartezeit → korrektes Verhalten (Tabelle oben).
-2. **Keine echten Fehler an der Landingpage gefunden.** Es gab nichts zu fixen; der aus Anhang A übernommene Code wurde unverändert deployt.
+2. **Keine echten Fehler an der Landingpage gefunden.** Der aus Anhang A übernommene Code wurde unverändert deployt.
+3. **Tippfehler „Das ändert wir."** (Sektion „Die Lücke", Karte „Talent") — vom Auftraggeber nach dem Go-live angemerkt. Behoben zu „Das ändern wir." und erneut deployt; Live-Prüfung bestätigt den korrekten Text.
 
 ## URL-Testergebnis
 
@@ -91,4 +92,4 @@ Damit sind alle Transitionen (Progressbar, Sticky-CTA, Hover) deaktiviert. Stati
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
 - Aus gleichem Grund wurde — nach Freigabe des Auftraggebers — die Landingpage in das neue Repo `dennis343/CAIO-Akademie` committet statt in das Transfer-Repo. Die Pages-URL weicht daher vom Briefing ab: `https://dennis343.github.io/CAIO-Akademie/` statt `…/KI-baeckerei/`.
-- **Offen:** Die Anhänge B–J (9 Markdown-Dateien für `caio-akademie/`) lagen dem Briefing nicht bei und wurden nicht selbst erfinden (Briefing-Regel). Sie werden vom Auftraggeber nachgereicht und unter den im Briefing JOB 2 genannten Pfaden ergänzt. `landingpage/index.html` ist wortidentisch zu Anhang A (352 Zeilen, exakt).
+- **Nachtrag 30.10.2026:** Die Anhänge B–J wurden nachgereicht und am gleichen Tag wortidentisch committet (`00-leitbild.md`, `01-strategie.md`, `02-die-rolle.md`, `03-stufe-navigator.md`, `selbsttest.md`, 3 Templates, `README.md`). Damit ist JOB 2 vollständig: alle 10 Pfade vorhanden. Einzige bewusste Abweichung von der Wortidentität: die README-URL wurde auf die real existierende Live-URL `https://dennis343.github.io/CAIO-Akademie/` korrigiert (die im Anhang J genannte `…/KI-baeckerei/`-URL existiert nach dem Repo-Wechsel nicht). `landingpage/index.html` entspricht Anhang A (352 Zeilen) zzgl. der freigegebenen Typo-Korrektur.
