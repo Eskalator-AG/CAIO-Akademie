@@ -196,6 +196,22 @@ Hinweis zum Test: Erste Browserprüfungen liefen auf die gecachte Vorversion (Gi
 
 **Fehler und Fixes dieser Stufe:** (1) altcha.org-CDN netzwerkseitig blockert → jsDelivr; (2) Challenge-API ebenfalls blockiert → statische lokale Challenge; (3) `w.state`-Property fehlend → Gate prüft verstecktes Verifizierungs-Input. **Hinweis:** Die statische Challenge ist ein rein clientseitiges Puzzle (Spam-Vermeidung ohne Tracking); sobald ein Formular-Backend existiert (Backlog), sollte auf serverseitig generierte Challenges umgestellt werden.
 
+---
+
+## Nachtrag: Über-uns-Seite, Hero-Neuausrichtung & externe Rechtslinks (31.10.2026, Commit `1596fc9`)
+
+| Anforderung | Umsetzung | Prüfergebnis |
+|---|---|---|
+| „Leitbild"-Verweis einlösbar machen | Neue Seite `ueber-uns.html` mit echtem Leitbild (Miriam-Story + Warum/Woran/Versprechen/Für wen, weitgehend wortidentisch zu Anhang B); figcaption auf der Startseite verlinkt jetzt auf `ueber-uns.html#leitbild` | ✔ live |
+| Highlights der Über-uns-Seite auf der Startseite | Neues Band „Die Akademie in Zahlen" unter der Story: 10+ Jahre Förder-Expertise · bis 95 % Bewilligungsquote · 18 Dozenten & Experten · AZAV/ISO — plus Link „Über uns →" | ✔ live |
+| Hero auf Befähigung (statt Selbsttest-Fokus) | Neuer Hero: Eyebrow „Ein Projekt der Wissensreich Academy", H1 „Wir machen aus KI-Pflicht KI-Kompetenz.", Primär-CTA „Die vier Stufen ansehen", Sekundär „Selbsttest — 2 Minuten" | ✔ live verifiziert |
+| Zahlen/Daten/Fakten Dozenten & Unterstützer | Über-uns-Seite: Zahlen-Karten (10+ Jahre, bis 95 %, 30–100 %, 4 Stufen), Zertifikate mit Original-Siegelbildern (AZAV/ISO 9001, ISO 56002:2019, BVMW), Awards (Top 100 Speakers 2026, German Brand Award), Presse-Zeile (Spiegel · Handelsblatt · WAZ · Funke · Hamburg1), Dozenten-Grid mit 18 Fotos + Namen aus dem Wissensreich-Bestand (Rollen nur wo belegt: GF Fürstenau/Domin; Bakir, Beilharz, Löhr mit Themen von der Live-Site) | ✔ 18 Karten, Bilder laden (lazy, HTTP 200) |
+| Impressum/Datenschutz extern auf Wissensreich Academy | Alle Footer- und Formular-Links auf `https://wissensreich.academy/impressum` bzw. `/datenschutz`, jeweils `target="_blank" rel="noopener"`; lokale Rechtsseiten gelöscht (404 bestätigt), README aktualisiert | ✔ |
+| Navigation | „Über uns" in Nav (Startseite + alle Unterseiten + Dankeseite) und allen Footern | ✔ |
+| 360 px ohne horizontales Scrollen (Start + Über-uns) | ✔ |
+
+**Quellen der Fakten:** Live-Site wissensreich.academy (10+ Jahre, bis 90–95 % Bewilligungsquote, Zertifikate, Awards, Dozenten-Themen, GF) und Asset-Bestand des Wissensreich-Repos (18 Dozenten-Fotos, Siegel, Awards). Keine Rollen oder Zahlen erfunden — unbelegte Dozenten heißen neutral „Praxis-Experte/-in".
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
