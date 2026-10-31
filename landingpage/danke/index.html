@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Danke – CAIO-Akademie</title>
+<meta name="description" content="Danke für dein Interesse an der CAIO-Akademie.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FAF6EF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316425B'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-weight='700' font-size='17' fill='%23FAF6EF' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { mehl:'#FAF6EF', espresso:'#171310', ofen:'#16425B', orange:'#E4572E', sand:'#F2C57C', licht:'#2E86AB', nacht:'#0E3A53', gold:'#D4AF37' },
+    fontFamily: { head:['"Space Grotesk"','sans-serif'], body:['Inter','sans-serif'] },
+    boxShadow: { card:'0 2px 8px rgba(23,19,16,.06)' }
+  }}
+}
+</script>
+<style>
+  @media (prefers-reduced-motion: reduce){ *{transition:none!important;animation:none!important} }
+  :focus-visible{ outline:3px solid #2E86AB; outline-offset:2px; }
+</style>
+</head>
+
+<body class="bg-mehl text-espresso font-body text-[17px] leading-relaxed antialiased">
+
+<nav aria-label="Hauptnavigation" class="sticky top-0 z-40 bg-mehl/95 backdrop-blur border-b border-espresso/10">
+  <div class="max-w-[1120px] mx-auto px-5 md:px-8 flex items-center justify-between min-h-[56px]">
+    <a href="../index.html" class="font-head font-bold text-ofen text-[15px] sm:text-base whitespace-nowrap">CAIO-Akademie</a>
+    <div class="flex items-center gap-0.5 sm:gap-1">
+      <a href="../index.html" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Start</a>
+      <a href="../index.html#stufen" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Stufen</a>
+      <a href="../index.html#test" class="inline-flex items-center min-h-[48px] px-2.5 sm:px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Selbsttest</a>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-[640px] mx-auto px-5 md:px-8 py-14 text-center">
+  <div class="mx-auto inline-flex items-center justify-center h-16 w-16 rounded-full bg-orange/15 ring-1 ring-orange/40">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-orange" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+  </div>
+  <h1 class="font-head font-bold text-ofen text-[clamp(28px,6vw,42px)] mt-6">Danke!</h1>
+  <p id="danke-text" class="mt-3 max-w-[46ch] mx-auto">Danke für dein Interesse an der CAIO-Akademie.</p>
+
+  <div id="danke-ergebnis" class="hidden mt-8 bg-white rounded-2xl shadow-card p-6 md:p-8 text-left">
+    <p class="text-xs font-semibold uppercase tracking-widest text-espresso/50">Dein Ergebnis noch einmal</p>
+    <p id="danke-badge" class="inline-block mt-3 px-4 py-1.5 rounded-full font-head font-bold text-sm"></p>
+    <p id="danke-kurs" class="mt-3 text-[15px]"></p>
+  </div>
+
+  <div class="mt-8 grid gap-3 text-left">
+    <div class="bg-white rounded-2xl shadow-card p-5 flex items-start gap-3">
+      <span class="font-head font-bold text-orange">1</span>
+      <p class="text-[15px]">Schau dir deine <a class="underline underline-offset-2 text-ofen" href="../index.html#stufen">passende Stufe im Detail</a> an.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-card p-5 flex items-start gap-3">
+      <span class="font-head font-bold text-orange">2</span>
+      <p class="text-[15px]">Lies das <a class="underline underline-offset-2 text-ofen" href="../berufsbild.html">Berufsbild CAIO</a> — Aufgaben, Zahlen, Gehalt.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-card p-5 flex items-start gap-3">
+      <span class="font-head font-bold text-orange">3</span>
+      <p class="text-[15px]">Fragen offen? Schreib uns: <a class="underline underline-offset-2 text-ofen" href="mailto:concierge@wissensreich.academy">concierge@wissensreich.academy</a></p>
+    </div>
+  </div>
+
+  <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+    <a href="../index.html" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold shadow-card">Zurück zur Startseite</a>
+    <a href="../glossar.html" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl font-head font-medium text-ofen underline underline-offset-4">Ins Glossar</a>
+  </div>
+
+  <p class="mt-8 text-xs text-espresso/50">Hinweis: Deine Eingaben bleiben in deinem Browser. Der eventuelle E-Mail-Versand läuft über dein eigenes E-Mail-Programm.</p>
+</main>
+
+<footer class="max-w-[1120px] mx-auto px-5 md:px-8 pt-10 pb-16 text-sm text-espresso/60 text-center">
+  <p>CAIO-Akademie · Ein Projekt des Verbunds Conversion-Day · Wissensreich Academy · Deal-Maker · Grenzenlos</p>
+  <p class="mt-3">
+    <a class="underline underline-offset-2 hover:text-espresso" href="../index.html">Startseite</a> ·
+    <a class="underline underline-offset-2 hover:text-espresso" href="../berufsbild.html">Berufsbild CAIO</a> ·
+    <a class="underline underline-offset-2 hover:text-espresso" href="../impressum.html">Impressum</a> ·
+    <a class="underline underline-offset-2 hover:text-espresso" href="../datenschutz.html">Datenschutz</a>
+  </p>
+</footer>
+
+<script>
+const daten={
+  entdecker:{badge:'KI-Entdecker 🌱',badgeKlasse:'bg-sand/60',kurs:'Sehr wahrscheinlich für dich passend: <strong>AI Professional (AIP)</strong>',text:'Danke für deinen Selbsttest.'},
+  navigator:{badge:'Versteckter Navigator 🧭',badgeKlasse:'bg-licht/30',kurs:'Sehr wahrscheinlich für dich passend: <strong>AI Officer (AIO)</strong> und <strong>AI Architekt (AIA)</strong>',text:'Danke für deinen Selbsttest.'},
+  caio:{badge:'Versteckter CAIO 👑',badgeKlasse:'bg-gold/50',kurs:'Sehr wahrscheinlich für dich passend: <strong>AI Officer (AIO)</strong> und <strong>AI Architekt (AIA)</strong> — jeweils verkürzt',text:'Danke für deinen Selbsttest.'},
+  kontakt:{badge:'',badgeKlasse:'',kurs:'',text:'Deine Kontaktanfrage ist vorbereitet. Prüfe dein E-Mail-Programm — die Nachricht wartet dort zum Absenden.'}
+};
+const r=new URLSearchParams(location.search).get('r');
+const d=daten[r];
+if(d){
+  document.getElementById('danke-text').textContent=d.text;
+  if(d.badge){
+    const b=document.getElementById('danke-badge');
+    b.className='inline-block mt-3 px-4 py-1.5 rounded-full font-head font-bold text-sm '+d.badgeKlasse;
+    b.textContent=d.badge;
+    document.getElementById('danke-kurs').innerHTML=d.kurs;
+    document.getElementById('danke-ergebnis').classList.remove('hidden');
+  }
+}
+</script>
+</body>
+</html>
