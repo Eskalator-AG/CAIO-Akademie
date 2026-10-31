@@ -38,7 +38,7 @@ tailwind.config = {
   :focus-visible{ outline:3px solid #2E86AB; outline-offset:2px; }
   details>summary{ list-style:none; cursor:pointer; }
   details>summary::-webkit-details-marker{ display:none; }
-  header[id],section[id]{ scroll-margin-top:72px }
+  header[id],section[id]{ scroll-margin-top:104px }
 </style>
 </head>
 
@@ -54,10 +54,17 @@ tailwind.config = {
       <a href="#test" class="inline-flex items-center min-h-[48px] px-2.5 sm:px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Selbsttest</a>
     </div>
   </div>
+  <div class="border-t border-espresso/5 bg-white/40">
+    <div class="max-w-[1120px] mx-auto px-5 md:px-8 min-h-[32px] flex items-center gap-2 text-xs text-espresso/60">
+      <span aria-hidden="true" class="h-1.5 w-1.5 rounded-full bg-orange inline-block flex-shrink-0"></span>
+      <span>Du bist hier:</span>
+      <span id="ort-text" class="font-semibold text-espresso/80 truncate">Start</span>
+    </div>
+  </div>
 </nav>
 
 <!-- 1. HERO -->
-<header id="top" class="max-w-[1120px] mx-auto px-5 pt-14 pb-10 md:px-8 md:pt-20">
+<header id="top" data-ort="Start" class="max-w-[1120px] mx-auto px-5 pt-14 pb-10 md:px-8 md:pt-20">
   <p class="font-head font-medium text-licht text-sm tracking-widest uppercase">CAIO-Akademie</p>
   <h1 class="font-head font-bold text-ofen text-[clamp(28px,6vw,44px)] leading-tight mt-3 max-w-[22ch]">
     Die Rolle, die es überall gibt.
@@ -74,7 +81,7 @@ tailwind.config = {
 </header>
 
 <!-- 2. STORY -->
-<section class="max-w-[1120px] mx-auto px-5 md:px-8 py-8">
+<section data-ort="Miriam-Story" class="max-w-[1120px] mx-auto px-5 md:px-8 py-8">
   <figure class="bg-white rounded-2xl shadow-card border-l-4 border-sand p-6 md:p-8">
     <blockquote class="font-story italic text-xl md:text-2xl leading-snug text-ofen">
       „Miriam ist 34. Sie arbeitet im Einkauf. Sie hat die Bestellprognose mit KI verbessert.
@@ -85,7 +92,7 @@ tailwind.config = {
 </section>
 
 <!-- 2b. WAS IST EIN CAIO -->
-<section id="rolle" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+<section id="rolle" data-ort="Was ist ein CAIO?" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Was ist ein CAIO?</h2>
   <p class="mt-3 max-w-[60ch]">Denk an ein Bauprojekt. Der Bauherr zahlt und entscheidet. Die Handwerker mauern, verlegen Rohre, setzen Fenster. Der Architekt übersetzt den Wunsch in einen Plan, begleitet die Baustelle und nimmt ab. Er mauert nicht selbst.</p>
   <div class="mt-6 grid gap-4 md:grid-cols-3">
@@ -141,7 +148,7 @@ tailwind.config = {
 </section>
 
 <!-- 3. DIE LÜCKE -->
-<section class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+<section data-ort="Die Lücke" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Die Lücke</h2>
   <div class="mt-6 grid gap-4 md:grid-cols-3">
     <div class="bg-white rounded-2xl shadow-card p-6">
@@ -160,12 +167,12 @@ tailwind.config = {
 </section>
 
 <!-- 4. STUFENLEITER -->
-<section id="stufen" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+<section id="stufen" data-ort="Vier Stufen" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Vier Stufen. Ein Pfad.</h2>
   <div class="mt-8 grid gap-4 md:grid-cols-4">
     <div class="md:rounded-2xl md:bg-white md:shadow-card md:p-6 border-l-4 border-sand pb-6 pl-6">
-      <p class="hidden md:block font-head font-bold text-sm text-espresso/50">Stufe 1 · Sandguss</p>
-      <h3 class="font-head font-bold text-ofen text-lg mt-1">AI Aware</h3>
+      <p class="hidden md:block font-head font-bold text-sm text-espresso/50">Stufe 1</p>
+      <h3 class="font-head font-bold text-ofen text-lg mt-1">AI Professional (AIP)</h3>
       <p class="font-story italic">Öffnet die Augen.</p>
       <details class="mt-2 md:mt-3">
         <summary class="text-licht font-semibold text-sm">Details</summary>
@@ -175,8 +182,8 @@ tailwind.config = {
       </details>
     </div>
     <div class="md:rounded-2xl md:bg-white md:shadow-card md:p-6 border-l-4 border-orange pb-6 pl-6">
-      <p class="hidden md:block font-head font-bold text-sm text-espresso/50">Stufe 2 · Kupfer</p>
-      <h3 class="font-head font-bold text-ofen text-lg mt-1">AI Navigator</h3>
+      <p class="hidden md:block font-head font-bold text-sm text-espresso/50">Stufe 2</p>
+      <h3 class="font-head font-bold text-ofen text-lg mt-1">AI Officer (AIO)</h3>
       <p class="font-story italic">Schärft das Urteil.</p>
       <details class="mt-2 md:mt-3">
         <summary class="text-licht font-semibold text-sm">Details</summary>
@@ -186,8 +193,8 @@ tailwind.config = {
       </details>
     </div>
     <div class="md:rounded-2xl md:bg-white md:shadow-card md:p-6 border-l-4 border-licht pb-6 pl-6">
-      <p class="hidden md:block font-head font-bold text-sm text-espresso/50">Stufe 3 · Silber</p>
-      <h3 class="font-head font-bold text-ofen text-lg mt-1">AI Architect</h3>
+      <p class="hidden md:block font-head font-bold text-sm text-espresso/50">Stufe 3</p>
+      <h3 class="font-head font-bold text-ofen text-lg mt-1">AI Architekt (AIA)</h3>
       <p class="font-story italic">Baut Projekte.</p>
       <details class="mt-2 md:mt-3">
         <summary class="text-licht font-semibold text-sm">Details</summary>
@@ -197,8 +204,8 @@ tailwind.config = {
       </details>
     </div>
     <div class="md:rounded-2xl md:bg-white md:shadow-card md:p-6 border-l-4 border-nacht pb-2 pl-6">
-      <p class="hidden md:block font-head font-bold text-sm text-espresso/50">Stufe 4 · Gold</p>
-      <h3 class="font-head font-bold text-ofen text-lg mt-1">CAIO</h3>
+      <p class="hidden md:block font-head font-bold text-sm text-espresso/50">Stufe 4</p>
+      <h3 class="font-head font-bold text-ofen text-lg mt-1">Chief AI Officer (CAIO)</h3>
       <p class="font-story italic">Trägt Verantwortung.</p>
       <details class="mt-2 md:mt-3">
         <summary class="text-licht font-semibold text-sm">Details</summary>
@@ -211,12 +218,12 @@ tailwind.config = {
 </section>
 
 <!-- 5. KOMPETENZMATRIX -->
-<section class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+<section data-ort="Kompetenzmatrix" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Sechs Dimensionen. Vier Tiefen.</h2>
   <div class="hidden md:block mt-6 bg-white rounded-2xl shadow-card overflow-x-auto">
     <table class="w-full text-sm text-left">
       <thead class="bg-ofen text-mehl font-head">
-        <tr><th class="p-4">Dimension</th><th class="p-4">S1 Aware</th><th class="p-4">S2 Navigator</th><th class="p-4">S3 Architect</th><th class="p-4">S4 CAIO</th></tr>
+        <tr><th class="p-4">Dimension</th><th class="p-4">S1 · AIP</th><th class="p-4">S2 · AIO</th><th class="p-4">S3 · AIA</th><th class="p-4">S4 · CAIO</th></tr>
       </thead>
       <tbody class="[&_td]:p-4 [&_tr]:border-t [&_tr]:border-espresso/10">
         <tr><td class="font-semibold">Wirtschaftlichkeit</td><td>verstehen</td><td>Business Case prüfen</td><td>Business Case bauen</td><td>Portfolio steuern</td></tr>
@@ -286,8 +293,56 @@ tailwind.config = {
   </div>
 </section>
 
+<!-- 5b. SPANNUNGSFELD -->
+<section id="spannungsfeld" data-ort="Spannungsfeld" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+  <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Das Spannungsfeld</h2>
+  <p class="mt-3 max-w-[60ch]">Jedes KI-Vorhaben wird von mehreren Kräften gleichzeitig gezogen. Wer nur einer folgt, scheitert an der anderen. Der CAIO hält die Spannung aus — und macht sie berechenbar.</p>
+  <div class="mt-6 grid gap-4 md:grid-cols-3">
+    <div class="bg-white rounded-2xl shadow-card p-6 border-t-4 border-orange">
+      <p class="font-head font-bold text-ofen">Performance-Wunsch</p>
+      <p class="mt-1 text-sm font-semibold text-orange">zieht nach: Tempo</p>
+      <p class="mt-2 text-[15px]">Digitalisierung soll liefern: schneller, effizienter, mehr Output. Das Tempo verführt zu Freitools und ungeprüftem Datenzugriff.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-card p-6 border-t-4 border-ofen">
+      <p class="font-head font-bold text-ofen">DSGVO</p>
+      <p class="mt-1 text-sm font-semibold text-ofen">setzt Grenzen: Datenschutz</p>
+      <p class="mt-2 text-[15px]">Datensparsamkeit, Rechtsgrundlage, Auftragsverarbeitung. Kundendaten gehören nicht in jedes Tool — auch nicht in das schnellste.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-card p-6 border-t-4 border-nacht">
+      <p class="font-head font-bold text-ofen">EU AI Act</p>
+      <p class="mt-1 text-sm font-semibold text-nacht">setzt Grenzen: Risiko &amp; Pflicht</p>
+      <p class="mt-2 text-[15px]">Risikoklasse prüfen, Transparenz herstellen, KI-Kompetenz nachweisen (Art. 4, seit Februar 2025). Hochrisiko-Anwendungen brauchen Kontrollen.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-card p-6 border-t-4 border-licht">
+      <p class="font-head font-bold text-ofen">US CLOUD Act</p>
+      <p class="mt-1 text-sm font-semibold text-licht">setzt Grenzen: Datenzugriff</p>
+      <p class="mt-2 text-[15px]">US-Behörden können von US-Anbietern gespeicherte Daten verlangen — auch außerhalb der USA. Die Cloud-Wahl ist eine Datenschutz-Entscheidung.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-card p-6 border-t-4 border-sand">
+      <p class="font-head font-bold text-ofen">Kundenwünsche</p>
+      <p class="mt-1 text-sm font-semibold text-licht">ziehen nach: Erlebnis</p>
+      <p class="mt-2 text-[15px]">Kunden erwarten Personalisierung, Geschwindigkeit, Erreichbarkeit. Dieselben Kunden erwarten Datensparsamkeit und Transparenz. Beides zugleich.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-card p-6 border-t-4 border-espresso/30">
+      <p class="font-head font-bold text-ofen">Wirtschaftlichkeit</p>
+      <p class="mt-1 text-sm font-semibold text-espresso/70">setzt Grenzen: Budget</p>
+      <p class="mt-2 text-[15px]">Jeder Euro für KI muss sich rechnen. Compliance und Sicherheit kosten Geld — Fehlkäufe, Stillstand und Bußgelder kosten mehr.</p>
+    </div>
+  </div>
+  <div class="mt-4 bg-ofen rounded-2xl shadow-card p-6 md:p-8 text-mehl">
+    <p class="font-head font-bold text-lg">Die Auflösung: Klartext statt Schwarz-Weiß</p>
+    <div class="mt-3 grid gap-3 md:grid-cols-4 text-sm">
+      <p><strong class="font-head">1 · Ziel zuerst.</strong> Was bringt es — messbar, ab wann?</p>
+      <p><strong class="font-head">2 · Risiko einordnen.</strong> AI-Act-Klasse, DSGVO, Datenort.</p>
+      <p><strong class="font-head">3 · Anbieter prüfen.</strong> Wo liegen die Daten? Wer kann zugreifen?</p>
+      <p><strong class="font-head">4 · Dokumentieren.</strong> Entscheidungen nachvollziehbar machen.</p>
+    </div>
+    <p class="mt-4 text-sm text-mehl/80">Begriffe wie DSGVO, CLOUD Act oder Risikoklassen erklärt unser <a class="underline underline-offset-2 font-semibold text-mehl" href="glossar.html">Glossar →</a></p>
+  </div>
+</section>
+
 <!-- 6. ÖKOSYSTEM -->
-<section class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+<section data-ort="Ökosystem" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Unser Rückgrat</h2>
   <ul class="mt-6 divide-y divide-espresso/10 rounded-2xl bg-white shadow-card">
     <li class="p-5"><strong class="font-head">Conversion-Day</strong> – bringt die Menschen zusammen.</li>
@@ -299,7 +354,7 @@ tailwind.config = {
 </section>
 
 <!-- 7. SELBSTTEST -->
-<section id="test" class="max-w-[640px] mx-auto px-5 md:px-8 py-12">
+<section id="test" data-ort="Selbsttest" class="max-w-[640px] mx-auto px-5 md:px-8 py-12">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Bin ich ein versteckter CAIO?</h2>
   <p class="mt-2">Fünf Fragen. Fünf Minuten. Ehrlich antworten – es gibt kein Richtig.</p>
   <div class="mt-6 bg-white rounded-2xl shadow-card p-6">
@@ -321,12 +376,34 @@ tailwind.config = {
       </form>
     </div>
   </div>
+  <div class="mt-6 bg-white rounded-2xl shadow-card p-6 border-t-4 border-orange">
+    <p class="font-head font-bold text-ofen text-lg">Lieber direkt sprechen?</p>
+    <p class="mt-1 text-[15px]">Kein Test, einfach Kontakt. Wähle deine priorisierte Weiterbildung — wir melden uns.</p>
+    <form id="kontakt" class="mt-4 grid gap-3">
+      <div class="grid sm:grid-cols-2 gap-3">
+        <input required placeholder="Dein Name" aria-label="Dein Name" class="min-h-[48px] px-4 rounded-xl border border-espresso/20 bg-mehl text-base">
+        <input required type="email" placeholder="Deine E-Mail" aria-label="Deine E-Mail" class="min-h-[48px] px-4 rounded-xl border border-espresso/20 bg-mehl text-base">
+      </div>
+      <label for="kontakt-stufe" class="text-sm font-semibold text-espresso/70">Deine priorisierte Weiterbildung</label>
+      <select id="kontakt-stufe" class="min-h-[48px] px-4 rounded-xl border border-espresso/20 bg-mehl text-base">
+        <option>Stufe 1 · AI Professional (AIP) — Basis-Zertifikat</option>
+        <option>Stufe 2 · AI Officer (AIO) — geprüfter Business Case</option>
+        <option>Stufe 3 · AI Architekt (AIA) — Meisterstück-Projekt</option>
+        <option>Stufe 4 · Chief AI Officer (CAIO) — Governance &amp; Portfolio</option>
+        <option>Noch unsicher — Beratung zum passenden Einstieg</option>
+      </select>
+      <textarea rows="3" placeholder="Worum geht es? (optional)" aria-label="Deine Nachricht" class="min-h-[48px] px-4 py-3 rounded-xl border border-espresso/20 bg-mehl text-base"></textarea>
+      <button type="submit" class="min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold">E-Mail vorbereiten</button>
+      <p class="text-xs text-espresso/50">Öffnet dein E-Mail-Programm mit vorbereiteter Nachricht an concierge@wissensreich.academy. Über diese Seite werden keine Daten übertragen.</p>
+    </form>
+  </div>
 </section>
 
-<footer class="max-w-[1120px] mx-auto px-5 md:px-8 py-10 text-sm text-espresso/60">
+<footer class="max-w-[1120px] mx-auto px-5 md:px-8 pt-10 pb-28 text-sm text-espresso/60">
   <p>CAIO-Akademie · Ein Projekt des Verbunds Conversion-Day · Wissensreich Academy · Deal-Maker · Grenzenlos</p>
   <p class="mt-3">
     <a class="underline underline-offset-2 hover:text-espresso" href="berufsbild.html">Berufsbild CAIO</a> ·
+    <a class="underline underline-offset-2 hover:text-espresso" href="glossar.html">Glossar</a> ·
     <a class="underline underline-offset-2 hover:text-espresso" href="impressum.html">Impressum</a> ·
     <a class="underline underline-offset-2 hover:text-espresso" href="datenschutz.html">Datenschutz</a>
   </p>
@@ -345,6 +422,34 @@ addEventListener('scroll',()=>{
   const p=scrollY/(document.body.scrollHeight-innerHeight);
   sticky.classList.toggle('translate-y-full',p<0.5);
 },{passive:true});
+
+// Ortsanzeige: aktuelle Sektion in der Navigationsleiste
+const ortText=document.getElementById('ort-text');
+const ortSecs=[...document.querySelectorAll('[data-ort]')];
+function updateOrt(){
+  let label='Start',marker=scrollY+140;
+  for(const s of ortSecs){
+    if(s.getBoundingClientRect().top+scrollY<=marker)label=s.dataset.ort;
+  }
+  if(ortText.textContent!==label)ortText.textContent=label;
+}
+addEventListener('scroll',updateOrt,{passive:true});
+updateOrt();
+
+// Kontakt: E-Mail vorbereiten (öffnet das E-Mail-Programm, kein Versand über die Seite)
+const kf=document.getElementById('kontakt');
+if(kf){
+  kf.addEventListener('submit',e=>{
+    e.preventDefault();
+    const name=kf.querySelector('input:not([type=email])').value.trim();
+    const mail=kf.querySelector('input[type=email]').value.trim();
+    const stufe=kf.querySelector('select').value;
+    const msg=kf.querySelector('textarea').value.trim();
+    const body='Name: '+name+'\nE-Mail: '+mail+'\nPriorisierte Weiterbildung: '+stufe+'\n\n'+msg+'\n\n—Gesendet über die CAIO-Akademie-Landingpage';
+    location.href='mailto:concierge@wissensreich.academy?subject='+encodeURIComponent('Anfrage CAIO-Akademie: '+stufe)+'&body='+encodeURIComponent(body);
+    kf.querySelector('button').textContent='E-Mail-Programm geöffnet — Danke!';
+  });
+}
 
 const quiz=[
  {q:"Gibt es eine Aufgabe, die du mit KI schon besser machst?",o:[["Nein, noch nicht.",0],["Ich habe es ausprobiert.",1],["Ich nutze KI regelmäßig.",2],["Ich habe einen Prozess damit verbessert.",3]]},
