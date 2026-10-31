@@ -261,6 +261,21 @@ Auftraggeber-Freigabe: P1–P6 + O1/O2 (O3 WhatsApp entfallen — im Wissensreic
 
 **Anlass:** Die Domains www.caio-institut.de und www.caio-ausbildung.de sind für diesen Auftritt reserviert. Domain-Anbindung dokumentiert (GitHub Pages oder Vercel). **Offen nach DNS-Umzug:** og:url-Angaben enthalten noch die github.io-URL und sind bei Aktiv-Domain zu aktualisieren.
 
+---
+
+## Nachtrag: Domain-Go-Live www.caio-institut.de (31.10.2026)
+
+| Schritt | Prüfergebnis |
+|---|---|
+| Ursachenanalyse: CYON-DNS-Records korrekt, aber Registry (DENIC) führte nur einen Nsentry (A → CYON-Parking-IP) statt Nameserver-Delegation → Aktivierung von cyonDNS durch Auftraggeber | ✔ Whois danach: ns1/ns2.cyon.ch |
+| Zwischenfall: github.io-URL leitete auf die noch nicht auflösbare Domain um (Seite offline) → Custom-Domain temporär entfernt, Seite sofort wieder online | ✔ HTTP 200 |
+| Nach Delegation: Custom-Domain `www.caio-institut.de` erneut gesetzt, Deployment aktualisiert | ✔ https 200, Inhalt vollständig |
+| HTTPS-Zwang aktiviert (Zertifikat automatisch ausgestellt) | ✔ http → 301 → https |
+| og:urls auf `https://www.caio-institut.de/…` umgestellt (inkl. Korrektur eines URL-Pfadfehlers aus der Umbenennung) | ✔ live verifiziert |
+| github.io-URL bleibt als Adresse erreichbar; E2E-Formulare/Selbsttest unberührt (relative Pfade) | ✔ |
+
+**Offen:** `caio-ausbildung.de` — 301-Weiterleitung beim Registrar/CYON auf `https://www.caio-institut.de` einrichten (Zweitdomain, keine eigene Ausspielung nötig).
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
