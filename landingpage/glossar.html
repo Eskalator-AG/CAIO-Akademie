@@ -11,7 +11,7 @@
 <meta property="og:description" content="KI-Begriffe, Datenschutz-Regeln und unsere Stufen-Kürzel AIP, AIO, AIA, CAIO – klar erklärt auf Deutsch.">
 <meta property="og:url" content="https://dennis343.github.io/CAIO-Akademie/glossar.html">
 <meta property="og:locale" content="de_DE">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316425B'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-weight='700' font-size='17' fill='%23FAF6EF' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%2316425B'/%3E%3Cpath d='M12 38V22a12 12 0 0 1 24 0v16' fill='none' stroke='%23FAF6EF' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='16' y='32' width='4' height='6' fill='%23FAF6EF'/%3E%3Crect x='21' y='28' width='4' height='10' fill='%23FAF6EF'/%3E%3Crect x='26' y='24' width='4' height='14' fill='%23FAF6EF'/%3E%3Crect x='31' y='20' width='4' height='18' fill='%23E4572E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -29,6 +29,7 @@ tailwind.config = {
   @media (prefers-reduced-motion: reduce){ *{transition:none!important;animation:none!important} }
   :focus-visible{ outline:3px solid #2E86AB; outline-offset:2px; }
   dt{ font-weight:700; }
+  header[id],section[id]{ scroll-margin-top:104px }
 </style>
 </head>
 
@@ -36,12 +37,22 @@ tailwind.config = {
 
 <nav aria-label="Hauptnavigation" class="sticky top-0 z-40 bg-mehl/95 backdrop-blur border-b border-espresso/10">
   <div class="max-w-[1120px] mx-auto px-5 md:px-8 flex items-center justify-between min-h-[56px]">
-    <a href="index.html" class="font-head font-bold text-ofen text-[15px] sm:text-base whitespace-nowrap">CAIO-Akademie</a>
+    <a href="index.html" class="flex items-center gap-2 min-h-[48px] font-head font-bold text-ofen text-[15px] sm:text-base whitespace-nowrap">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="h-7 w-7 flex-shrink-0" role="img" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#16425B"/><path d="M12 38V22a12 12 0 0 1 24 0v16" fill="none" stroke="#FAF6EF" stroke-width="3" stroke-linecap="round"/><rect x="16" y="32" width="4" height="6" fill="#FAF6EF"/><rect x="21" y="28" width="4" height="10" fill="#FAF6EF"/><rect x="26" y="24" width="4" height="14" fill="#FAF6EF"/><rect x="31" y="20" width="4" height="18" fill="#E4572E"/></svg>
+      CAIO-Akademie
+    </a>
     <div class="flex items-center gap-0.5 sm:gap-1">
       <a href="index.html" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Start</a>
       <a href="ueber-uns.html" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Über uns</a>
       <a href="index.html#stufen" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Stufen</a>
       <a href="index.html#test" class="inline-flex items-center min-h-[48px] px-2.5 sm:px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Selbsttest</a>
+    </div>
+  </div>
+  <div class="border-t border-espresso/5 bg-white/40">
+    <div class="max-w-[1120px] mx-auto px-5 md:px-8 min-h-[32px] flex items-center gap-2 text-xs text-espresso/60">
+      <span aria-hidden="true" class="h-1.5 w-1.5 rounded-full bg-orange inline-block flex-shrink-0"></span>
+      <span>Du bist hier:</span>
+      <span id="ort-text" data-anfang="Glossar" class="font-semibold text-espresso/80 truncate">Glossar</span>
     </div>
   </div>
 </nav>
@@ -62,7 +73,7 @@ tailwind.config = {
 
 <main class="max-w-[880px] mx-auto px-5 md:px-8 pb-16 space-y-12">
 
-  <section id="a-d" class="scroll-mt-24">
+  <section id="a-d" data-ort="A–D" class="scroll-mt-24">
     <h2 class="font-head font-bold text-ofen text-2xl">A–D</h2>
     <dl class="mt-4 grid gap-3">
       <div class="bg-white rounded-2xl shadow-card p-5">
@@ -120,7 +131,7 @@ tailwind.config = {
     </dl>
   </section>
 
-  <section id="e-k" class="scroll-mt-24">
+  <section id="e-k" data-ort="E–K" class="scroll-mt-24">
     <h2 class="font-head font-bold text-ofen text-2xl">E–K</h2>
     <dl class="mt-4 grid gap-3">
       <div class="bg-white rounded-2xl shadow-card p-5">
@@ -162,7 +173,7 @@ tailwind.config = {
     </dl>
   </section>
 
-  <section id="l-r" class="scroll-mt-24">
+  <section id="l-r" data-ort="L–R" class="scroll-mt-24">
     <h2 class="font-head font-bold text-ofen text-2xl">L–R</h2>
     <dl class="mt-4 grid gap-3">
       <div class="bg-white rounded-2xl shadow-card p-5">
@@ -196,7 +207,7 @@ tailwind.config = {
     </dl>
   </section>
 
-  <section id="s-z" class="scroll-mt-24">
+  <section id="s-z" data-ort="S–Z" class="scroll-mt-24">
     <h2 class="font-head font-bold text-ofen text-2xl">S–Z</h2>
     <dl class="mt-4 grid gap-3">
       <div class="bg-white rounded-2xl shadow-card p-5">
@@ -229,7 +240,11 @@ tailwind.config = {
 </main>
 
 <footer class="max-w-[1120px] mx-auto px-5 md:px-8 pt-10 pb-28 text-sm text-espresso/60">
-  <p>CAIO-Akademie · Ein Projekt des Verbunds Conversion-Day · Wissensreich Academy · Deal-Maker · Grenzenlos</p>
+  <a href="index.html" class="inline-flex items-center gap-3" aria-label="CAIO-Akademie — zur Startseite">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="h-10 w-10 flex-shrink-0" role="img" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#16425B"/><path d="M12 38V22a12 12 0 0 1 24 0v16" fill="none" stroke="#FAF6EF" stroke-width="3" stroke-linecap="round"/><rect x="16" y="32" width="4" height="6" fill="#FAF6EF"/><rect x="21" y="28" width="4" height="10" fill="#FAF6EF"/><rect x="26" y="24" width="4" height="14" fill="#FAF6EF"/><rect x="31" y="20" width="4" height="18" fill="#E4572E"/></svg>
+    <span class="font-head font-bold text-ofen text-lg leading-tight">CAIO-Akademie<span class="block text-[11px] font-medium text-espresso/50 tracking-wide">Ausbildung zum Chief AI Officer</span></span>
+  </a>
+  <p class="mt-4">CAIO-Akademie · Ein Projekt des Verbunds Conversion-Day · Wissensreich Academy · Deal-Maker · Grenzenlos</p>
   <p class="mt-3">
     <a class="underline underline-offset-2 hover:text-espresso" href="index.html">Startseite</a> ·
     <a class="underline underline-offset-2 hover:text-espresso" href="ueber-uns.html">Über uns</a> ·
@@ -239,5 +254,16 @@ tailwind.config = {
   </p>
 </footer>
 
+<script>
+const ortTextG=document.getElementById('ort-text');
+const ortSecsG=[...document.querySelectorAll('[data-ort]')];
+function updateOrtG(){
+  let label=ortTextG.dataset.anfang,marker=scrollY+140;
+  for(const s of ortSecsG){ if(s.getBoundingClientRect().top+scrollY<=marker)label=s.dataset.ort; }
+  if(ortTextG.textContent!==label)ortTextG.textContent=label;
+}
+addEventListener('scroll',updateOrtG,{passive:true});
+updateOrtG();
+</script>
 </body>
 </html>

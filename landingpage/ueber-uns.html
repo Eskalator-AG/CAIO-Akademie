@@ -11,7 +11,7 @@
 <meta property="og:description" content="Leitbild, Zahlen, Zertifikate und Dozenten der CAIO-Akademie — einem Projekt der Wissensreich Academy.">
 <meta property="og:url" content="https://dennis343.github.io/CAIO-Akademie/ueber-uns.html">
 <meta property="og:locale" content="de_DE">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316425B'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-weight='700' font-size='17' fill='%23FAF6EF' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%2316425B'/%3E%3Cpath d='M12 38V22a12 12 0 0 1 24 0v16' fill='none' stroke='%23FAF6EF' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='16' y='32' width='4' height='6' fill='%23FAF6EF'/%3E%3Crect x='21' y='28' width='4' height='10' fill='%23FAF6EF'/%3E%3Crect x='26' y='24' width='4' height='14' fill='%23FAF6EF'/%3E%3Crect x='31' y='20' width='4' height='18' fill='%23E4572E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&family=Fraunces:ital@1&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@ tailwind.config = {
 <style>
   @media (prefers-reduced-motion: reduce){ *{transition:none!important;animation:none!important} }
   :focus-visible{ outline:3px solid #2E86AB; outline-offset:2px; }
-  header[id],section[id]{ scroll-margin-top:72px }
+  header[id],section[id]{ scroll-margin-top:104px }
 </style>
 </head>
 
@@ -36,17 +36,27 @@ tailwind.config = {
 
 <nav aria-label="Hauptnavigation" class="sticky top-0 z-40 bg-mehl/95 backdrop-blur border-b border-espresso/10">
   <div class="max-w-[1120px] mx-auto px-5 md:px-8 flex items-center justify-between min-h-[56px]">
-    <a href="index.html" class="font-head font-bold text-ofen text-[15px] sm:text-base whitespace-nowrap">CAIO-Akademie</a>
+    <a href="index.html" class="flex items-center gap-2 min-h-[48px] font-head font-bold text-ofen text-[15px] sm:text-base whitespace-nowrap">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="h-7 w-7 flex-shrink-0" role="img" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#16425B"/><path d="M12 38V22a12 12 0 0 1 24 0v16" fill="none" stroke="#FAF6EF" stroke-width="3" stroke-linecap="round"/><rect x="16" y="32" width="4" height="6" fill="#FAF6EF"/><rect x="21" y="28" width="4" height="10" fill="#FAF6EF"/><rect x="26" y="24" width="4" height="14" fill="#FAF6EF"/><rect x="31" y="20" width="4" height="18" fill="#E4572E"/></svg>
+      CAIO-Akademie
+    </a>
     <div class="flex items-center gap-0.5 sm:gap-1">
       <a href="index.html" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Start</a>
       <a href="index.html#stufen" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Stufen</a>
       <a href="index.html#test" class="inline-flex items-center min-h-[48px] px-2.5 sm:px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Selbsttest</a>
     </div>
   </div>
+  <div class="border-t border-espresso/5 bg-white/40">
+    <div class="max-w-[1120px] mx-auto px-5 md:px-8 min-h-[32px] flex items-center gap-2 text-xs text-espresso/60">
+      <span aria-hidden="true" class="h-1.5 w-1.5 rounded-full bg-orange inline-block flex-shrink-0"></span>
+      <span>Du bist hier:</span>
+      <span id="ort-text" data-anfang="Über uns" class="font-semibold text-espresso/80 truncate">Über uns</span>
+    </div>
+  </div>
 </nav>
 
 <!-- HERO -->
-<header id="top" class="max-w-[1120px] mx-auto px-5 pt-12 pb-8 md:px-8 md:pt-16">
+<header id="top" data-ort="Über uns" class="max-w-[1120px] mx-auto px-5 pt-12 pb-8 md:px-8 md:pt-16">
   <p class="font-head font-medium text-licht text-sm tracking-widest uppercase">Über uns</p>
   <h1 class="font-head font-bold text-ofen text-[clamp(28px,6vw,44px)] leading-tight mt-3 max-w-[24ch]">
     Ein Projekt der Wissensreich Academy.
@@ -55,7 +65,7 @@ tailwind.config = {
 </header>
 
 <!-- LEITBILD -->
-<section id="leitbild" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+<section id="leitbild" data-ort="Leitbild" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Unser Leitbild</h2>
   <div class="mt-6 bg-white rounded-2xl shadow-card border-l-4 border-sand p-6 md:p-8">
     <blockquote class="font-story italic text-xl md:text-2xl leading-snug text-ofen">
@@ -87,7 +97,7 @@ tailwind.config = {
 </section>
 
 <!-- ZAHLEN -->
-<section id="zahlen-fakten" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+<section id="zahlen-fakten" data-ort="Zahlen &amp; Fakten" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Zahlen, Daten, Fakten</h2>
   <div class="mt-6 grid gap-4 grid-cols-2 lg:grid-cols-4">
     <div class="bg-white rounded-2xl shadow-card p-6 text-center">
@@ -110,7 +120,7 @@ tailwind.config = {
 </section>
 
 <!-- ZERTIFIKATE & AUSZEICHNUNGEN -->
-<section id="zertifikate" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+<section id="zertifikate" data-ort="Zertifikate &amp; Awards" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Zertifikate &amp; Auszeichnungen</h2>
   <p class="mt-3 max-w-[60ch]">Getragen von der Wissensreich Academy — AZAV-zertifiziert, geprüfte Qualitäts- und Innovationsstandards, anerkannt für geförderte Weiterbildung.</p>
   <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -143,7 +153,7 @@ tailwind.config = {
 </section>
 
 <!-- DOZENTEN -->
-<section id="dozenten" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+<section id="dozenten" data-ort="Dozenten" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Dozenten &amp; Praxis-Experten</h2>
   <p class="mt-3 max-w-[60ch]">18 namentlich genannte Dozenten und Experten stehen hinter den Programmen des Verbunds — aus Marketing, Vertrieb, Produkt, Strategie und KI-Praxis.</p>
   <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -253,7 +263,11 @@ tailwind.config = {
 </section>
 
 <footer class="max-w-[1120px] mx-auto px-5 md:px-8 pt-10 pb-16 text-sm text-espresso/60">
-  <p>CAIO-Akademie · Ein Projekt der Wissensreich Academy UG (haftungsbeschränkt), Köln · Geschäftsführung: Hermann Fürstenau &amp; Florian Domin</p>
+  <a href="index.html" class="inline-flex items-center gap-3" aria-label="CAIO-Akademie — zur Startseite">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="h-10 w-10 flex-shrink-0" role="img" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#16425B"/><path d="M12 38V22a12 12 0 0 1 24 0v16" fill="none" stroke="#FAF6EF" stroke-width="3" stroke-linecap="round"/><rect x="16" y="32" width="4" height="6" fill="#FAF6EF"/><rect x="21" y="28" width="4" height="10" fill="#FAF6EF"/><rect x="26" y="24" width="4" height="14" fill="#FAF6EF"/><rect x="31" y="20" width="4" height="18" fill="#E4572E"/></svg>
+    <span class="font-head font-bold text-ofen text-lg leading-tight">CAIO-Akademie<span class="block text-[11px] font-medium text-espresso/50 tracking-wide">Ausbildung zum Chief AI Officer</span></span>
+  </a>
+  <p class="mt-4">CAIO-Akademie · Ein Projekt der Wissensreich Academy UG (haftungsbeschränkt), Köln · Geschäftsführung: Hermann Fürstenau &amp; Florian Domin</p>
   <p class="mt-3">
     <a class="underline underline-offset-2 hover:text-espresso" href="index.html">Startseite</a> ·
     <a class="underline underline-offset-2 hover:text-espresso" href="berufsbild.html">Berufsbild CAIO</a> ·
@@ -263,5 +277,16 @@ tailwind.config = {
   </p>
 </footer>
 
+<script>
+const ortTextU=document.getElementById('ort-text');
+const ortSecsU=[...document.querySelectorAll('[data-ort]')];
+function updateOrtU(){
+  let label=ortTextU.dataset.anfang,marker=scrollY+140;
+  for(const s of ortSecsU){ if(s.getBoundingClientRect().top+scrollY<=marker)label=s.dataset.ort; }
+  if(ortTextU.textContent!==label)ortTextU.textContent=label;
+}
+addEventListener('scroll',updateOrtU,{passive:true});
+updateOrtU();
+</script>
 </body>
 </html>
