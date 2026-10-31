@@ -367,3 +367,7 @@ Bestandsaufnahme: Neue Seiteninhalte seit Erstellung (CAIO-Einschub mit C-Ebene,
 | Betriebliche Automatisierung | Handlungsfeld 2 („wo betriebliche Automatisierung Zeit und Fehler spart") + Glossar-Neueintrag | ✔ |
 | Effizienzpotenziale identifizieren & fördern | „Er tut"-Liste + Handlungsfeld 1 | ✔ |
 | Glossar 40 → 42 Begriffe (Titel + llms.txt synchron) | ✔ |
+
+## Korrektur (31.10.2026, Commit `0107f49`)
+
+Dritter Anbieter-Button (Mistral) auf Wunsch des Auftraggebers entfernt — die Bubble bietet nur noch ChatGPT und Claude (beide mit funktionierendem URL-Prefill). Alle 5 Seiten bereinigt, live verifiziert (0 Mistral-Reste, genau 2 Anbieter-Buttons).
