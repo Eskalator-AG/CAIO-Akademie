@@ -167,6 +167,21 @@ Hinweis zum Test: Erste Browserprüfungen liefen auf die gecachte Vorversion (Gi
 | Alle 4 Stufenkarten (Startseite + Berufsbild) führen jetzt ihre Schwerpunkt-Zeile | ✔ |
 | 360 px weiterhin ohne horizontales Scrollen | ✔ |
 
+---
+
+## Nachtrag: Feinschliff Stufen & Matrix (31.10.2026, Commit `6bdbf45`)
+
+| Änderung | Prüfergebnis |
+|---|---|
+| AIP-Tagline präzisiert: „Bereitet das Fundament vor." (statt „baut") — Stufenkarte, Selbsttest-Band, Berufsbild, Glossar | ✔ live |
+| Matrixzellen verständlicher: „Nutzen an Beispielen einschätzen" (statt „verstehen"), „★ Business Cases priorisieren", „★ Regeln setzen und Einhaltung prüfen" (statt „Governance führen"), „Kundenerlebnis messbar machen" (statt „CX als KPI"), „★ Potenziale identifizieren & Chancen begreiflich machen" (statt „offen reden") | ✔ alle Zellen live |
+| AIO-Schärfung: Stufenkarte ergänzt „Konzipiert Projekte und überwacht den Fortschritt"; Berufsbild-Karte entsprechend | ✔ |
+| Fremd-Abkürzungen entfernt: „CX als KPI" ersetzt; Contra-Liste (Berufsbild) „CDO und CTO" → „bestehende Rollen in Data und IT" | ✔ grep: keine Alt-Texte |
+| Stufen-Icons (Inline-SVG, Outline-Stil): AIP Buch · AIO Kompass · AIA Lineal · CAIO Schild mit Haken — in Stufenfarbe neben dem Titel | ✔ 4/4 Icons live |
+| Matrix farbcodiert nach Stufenfarben: Spaltenköpfe Sand/Orange/Lichtblau/Nachtblau, Zellen je Spalte leicht getönt, ★-Zellen verstärkt | ✔ Spaltenfarben computed verifiziert |
+| Neuer Absatz Förderfähigkeit (nach der Stufenleiter): grundsätzlich förderfähig, Ermittlung im individuellen Gespräch, 30–100 % Zuschuss möglich | ✔ live |
+| 360 px ohne horizontales Scrollen | ✔ |
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
