@@ -88,6 +88,24 @@ Damit sind alle Transitionen (Progressbar, Sticky-CTA, Hover) deaktiviert. Stati
 - Workflow-Run „Deploy Landingpage": **success** (GitHub Actions).
 - `https://dennis343.github.io/CAIO-Akademie/` → **HTTP 200**, HTTPS, 20 230 Bytes, enthält „Selbsttest starten" (2 Vorkommen: Hero-CTA + Sticky-CTA).
 
+---
+
+## Nachtrag: Finalisierung (31.10.2026)
+
+Anlass: Auftraggeber sah „nur die Selbsttestseite". Diagnose: Die Seite war vollständig (alle 9 Sektionen, 3 609 px hoch) — der Browser-Viewport stand nach dem Selbsttest (`?r=caio`) am unteren Seitenende. Es fehlte eine Navigation zur Orientierung. Finalisiert wurde daraufhin (Commit `akademie: homepage finalisierung — navigation, impressum, datenschutz, meta-tags`):
+
+| Ergänzung | Prüfergebnis |
+|---|---|
+| Sticky Hauptnavigation (Wortmarke + Rolle/Stufen/Selbsttest, `hidden sm:inline-flex` für „Rolle" mobil) | ✔ sticky, 57 px, 360 px ohne horizontales Scrollen (scrollWidth 360) |
+| Anchor-Sprünge mit `scroll-margin-top: 72px` | ✔ Klick „Stufen" (360 px) und „Rolle" (1 280 px): Sektion landet exakt bei top = 72 px, nicht unter der Nav versteckt |
+| Impressum (`impressum.html`, Betreiberdaten WissensReich Academy UG) | ✔ HTTP 200, noindex |
+| Datenschutzerklärung (`datenschutz.html`: kein Tracking, externe Dienste offengelegt, Selbsttest rein lokal, Betroffenenrechte) | ✔ HTTP 200, noindex |
+| Footer-Rechtslinks (Impressum · Datenschutz) | ✔ beide Links vorhanden |
+| Meta-Tags (theme-color, Open Graph, Favicon als SVG-Data-URI) | ✔ im DOM |
+| Sticky-CTA unten + Selbsttest unverändert | ✔ (keine Regression; erneute CTA-Farbmessung: Text `rgb(23,19,16)` Espresso auf `rgb(228,87,46)` Orange — eine Bildanalyse-Lesefehlermeldung „weißer Text" wurde per computed style widerlegt) |
+
+**Hinweis zur Prüfung:** Betreiberangaben im Impressum (WissensReich Academy UG, Köln) wurden der bestehenden Wissensreich-Site entnommen und sollten vom Auftraggeber rechtlich gegengeprüft werden.
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
