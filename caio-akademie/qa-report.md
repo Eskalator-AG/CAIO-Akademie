@@ -247,6 +247,20 @@ Auftraggeber-Freigabe: P1–P6 + O1/O2 (O3 WhatsApp entfallen — im Wissensreic
 
 **Design-Begründung (nicht generisch, kein KI-Slop):** geometrische Konstruktion aus zwei Bedeutungsträgern (Backofen-Bogen = handwerklicher Praxisfall; Stufenleiter = 4-stufiger Ausbildungspfad in den echten Stufenakzenten), auf 16 px Favicon-Größe lesbar reduziert, flach ohne Verläufe/Glow.
 
+---
+
+## Nachtrag: Umbenennung zu „CAIO Institut" (31.10.2026, Commit `3d6247f`)
+
+| Prüfpunkt | Ergebnis |
+|---|---|
+| „CAIO-Akademie" → „CAIO Institut" auf allen 5 Seiten, inkl. Grammatik-Fälle („Glossar des CAIO Instituts", „Leitbild des CAIO Instituts", „Interesse am CAIO Institut", „Das CAIO Institut baut auf …") | ✔ |
+| Standalone-„Akademie"-Begriffe vereinheitlicht („Das Institut in Zahlen", „Passt das Institut zu dir?", „Institut-Infos", „Kontakt zum Institut") | ✔ |
+| Titel-Tags: Startseite jetzt „CAIO Institut – Wir machen aus KI-Pflicht KI-Kompetenz" | ✔ |
+| Live-Check: 16× „CAIO Institut", 0× „Akademie" auf der Startseite | ✔ |
+| README mit umbenannt | ✔ |
+
+**Anlass:** Die Domains www.caio-institut.de und www.caio-ausbildung.de sind für diesen Auftritt reserviert. Domain-Anbindung dokumentiert (GitHub Pages oder Vercel). **Offen nach DNS-Umzug:** og:url-Angaben enthalten noch die github.io-URL und sind bei Aktiv-Domain zu aktualisieren.
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
