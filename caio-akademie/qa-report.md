@@ -156,6 +156,17 @@ Verwendete Quellen: Kienbaum-Blog (25.02.2025), Bitkom-Pressemitteilung (25.09.2
 
 Hinweis zum Test: Erste Browserprüfungen liefen auf die gecachte Vorversion (GitHub-Pages-Cache, max-age=600); Verifikation daher mit Cache-Buster gegen den Serverbestand wiederholt.
 
+---
+
+## Nachtrag: Fundament & Schwerpunkte (31.10.2026, Commit `f329da9`)
+
+| Änderung | Prüfergebnis |
+|---|---|
+| AI Professional (AIP) aufgewertet: Tagline „Baut das Fundament.", Umfang „Über 32 Stunden" (statt „~20"), Detailzeile „Schwerpunkt: Menschen & Change" — auf Startseite, Berufsbild-Seite, Glossar und im Selbsttest-Bandtext | ✔ live, keine „20 Stunden"/„Öffnet die Augen"-Reste (grep) |
+| Kompetenzmatrix: je Stufe ein forcierter Schwerpunkt mit ★ markiert — AIP → Menschen & Change (offen reden) · AIO → Wirtschaftlichkeit (Business Case prüfen) · AIA → Technologie & Daten (Mitgestalten) · CAIO → Sicherheit & Recht (Governance führen); Desktop-Zellen orange hinterlegt, Mobile-Chips mit Stern-Ring, Legende unter der Matrix | ✔ 4 Desktop-★-Zellen + 4 Mobile-★-Chips + Legende live |
+| Alle 4 Stufenkarten (Startseite + Berufsbild) führen jetzt ihre Schwerpunkt-Zeile | ✔ |
+| 360 px weiterhin ohne horizontales Scrollen | ✔ |
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
