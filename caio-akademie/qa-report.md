@@ -143,6 +143,19 @@ Verwendete Quellen: Kienbaum-Blog (25.02.2025), Bitkom-Pressemitteilung (25.09.2
 
 **Hinweis:** Interne Curriculum-Dokumente (`caio-akademie/*.md`) verwenden weiterhin die bisherigen Stufennamen (AI Aware/AI Navigator/AI Architect) — die Umbenennung wurde auf Wunsch des Auftraggebers auf allen öffentlichen Seiten umgesetzt; die Markdown-Dokumente können bei Bedarf nachgezogen werden.
 
+---
+
+## Nachtrag: Selbsttest-Feinschliff (31.10.2026, Commit `2b83764`)
+
+| Änderung | Prüfergebnis |
+|---|---|
+| Intro-Text neu: „Fünf Fragen. 2 Minuten. Direkt orientiert sein." | ✔ live |
+| Kurs-Empfehlung in der Auswertung („Sehr wahrscheinlich für dich passend: …") je Band: 0–5 P. → AI Professional (AIP) · 6–10 P. → AI Officer (AIO) und AI Architekt (AIA) · 11–15 P. → AIO und AIA, jeweils verkürzt | ✔ alle 3 Bänder live durchgeklickt und verifiziert |
+| Sticky-CTAs auf „– 2 Minuten" vereinheitlicht (Startseite + Berufsbild) | ✔ live |
+| 360 px weiterhin ohne horizontales Scrollen | ✔ |
+
+Hinweis zum Test: Erste Browserprüfungen liefen auf die gecachte Vorversion (GitHub-Pages-Cache, max-age=600); Verifikation daher mit Cache-Buster gegen den Serverbestand wiederholt.
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
