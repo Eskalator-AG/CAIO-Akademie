@@ -298,6 +298,21 @@ Bestandsaufnahme: Neue Seiteninhalte seit Erstellung (CAIO-Einschub mit C-Ebene,
 | FAQ | +4 Fragen (10 → **14**): „Was bedeutet CAIO?" (Begriffszzerlegung) · „Welchen Schwerpunkt hat welche Stufe?" · „Wie löse ich den Konflikt zwischen KI-Einsatz und Datenschutz?" (Verweis Spannungsfeld) · „Wer steht hinter dem CAIO Institut?" (Verweis Über uns); Förder-Antwort um „bis 95 % Bewilligungsquote" angereichert; Grammatikfix „Für wen ist **das** CAIO Institut?" | ✔ alle live |
 | FAQ-JSON-LD | synchron auf 14 Fragen erweitert | ✔ JSON validiert |
 
+---
+
+## Nachtrag: SEO-/GEO-Maximierung (31.10.2026, Commits `7cdf50c` + `978eda8`)
+
+| Baustein | Umsetzung | Prüfergebnis |
+|---|---|---|
+| **Technical SEO: Crawling** | `robots.txt` (Allow, Disallow /danke/, Sitemap-Verweis) + `sitemap.xml` (4 indexierbare Seiten, Prioritäten, XML-validiert) | ✔ HTTP 200 |
+| **Canonicals** | `<link rel="canonical">` auf allen 5 Seiten (verhindert Duplicate Content zwischen github.io und Domain) | ✔ live |
+| **Titles & Descriptions** | Keyword-optimiert je Seite (z. B. „Chief AI Officer (CAIO) – Berufsbild: Aufgaben, Gehalt, Chancen"; Glossar nennt „40 Begriffe") | ✔ live |
+| **Social Cards** | `og:image` (1200×630 PNG, im Browser aus Marken-SVG gerendert, 168 KB) + vollständige Twitter-Cards (`summary_large_image`) auf allen Seiten | ✔ PNG HTTP 200 |
+| **Structured Data** | Ergänzt: EducationalOrganization (mit Wissensreich-ParentOrg, Adresse, sameAs) + WebSite + WebPage (speakable) + **4× Course** (AIP/AIO/AIA/CAIO mit timeRequired, Zertifikat) auf der Startseite; **BreadcrumbList** auf allen Unterseiten; FAQPage (14) bestand schon | ✔ alle JSON-LD-Blöcke geparst/valide |
+| **GEO (KI-Suchmaschinen)** | `llms.txt` (maschinenlesbare Site-Übersicht mit Kernfakten, Seiten, Kontakt, Zitier-Erlaubnis) + zitierfähiger **Kernfaktenblock „Auf einen Blick"** (7 einzeilige, in sich geschlossene Fakten) auf der Startseite | ✔ HTTP 200 / live |
+| **Conversion** | **Schluss-CTA-Band** (orange, Nach der FAQ): Selbsttest + Erstgespräch, Trust-Zeile (Förderung, unverbindlich, Kontakt) | ✔ live |
+| Ortsanzeige | Neue Labels: „Auf einen Blick" · „Jetzt starten" | ✔ |
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
