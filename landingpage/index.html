@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>CAIO-Akademie – Die Rolle, die es überall gibt</title>
 <meta name="description" content="Vier Stufen. Ein echtes Fallbeispiel. Wir bilden die Person aus, die KI zur Strategie macht.">
+<meta name="theme-color" content="#FAF6EF">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CAIO-Akademie – Die Rolle, die es überall gibt">
+<meta property="og:description" content="Vier Stufen. Ein echtes Fallbeispiel. Wir bilden die Person aus, die KI zur Strategie macht.">
+<meta property="og:url" content="https://dennis343.github.io/CAIO-Akademie/">
+<meta property="og:locale" content="de_DE">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316425B'/%3E%3Ctext x='16' y='22' font-family='Arial,sans-serif' font-weight='700' font-size='17' fill='%23FAF6EF' text-anchor='middle'%3EC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&family=Fraunces:ital@1&display=swap" rel="stylesheet">
@@ -31,13 +38,26 @@ tailwind.config = {
   :focus-visible{ outline:3px solid #2E86AB; outline-offset:2px; }
   details>summary{ list-style:none; cursor:pointer; }
   details>summary::-webkit-details-marker{ display:none; }
+  header[id],section[id]{ scroll-margin-top:72px }
 </style>
 </head>
 
 <body class="bg-mehl text-espresso font-body text-[17px] leading-relaxed antialiased">
 
+<!-- 0. NAVIGATION -->
+<nav aria-label="Hauptnavigation" class="sticky top-0 z-40 bg-mehl/95 backdrop-blur border-b border-espresso/10">
+  <div class="max-w-[1120px] mx-auto px-5 md:px-8 flex items-center justify-between min-h-[56px]">
+    <a href="#top" class="font-head font-bold text-ofen text-[15px] sm:text-base whitespace-nowrap">CAIO-Akademie</a>
+    <div class="flex items-center gap-0.5 sm:gap-1">
+      <a href="#rolle" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Rolle</a>
+      <a href="#stufen" class="inline-flex items-center min-h-[48px] px-2.5 sm:px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Stufen</a>
+      <a href="#test" class="inline-flex items-center min-h-[48px] px-2.5 sm:px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Selbsttest</a>
+    </div>
+  </div>
+</nav>
+
 <!-- 1. HERO -->
-<header class="max-w-[1120px] mx-auto px-5 pt-14 pb-10 md:px-8 md:pt-20">
+<header id="top" class="max-w-[1120px] mx-auto px-5 pt-14 pb-10 md:px-8 md:pt-20">
   <p class="font-head font-medium text-licht text-sm tracking-widest uppercase">CAIO-Akademie</p>
   <h1 class="font-head font-bold text-ofen text-[clamp(28px,6vw,44px)] leading-tight mt-3 max-w-[22ch]">
     Die Rolle, die es überall gibt.
@@ -65,7 +85,7 @@ tailwind.config = {
 </section>
 
 <!-- 2b. WAS IST EIN CAIO -->
-<section class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+<section id="rolle" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Was ist ein CAIO?</h2>
   <p class="mt-3 max-w-[60ch]">Denk an ein Bauprojekt. Der Bauherr zahlt und entscheidet. Die Handwerker mauern, verlegen Rohre, setzen Fenster. Der Architekt übersetzt den Wunsch in einen Plan, begleitet die Baustelle und nimmt ab. Er mauert nicht selbst.</p>
   <div class="mt-6 grid gap-4 md:grid-cols-3">
@@ -292,7 +312,11 @@ tailwind.config = {
 </section>
 
 <footer class="max-w-[1120px] mx-auto px-5 md:px-8 py-10 text-sm text-espresso/60">
-  CAIO-Akademie · Ein Projekt des Verbunds Conversion-Day · Wissensreich Academy · Deal-Maker · Grenzenlos
+  <p>CAIO-Akademie · Ein Projekt des Verbunds Conversion-Day · Wissensreich Academy · Deal-Maker · Grenzenlos</p>
+  <p class="mt-3">
+    <a class="underline underline-offset-2 hover:text-espresso" href="impressum.html">Impressum</a> ·
+    <a class="underline underline-offset-2 hover:text-espresso" href="datenschutz.html">Datenschutz</a>
+  </p>
 </footer>
 
 <!-- Sticky CTA mobil -->
