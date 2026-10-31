@@ -396,7 +396,7 @@ tailwind.config = {
           <input type="checkbox" id="ergebnis-dsgvo" required class="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E4572E]">
           <span>Ich habe die <a class="underline underline-offset-2" href="datenschutz.html">Datenschutzerklärung</a> gelesen und willige in den Erhalt von Akademie-Infos ein. Jederzeit abbestellbar.</span>
         </label>
-        <altcha-widget challengeurl="https://altcha.org/api/v1/challenge" name="altcha-ergebnis" strings='{"label":"Ich bin kein Roboter","verifying":"Prüfen …","verified":"Bestätigt"}'></altcha-widget>
+        <altcha-widget challengejson='{"algorithm":"SHA-256","challenge":"f5a65af59cb73c0083c25f41e4ee758bf9a9ecbd0d59d32086f6195e119cffd4","salt":"3d091ff821c14aa431b5851e29f4f644","signature":"abab7ff5993b701f555fe2975467ebe5c4d865434a43349b5c168bc02e31e5ea","maxnumber":100000}' name="altcha-ergebnis" strings='{"label":"Ich bin kein Roboter","verifying":"Prüfen …","verified":"Bestätigt"}'></altcha-widget>
         <button class="min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold">
           Ergebnis + Stufen-Infos senden
         </button>
@@ -425,7 +425,7 @@ tailwind.config = {
         <input type="checkbox" id="kontakt-dsgvo" required class="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E4572E]">
         <span>Ich habe die <a class="underline underline-offset-2" href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin mit der Kontaktaufnahme einverstanden.</span>
       </label>
-      <altcha-widget challengeurl="https://altcha.org/api/v1/challenge" name="altcha-kontakt" strings='{"label":"Ich bin kein Roboter","verifying":"Prüfen …","verified":"Bestätigt"}'></altcha-widget>
+      <altcha-widget challengejson='{"algorithm":"SHA-256","challenge":"f5a65af59cb73c0083c25f41e4ee758bf9a9ecbd0d59d32086f6195e119cffd4","salt":"3d091ff821c14aa431b5851e29f4f644","signature":"abab7ff5993b701f555fe2975467ebe5c4d865434a43349b5c168bc02e31e5ea","maxnumber":100000}' name="altcha-kontakt" strings='{"label":"Ich bin kein Roboter","verifying":"Prüfen …","verified":"Bestätigt"}'></altcha-widget>
       <button type="submit" class="min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold">E-Mail vorbereiten</button>
       <p id="kontakt-hinweis" class="hidden text-xs text-rose-600"></p>
       <p class="text-xs text-espresso/50">Öffnet dein E-Mail-Programm mit vorbereiteter Nachricht an concierge@wissensreich.academy — danach geht es zur Bestätigungsseite. Über diese Seite werden keine Formulardaten übertragen.</p>
