@@ -320,22 +320,27 @@ updateOrtG();
     <span class="ai-text whitespace-nowrap"><span class="sm:hidden">Mit KI zusammenfassen</span><span class="hidden sm:inline">Diese Seite mit KI zusammenfassen</span></span>
   </button>
 </div>
-<style>
-  #ai-bubble-wrap.ai-kollabiert #ai-bubble{padding-left:0;padding-right:0;width:48px;overflow:hidden}
-  #ai-bubble-wrap.ai-kollabiert .ai-text{display:none}
-  @media (hover:hover) and (min-width:640px){
-    #ai-bubble-wrap.ai-kollabiert #ai-bubble:hover{padding-left:1rem;padding-right:1rem;width:auto}
-    #ai-bubble-wrap.ai-kollabiert #ai-bubble:hover .ai-text{display:inline}
-  }
-  @media (prefers-reduced-motion: reduce){ #ai-bubble{transition:none!important} }
-</style>
 <script>
 (function(){
-  var w=document.getElementById('ai-bubble-wrap'),b=document.getElementById('ai-bubble'),p=document.getElementById('ai-popover');
+  var w=document.getElementById('ai-bubble-wrap'),b=document.getElementById('ai-bubble'),p=document.getElementById('ai-popover'),t=document.querySelector('#ai-bubble .ai-text');
   if(!b)return;
-  function kollaps(){w.classList.toggle('ai-kollabiert',scrollY>300);}
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches)b.style.transition='none';
+  var hoverExp=false;
+  function setze(zu){
+    w.classList.toggle('ai-kollabiert',zu);
+    b.style.width=zu?'48px':'';
+    b.style.paddingLeft=zu?'0':'';
+    b.style.paddingRight=zu?'0':'';
+    b.style.overflow=zu?'hidden':'';
+    if(t)t.style.display=zu?'none':'';
+  }
+  function kollaps(){ if(!hoverExp)setze(scrollY>300); }
   kollaps();
   addEventListener('scroll',kollaps,{passive:true});
+  if(matchMedia('(hover:hover) and (min-width:640px)').matches){
+    b.addEventListener('mouseenter',function(){ if(w.classList.contains('ai-kollabiert')&&!hoverExp){hoverExp=true;setze(false);} });
+    b.addEventListener('mouseleave',function(){ if(hoverExp){hoverExp=false;setze(scrollY>300);} });
+  }
   b.addEventListener('click',function(){p.classList.toggle('hidden');b.setAttribute('aria-expanded',p.classList.contains('hidden')?'false':'true');});
   document.addEventListener('click',function(e){if(!p.classList.contains('hidden')&&!w.contains(e.target)){p.classList.add('hidden');b.setAttribute('aria-expanded','false');}});
   var url=location.origin+location.pathname;
