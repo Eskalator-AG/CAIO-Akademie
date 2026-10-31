@@ -276,6 +276,16 @@ Auftraggeber-Freigabe: P1–P6 + O1/O2 (O3 WhatsApp entfallen — im Wissensreic
 
 **Offen:** `caio-ausbildung.de` — 301-Weiterleitung beim Registrar/CYON auf `https://www.caio-institut.de` einrichten (Zweitdomain, keine eigene Ausspielung nötig).
 
+---
+
+## Nachtrag: CAIO-Erklär-Einschub, Hero-Bilder & KI-Bubble (31.10.2026, Commits `4fb6bd3` + `f38e454`)
+
+| Anforderung | Umsetzung | Prüfergebnis |
+|---|---|---|
+| Einschub „Was ist ein CAIO?" ganz oben auf der Startseite | Karte direkt unter dem Hero: Begriffszzerlegung **Chief / AI / Officer** einzeln auf Deutsch erklärt; C-Level-Riege (neben CEO/CFO/CTO), extremes Aufstiegspotenzial, Vernetzung, Puls der Zeit, Gehalt „selten nur fünfstellig — häufig sechsstelllig" mit Link zur Gehalts-Sektion (Quellen); Ortsanzeige-Label ergänzt | ✔ live (6 Merkmale verifiziert), 360 px fit |
+| Emotionale Hero-Bilder auf allen Unterseiten | Echte kuratierte Stockfotos (Unsplash, freie Lizenz, 1600 px quer, `aspect-16/7`, `fetchpriority=high`): Berufsbild = erfahrene Führungskraft mit Tablet · Über uns = warme Bäckerei (Praxisfall) · Glossar = offenes Buch im warmen Licht · Danke = Händedruck vor Laptop. Bewusst echte Fotos statt KI-Generierung (Realismus, kein KI-Slop) | ✔ 4/4 geladen (HTTP 200, naturalWidth > 0); Bildanalyse: 8,5/10 bzw. 8/10 („authentisch, keine KI-Artefakte") |
+| Sticky Conversion-Bubble „Diese Seite mit deiner KI zusammenfassen lassen" | Floating-Bubble rechts unten (bottom-24, über der Sticky-CTA) auf allen 5 Seiten; Popover mit ChatGPT / Claude / Z.ai; Prompt inkl. Seiten-URL wird in die Zwischenablage kopiert, ChatGPT & Claude öffnen mit vorausgefüllter Frage (`?q=`), Z.ai öffnet Chat mit Einfüge-Hinweis; Outside-Click schließt; aria-expanded/controls | ✔ Popover öffnet, 3 Anbieter, kein Overflow, keine Kollision mit Sticky-CTA, auf allen 5 Seiten live |
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
