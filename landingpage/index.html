@@ -800,5 +800,44 @@ if(zahlEls.length&&'IntersectionObserver'in window){
 {"@type":"Question","name":"Können ganze Teams oder Unternehmen teilnehmen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Firmen qualifizieren einzelne Mitarbeitende oder ganze Teams — von der AIP-Basisqualifizierung bis zur CAIO-Verantwortung."}}
 ]}
 </script>
+<!-- KI-Zusammenfassungs-Bubble (sticky) -->
+<div id="ai-bubble-wrap" class="fixed right-4 bottom-24 z-40 flex flex-col items-end gap-2">
+  <div id="ai-popover" class="hidden bg-white rounded-2xl shadow-card border border-espresso/10 p-4 w-72 max-w-[calc(100vw-2rem)]">
+    <p class="font-head font-bold text-ofen text-sm">Mit deiner KI zusammenfassen</p>
+    <p class="mt-1 text-xs text-espresso/60">Der Prompt mit dieser Seiten-URL wird kopiert und der Chat vorbereitet:</p>
+    <div class="mt-3 grid gap-2">
+      <button data-ai="chatgpt" class="flex items-center gap-2 min-h-[44px] px-4 rounded-xl border border-espresso/15 bg-mehl hover:border-orange text-sm font-semibold text-left"><span aria-hidden="true" class="h-2.5 w-2.5 rounded-full bg-[#10a37f] flex-shrink-0"></span>ChatGPT öffnen</button>
+      <button data-ai="claude" class="flex items-center gap-2 min-h-[44px] px-4 rounded-xl border border-espresso/15 bg-mehl hover:border-orange text-sm font-semibold text-left"><span aria-hidden="true" class="h-2.5 w-2.5 rounded-full bg-[#d97757] flex-shrink-0"></span>Claude öffnen</button>
+      <button data-ai="zai" class="flex items-center gap-2 min-h-[44px] px-4 rounded-xl border border-espresso/15 bg-mehl hover:border-orange text-sm font-semibold text-left"><span aria-hidden="true" class="h-2.5 w-2.5 rounded-full bg-licht flex-shrink-0"></span>Z.ai öffnen <span class="font-normal text-espresso/50">(Prompt einfügen)</span></button>
+    </div>
+    <p id="ai-hinweis" class="hidden mt-2 text-xs text-emerald-600"></p>
+  </div>
+  <button id="ai-bubble" aria-expanded="false" aria-controls="ai-popover" class="inline-flex items-center gap-2 min-h-[48px] px-4 rounded-full bg-ofen text-mehl shadow-card font-head font-bold text-sm hover:bg-nacht max-w-[calc(100vw-2rem)]">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 flex-shrink-0" aria-hidden="true"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/></svg>
+    <span class="sm:hidden">Mit KI zusammenfassen</span><span class="hidden sm:inline">Diese Seite mit KI zusammenfassen</span>
+  </button>
+</div>
+<script>
+(function(){
+  var b=document.getElementById('ai-bubble'),p=document.getElementById('ai-popover');
+  if(!b)return;
+  b.addEventListener('click',function(){p.classList.toggle('hidden');b.setAttribute('aria-expanded',p.classList.contains('hidden')?'false':'true');});
+  document.addEventListener('click',function(e){if(!p.classList.contains('hidden')&&!document.getElementById('ai-bubble-wrap').contains(e.target)){p.classList.add('hidden');b.setAttribute('aria-expanded','false');}});
+  var url=location.origin+location.pathname;
+  var prompt='Fasse bitte diese Seite knapp und strukturiert zusammen: Kernangebot, die vier Stufen (AIP, AIO, AIA, CAIO), Förder- und Kostenhinweise sowie die wichtigsten nächsten Schritte. Seite: '+url+' — Falls du sie nicht öffnen kannst, sage Bescheid, dann füge ich den Text ein.';
+  var ziele={chatgpt:'https://chatgpt.com/?q=',claude:'https://claude.ai/new?q=',zai:'https://chat.z.ai/'};
+  p.querySelectorAll('button[data-ai]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var ziel=ziele[btn.dataset.ai]+(btn.dataset.ai==='zai'?'':encodeURIComponent(prompt));
+      try{if(navigator.clipboard)navigator.clipboard.writeText(prompt);}catch(e){}
+      var h=document.getElementById('ai-hinweis');
+      h.textContent='Prompt kopiert — im Chat ggf. mit Strg/Cmd+V einfügen.';
+      h.classList.remove('hidden');
+      window.open(ziel,'_blank','noopener');
+    });
+  });
+})();
+</script>
+
 </body>
 </html>
