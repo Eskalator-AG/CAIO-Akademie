@@ -354,3 +354,16 @@ Bestandsaufnahme: Neue Seiteninhalte seit Erstellung (CAIO-Einschub mit C-Ebene,
 | Mistral-Klick überträgt Prompt als `?q=`-Parameter (wirkt, sobald Mistral Prefill unterstützt) UND kopiert in die Zwischenablage; dynamischer Hinweis: „Prompt kopiert — im Le-Chat-Eingabefeld mit Strg/Cmd+V einfügen." | ✔ E2E: URL enthält `?q=Fasse…`, Hinweis korrekt |
 | ChatGPT/Claude unverändert (Prefill `?q=` + Clipboard) | ✔ |
 | Auf allen 5 Seiten | ✔ |
+
+---
+
+## Nachtrag: Fünf Themen integriert (31.10.2026, Commit `11ca796`)
+
+| Thema | Platzierung | Prüfergebnis |
+|---|---|---|
+| Unternehmensvision & KI-Strategie | Startseite „Er tut"-Liste („Fragt zuerst nach Unternehmensvision und KI-Strategie") + Berufsbild Handlungsfeld 1 („im Dienst der Unternehmensvision") | ✔ |
+| Daten-Souveränität | „Er tut"-Liste + Spannungsfeld-Regel 2 („AI-Act-Klasse, DSGVO, Daten-Souveränität") + Handlungsfeld 3 + Glossar-Neueintrag (mit CLOUD-Act-Bezug) | ✔ |
+| Steuerung externer Dienstleister | „Er tut"-Liste („klare Anforderungen, klare Abnahme") + Handlungsfeld 4 + Spannungsfeld-Regel 3 („Anbieter steuern — wer entscheidet?") | ✔ |
+| Betriebliche Automatisierung | Handlungsfeld 2 („wo betriebliche Automatisierung Zeit und Fehler spart") + Glossar-Neueintrag | ✔ |
+| Effizienzpotenziale identifizieren & fördern | „Er tut"-Liste + Handlungsfeld 1 | ✔ |
+| Glossar 40 → 42 Begriffe (Titel + llms.txt synchron) | ✔ |
