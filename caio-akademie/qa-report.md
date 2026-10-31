@@ -126,6 +126,23 @@ Anlass: Auftraggeber-Recherche zu Quellen wie Kienbaum („Chief AI Officer: Pro
 
 Verwendete Quellen: Kienbaum-Blog (25.02.2025), Bitkom-Pressemitteilung (25.09.2024), stellenmarkt.de-Berufsporträt, Business Insider/Gruenderszene, EU AI Act Art. 4. Reale CAIO-Beispiele: SAP (Philipp Herzig), Deutsche Bahn (Dr. Michael Drass) — laut Bitkom/Presseberichterstattung.
 
+---
+
+## Nachtrag: Ausbaustufe 4 (31.10.2026, Commits `3ed724e` + `25fda53`)
+
+| Anforderung (Auftraggeber) | Umsetzung | Prüfergebnis |
+|---|---|---|
+| Zweite Navigationsebene: Sektionstitel beim Scrollen in der Leiste anzeigen | „Du bist hier:"-Strip unter der Hauptnav, aktualisiert per Scroll-Listener auf `data-ort`-Attribute | ✔ 5/5 Sektionen korrekt (Start, Rolle, Stufen, Spannungsfeld, Selbsttest) |
+| Stufen einheitlich benennen | Umbenennung in AI Professional (AIP) / AI Officer (AIO) / AI Architekt (AIA) / Chief AI Officer (CAIO); Badgenamen (Sandguss/Kupfer/Silber/Gold) und Altnamen (AI Aware/AI Navigator/AI Architect) vollständig entfernt — auch Matrixkopf (S1 · AIP …) und Berufsbild-Seite | ✔ grep-Konsistenzcheck: keine Altnamen in `landingpage/` |
+| Direkte Kontaktmöglichkeit neben Selbsttest, inkl. Auswahl der priorisierten Weiterbildung | Kontakt-Karte unter dem Selbsttest: Name, E-Mail, Stufen-Auswahl (AIP/AIO/AIA/CAIO/Beratung), Nachricht; Button baut `mailto:` an concierge@wissensreich.academy — kein Datenversand über die Seite (DSGVO-konsistent, transparent ausgewiesen) | ✔ Handler live getestet (Bestätigungstext erscheint) |
+| Sektion Spannungsfeld (Digitalisierungs-/Performance-Wunsch vs. DSGVO, EU AI Act, US CLOUD Act, Kundenwünsche, Wirtschaftlichkeit) | Neue Sektion `#spannungsfeld` (6 Kraft-Karten mit „zieht nach / setzt Grenzen" + Auflösungsblock „Klartext statt Schwarz-Weiß" mit 4 Regeln + Glossar-Link), inkl. Ortsanzeige-Label | ✔ 6 Karten vorhanden, 360 px fit |
+| Glossar als Unterseite (SEO + Themenklärung) | `glossar.html`: 34 Begriffe in 4 Abschnitten (A–D/E–K/L–R/S–Z) mit Schnellsprung, Stufen-Kürzeln AIP/AIO/AIA/CAIO, Rechts- und Tech-Begriffen (DSGVO, EU AI Act, Art. 4, CLOUD Act, AVV, LLM, RAG …), SEO-Meta, interne Links auf Stufen/Berufsbild/Selbsttest; verlinkt aus Footer (alle Seiten) und Spannungsfeld-Sektion | ✔ HTTP 200, 34 `<dt>`, kein Overflow |
+| Fix: Sticky-CTA verdeckt Footer-Links | Footer-Padding `pb-28` auf Seiten mit Sticky-CTA (Startseite, Berufsbild); Rechtsseiten-Footer um Glossar-Link ergänzt | ✔ Footer-Links liegen 112 px über Seitenende, nicht verdeckt |
+
+**Gefundener und behobener Fehler:** Das Kontakt-Select hatte keine Breitenbegrenzung; die längste Option („Stufe 4 · Chief AI Officer (CAIO) — Governance & Portfolio") erzeugte horizontales Scrollen bei 360 px. Behoben per `w-full` auf allen Formularfeldern (Commit `25fda53`); danach scrollWidth = 360 = innerWidth, Select 272 px breit.
+
+**Hinweis:** Interne Curriculum-Dokumente (`caio-akademie/*.md`) verwenden weiterhin die bisherigen Stufennamen (AI Aware/AI Navigator/AI Architect) — die Umbenennung wurde auf Wunsch des Auftraggebers auf allen öffentlichen Seiten umgesetzt; die Markdown-Dokumente können bei Bedarf nachgezogen werden.
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
