@@ -330,3 +330,16 @@ Bestandsaufnahme: Neue Seiteninhalte seit Erstellung (CAIO-Einschub mit C-Ebene,
 | Arbeitgeber (7 Vorteile): Direkter Draht zur Führung, Wirkung über Abteilungen, Know-how bleibt im Haus, Art.-4-Rechtssicherheit, weniger Fehlkäufe, Talentbindung, 30–100 % Zuschuss | ✔ |
 | Zielgruppen-CTAs je Karte (Selbsttest / Erstgespräch mit Förder-Check) | ✔ |
 | Ortsanzeige-Label, 360 px ohne Overflow | ✔ |
+
+---
+
+## Nachtrag: KI-Bubble mit Scroll-Kollaps (31.10.2026, Commits `cb840aa` + `2b4d08f`)
+
+| Prüfpunkt | Ergebnis |
+|---|---|
+| Bubble kollabiert beim Scrollen (>300 px) zum runden Icon-Button (48 px), am Seitenanfang voller Text | ✔ live (48 px ↔ 293 px) |
+| Hover (Desktop) expandiert temporär zum vollen Button inkl. Text, Mouseleave klappt wieder ein | ✔ (48 → 261 → 48 px) |
+| Klick auf kollabierte Bubble öffnet weiterhin das Anbieter-Popover | ✔ |
+| reduced-motion: Transition deaktiviert | ✔ |
+| Implementierung: JS-gesteuerte Inline-Styles; ein erster CSS-Kaskaden-Ansatz wurde im Live-Betrieb trotz korrekt registrierter Regeln nicht angewendet (Cascade-Anomalie unter Tailwind-CDN) und deterministisch ersetzt | Fix dokumentiert |
+| Auf allen 5 Seiten ausgerollt | ✔ |
