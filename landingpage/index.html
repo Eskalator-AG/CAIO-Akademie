@@ -50,7 +50,8 @@ tailwind.config = {
   <div class="max-w-[1120px] mx-auto px-5 md:px-8 flex items-center justify-between min-h-[56px]">
     <a href="#top" class="font-head font-bold text-ofen text-[15px] sm:text-base whitespace-nowrap">CAIO-Akademie</a>
     <div class="flex items-center gap-0.5 sm:gap-1">
-      <a href="berufsbild.html" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Berufsbild</a>
+      <a href="berufsbild.html" class="hidden md:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Berufsbild</a>
+      <a href="ueber-uns.html" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Über uns</a>
       <a href="#stufen" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Stufen</a>
       <a href="#test" class="inline-flex items-center min-h-[48px] px-2.5 sm:px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Selbsttest</a>
     </div>
@@ -66,17 +67,17 @@ tailwind.config = {
 
 <!-- 1. HERO -->
 <header id="top" data-ort="Start" class="max-w-[1120px] mx-auto px-5 pt-14 pb-10 md:px-8 md:pt-20">
-  <p class="font-head font-medium text-licht text-sm tracking-widest uppercase">CAIO-Akademie</p>
+  <p class="font-head font-medium text-licht text-sm tracking-widest uppercase">CAIO-Akademie · Ein Projekt der Wissensreich Academy</p>
   <h1 class="font-head font-bold text-ofen text-[clamp(28px,6vw,44px)] leading-tight mt-3 max-w-[22ch]">
-    Die Rolle, die es überall gibt.
+    Wir machen aus KI-Pflicht KI-Kompetenz.
   </h1>
-  <p class="mt-4 max-w-[46ch]">Und die niemand beim Namen nennt. Fünf Fragen zeigen, ob du sie schon lebst.</p>
+  <p class="mt-4 max-w-[52ch]">Vier Stufen. Ein echter Fall. Über 32 Stunden Fundament bis zur Verantwortung für das ganze Unternehmen — förderfähig mit 30 bis 100&nbsp;% Zuschuss.</p>
   <div class="mt-7 flex flex-col sm:flex-row gap-3">
-    <a href="#test" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold text-lg shadow-card">
-      Selbsttest starten
+    <a href="#stufen" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold text-lg shadow-card">
+      Die vier Stufen ansehen
     </a>
-    <a href="#stufen" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl font-head font-medium text-ofen underline underline-offset-4">
-      Wie die Akademie funktioniert
+    <a href="#test" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl font-head font-medium text-ofen underline underline-offset-4">
+      Selbsttest — 2 Minuten
     </a>
   </div>
 </header>
@@ -88,8 +89,36 @@ tailwind.config = {
       „Miriam ist 34. Sie arbeitet im Einkauf. Sie hat die Bestellprognose mit KI verbessert.
       Niemand hat ihr dafür eine Rolle gegeben. Sie hat sich die Rolle selbst gebaut."
     </blockquote>
-    <figcaption class="mt-3 text-sm text-espresso/60">Aus dem Leitbild der CAIO-Akademie</figcaption>
+    <figcaption class="mt-3 text-sm text-espresso/60">Aus dem <a class="underline underline-offset-2 hover:text-espresso" href="ueber-uns.html#leitbild">Leitbild der CAIO-Akademie</a></figcaption>
   </figure>
+</section>
+
+<!-- 2c. DIE AKADEMIE IN ZAHLEN -->
+<section class="max-w-[1120px] mx-auto px-5 md:px-8 py-6">
+  <div class="bg-white rounded-2xl shadow-card p-6 md:p-8">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <p class="font-head font-bold text-ofen">Die Akademie in Zahlen</p>
+      <a href="ueber-uns.html" class="text-sm font-semibold text-ofen underline underline-offset-2">Leitbild, Zahlen &amp; Dozenten: Über uns →</a>
+    </div>
+    <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <div>
+        <p class="font-head font-bold text-2xl text-orange">10+</p>
+        <p class="text-xs text-espresso/70 mt-1">Jahre Fördermittel-Expertise</p>
+      </div>
+      <div>
+        <p class="font-head font-bold text-2xl text-orange">bis 95 %</p>
+        <p class="text-xs text-espresso/70 mt-1">Bewilligungsquote bei Begleitung</p>
+      </div>
+      <div>
+        <p class="font-head font-bold text-2xl text-orange">18</p>
+        <p class="text-xs text-espresso/70 mt-1">Dozenten &amp; Praxis-Experten</p>
+      </div>
+      <div>
+        <p class="font-head font-bold text-2xl text-orange">AZAV · ISO</p>
+        <p class="text-xs text-espresso/70 mt-1">Zertifizierte Qualität (9001 &amp; 56002)</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- 2b. WAS IST EIN CAIO -->
@@ -394,7 +423,7 @@ tailwind.config = {
           class="w-full min-h-[56px] px-4 rounded-xl border border-espresso/20 bg-mehl text-base">
         <label class="flex items-start gap-2 text-xs text-espresso/70">
           <input type="checkbox" id="ergebnis-dsgvo" required class="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E4572E]">
-          <span>Ich habe die <a class="underline underline-offset-2" href="datenschutz.html">Datenschutzerklärung</a> gelesen und willige in den Erhalt von Akademie-Infos ein. Jederzeit abbestellbar.</span>
+          <span>Ich habe die <a class="underline underline-offset-2" href="https://wissensreich.academy/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und willige in den Erhalt von Akademie-Infos ein. Jederzeit abbestellbar.</span>
         </label>
         <altcha-widget challengejson='{"algorithm":"SHA-256","challenge":"f5a65af59cb73c0083c25f41e4ee758bf9a9ecbd0d59d32086f6195e119cffd4","salt":"3d091ff821c14aa431b5851e29f4f644","signature":"abab7ff5993b701f555fe2975467ebe5c4d865434a43349b5c168bc02e31e5ea","maxnumber":100000}' name="altcha-ergebnis" strings='{"label":"Ich bin kein Roboter","verifying":"Prüfen …","verified":"Bestätigt"}'></altcha-widget>
         <button class="min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold">
@@ -423,7 +452,7 @@ tailwind.config = {
       <textarea rows="3" placeholder="Worum geht es? (optional)" aria-label="Deine Nachricht" class="w-full min-h-[48px] px-4 py-3 rounded-xl border border-espresso/20 bg-mehl text-base"></textarea>
       <label class="flex items-start gap-2 text-xs text-espresso/70">
         <input type="checkbox" id="kontakt-dsgvo" required class="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E4572E]">
-        <span>Ich habe die <a class="underline underline-offset-2" href="datenschutz.html">Datenschutzerklärung</a> gelesen und bin mit der Kontaktaufnahme einverstanden.</span>
+        <span>Ich habe die <a class="underline underline-offset-2" href="https://wissensreich.academy/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a> gelesen und bin mit der Kontaktaufnahme einverstanden.</span>
       </label>
       <altcha-widget challengejson='{"algorithm":"SHA-256","challenge":"f5a65af59cb73c0083c25f41e4ee758bf9a9ecbd0d59d32086f6195e119cffd4","salt":"3d091ff821c14aa431b5851e29f4f644","signature":"abab7ff5993b701f555fe2975467ebe5c4d865434a43349b5c168bc02e31e5ea","maxnumber":100000}' name="altcha-kontakt" strings='{"label":"Ich bin kein Roboter","verifying":"Prüfen …","verified":"Bestätigt"}'></altcha-widget>
       <button type="submit" class="min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold">E-Mail vorbereiten</button>
@@ -436,10 +465,11 @@ tailwind.config = {
 <footer class="max-w-[1120px] mx-auto px-5 md:px-8 pt-10 pb-28 text-sm text-espresso/60">
   <p>CAIO-Akademie · Ein Projekt des Verbunds Conversion-Day · Wissensreich Academy · Deal-Maker · Grenzenlos</p>
   <p class="mt-3">
+    <a class="underline underline-offset-2 hover:text-espresso" href="ueber-uns.html">Über uns</a> ·
     <a class="underline underline-offset-2 hover:text-espresso" href="berufsbild.html">Berufsbild CAIO</a> ·
     <a class="underline underline-offset-2 hover:text-espresso" href="glossar.html">Glossar</a> ·
-    <a class="underline underline-offset-2 hover:text-espresso" href="impressum.html">Impressum</a> ·
-    <a class="underline underline-offset-2 hover:text-espresso" href="datenschutz.html">Datenschutz</a>
+    <a class="underline underline-offset-2 hover:text-espresso" href="https://wissensreich.academy/impressum" target="_blank" rel="noopener">Impressum</a> ·
+    <a class="underline underline-offset-2 hover:text-espresso" href="https://wissensreich.academy/datenschutz" target="_blank" rel="noopener">Datenschutz</a>
   </p>
 </footer>
 

@@ -30,7 +30,8 @@ Praxisfall über alle Stufen: die KI-Bäckerei.
 ## Landingpage
 
 - Pflicht: `landingpage/index.html`
-- Rechtsseiten: `landingpage/impressum.html`, `landingpage/datenschutz.html`
+- Unterseiten: `berufsbild.html`, `ueber-uns.html` (Leitbild, Zahlen, Dozenten), `glossar.html`, `danke/` (Dankesseite nach Formular)
+- Impressum/Datenschutz: verlinkt extern auf wissensreich.academy (neuer Tab)
 - Deployment: GitHub Pages (Workflow `.github/workflows/deploy.yml`)
 - URL: https://dennis343.github.io/CAIO-Akademie/
 
