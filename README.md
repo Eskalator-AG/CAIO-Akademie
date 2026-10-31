@@ -1,4 +1,4 @@
-# KI-Bäckerei & CAIO-Akademie
+# KI-Bäckerei & CAIO Institut
 
 Ein Repo. Zwei Bausteine. Ein Ziel: KI-Kompetenz, die im Alltag arbeitet.
 
@@ -11,7 +11,7 @@ Automatische Bestellvorhersage für den Großhandel. Die allgemein gültigen Men
 - Berechnung: Tagesfaktor (1 / 1.25 / 0.75) × Basismenge pro KW, gestaffelt über KW 1–4
 - Wochenlogik: vor dem Sonntag +25 %, am Montag −25 %
 
-## 2. CAIO-Akademie
+## 2. CAIO Institut
 
 Gestufte Ausbildung zur Rolle „Chief AI Officer" in 4 Stufen.
 Praxisfall über alle Stufen: die KI-Bäckerei.
@@ -33,7 +33,7 @@ Praxisfall über alle Stufen: die KI-Bäckerei.
 - Unterseiten: `berufsbild.html`, `ueber-uns.html` (Leitbild, Zahlen, Dozenten), `glossar.html`, `danke/` (Dankesseite nach Formular)
 - Impressum/Datenschutz: verlinkt extern auf wissensreich.academy (neuer Tab)
 - Deployment: GitHub Pages (Workflow `.github/workflows/deploy.yml`)
-- URL: https://dennis343.github.io/CAIO-Akademie/
+- URL: https://dennis343.github.io/CAIO Institut/
 
 ## Regeln für Beiträge
 
