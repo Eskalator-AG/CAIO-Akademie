@@ -212,6 +212,27 @@ Hinweis zum Test: Erste Browserprüfungen liefen auf die gecachte Vorversion (Gi
 
 **Quellen der Fakten:** Live-Site wissensreich.academy (10+ Jahre, bis 90–95 % Bewilligungsquote, Zertifikate, Awards, Dozenten-Themen, GF) und Asset-Bestand des Wissensreich-Repos (18 Dozenten-Fotos, Siegel, Awards). Keine Rollen oder Zahlen erfunden — unbelegte Dozenten heißen neutral „Praxis-Experte/-in".
 
+---
+
+## Nachtrag: Conversion-Paket nach Maximus-Analyse (31.10.2026, Commit `ff7cb19`)
+
+Auftraggeber-Freigabe: P1–P6 + O1/O2 (O3 WhatsApp entfallen — im Wissensreich-Bestand exists keine Messenger-Nummer; Telefon +49 208 377 695 71 verfügbar als Alternative).
+
+| Maßnahme | Umsetzung | Prüfergebnis |
+|---|---|---|
+| P1 FAQ | 10 Akkordeon-Fragen (`#faq`) + FAQPage-JSON-LD für Rich-Snippets | ✔ 10 Details, JSON-LD im DOM |
+| P2 Erstgesprächs-Ablauf | Karte „So läuft das kostenfreie Erstgespräch" (3 Schritte + 4 Takeaways) unter der Kontakt-Karte | ✔ |
+| P3 Vergleichstabelle | „Drei Wege zur KI-Kompetenz": Tool-Schulung · KI-Agentur · CAIO-Akademie (Desktop-Tabelle, mobil 3 Akkordeon-Karten) | ✔ |
+| P4 CTA-Frequenz | 6 dezente Sekundär-CTAs nach Matrix, Spannungsfeld, Ökosystem u. a. | ✔ |
+| P5 Stimmen & Praxisfall | 3 echte Google-Rezensionen (Thaller, Augner Seminare, Zijlstra — wörtliche Zitate von wissensreich.academy) + Praxisfall KI-Bäckerei | ✔ 3 Figuren, Praxisfall vorhanden |
+| P6 Förder-Topbar | Dezente Leiste über der Navigation: „Förderfähig: 30–100 % Zuschuss — im kostenfreien Erstgespräch ermitteln" | ✔ |
+| O1 Zahlen-Counter | Zahlen-Band zählt beim ersten Sichtbarwerden (IntersectionObserver, 900 ms, reduced-motion = Sofortwert) | ✔ Endwerte 10+ / bis 95 % / 18 |
+| O2 Passt-zu-dir | 4 ehrliche Ja-Kriterien + ehrliche 0–2-Ja-Empfehlung (Erstgespräch statt Test) | ✔ 4 Karten |
+| Ortsanzeige | Neue Labels: Vergleich · Stimmen · Passt zu dir? · FAQ | ✔ |
+| 360 px ohne horizontales Scrollen | ✔ |
+
+**Bewusst nicht übernommen** (Tonalitätsregel „Nie Angst machen"): künstliche Verknappung/„Nur diesen Monat", anonyme Siegel, Rezessions-Angst-Appell, verschleierte Preise.
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
