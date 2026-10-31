@@ -473,7 +473,10 @@ updateOrt();
 // Kontakt: E-Mail vorbereiten (öffnet das E-Mail-Programm, kein Versand über die Seite)
 function istAltchaOk(form){
   const w=form.querySelector('altcha-widget');
-  return !!w&&w.state==='verified';
+  if(!w)return false;
+  if(w.state==='verified')return true;
+  const h=w.querySelector('input[type=hidden]');
+  return !!h&&h.value.length>0;
 }
 function zeigeHinweis(id,text){
   const h=document.getElementById(id);
