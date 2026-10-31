@@ -343,3 +343,14 @@ Bestandsaufnahme: Neue Seiteninhalte seit Erstellung (CAIO-Einschub mit C-Ebene,
 | reduced-motion: Transition deaktiviert | ✔ |
 | Implementierung: JS-gesteuerte Inline-Styles; ein erster CSS-Kaskaden-Ansatz wurde im Live-Betrieb trotz korrekt registrierter Regeln nicht angewendet (Cascade-Anomalie unter Tailwind-CDN) und deterministisch ersetzt | Fix dokumentiert |
 | Auf allen 5 Seiten ausgerollt | ✔ |
+
+---
+
+## Nachtrag: Z.ai → Mistral (Le Chat) (31.10.2026, Commit `f39f65d`)
+
+| Prüfpunkt | Ergebnis |
+|---|---|
+| Z.ai durch Mistral (Le Chat) ersetzt (Auftraggeber-Präferenz); Recherche vorab: Le Chat hat keinen dokumentierten URL-Prefill (searchgptforme.com/Superuser) | umgesetzt |
+| Mistral-Klick überträgt Prompt als `?q=`-Parameter (wirkt, sobald Mistral Prefill unterstützt) UND kopiert in die Zwischenablage; dynamischer Hinweis: „Prompt kopiert — im Le-Chat-Eingabefeld mit Strg/Cmd+V einfügen." | ✔ E2E: URL enthält `?q=Fasse…`, Hinweis korrekt |
+| ChatGPT/Claude unverändert (Prefill `?q=` + Clipboard) | ✔ |
+| Auf allen 5 Seiten | ✔ |
