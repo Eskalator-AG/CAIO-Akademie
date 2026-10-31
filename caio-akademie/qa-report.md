@@ -233,6 +233,20 @@ Auftraggeber-Freigabe: P1–P6 + O1/O2 (O3 WhatsApp entfallen — im Wissensreic
 
 **Bewusst nicht übernommen** (Tonalitätsregel „Nie Angst machen"): künstliche Verknappung/„Nur diesen Monat", anonyme Siegel, Rezessions-Angst-Appell, verschleierte Preise.
 
+---
+
+## Nachtrag: Ortsanzeige auf allen Unterseiten & Logo (31.10.2026, Commit `d1cadbe`)
+
+| Anforderung | Umsetzung | Prüfergebnis |
+|---|---|---|
+| Zweite Navigationsebene („Du bist hier:") auf allen Unterseiten | Strip in der Navigation aller 5 Seiten + Scroll-Spy-Skript + `data-ort`-Labels: Berufsbild (Berufsbild · Handlungsfelder · Pro & Contra · Zahlen · Gehalt · Beispiele · Weg zur Rolle · Quellen), Über uns (Über uns · Leitbild · Zahlen & Fakten · Zertifikate & Awards · Dozenten), Glossar (Glossar · A–D · E–K · L–R · S–Z), Danke (statisch „Danke"); Scroll-Offset auf 104 px vereinheitlicht | ✔ Berufsbild 4/4 Sektionen korrekt, Glossar 3/3 korrekt (echtes Scrollen, instant) |
+| Logo entwickeln | Handgezeichnetes SVG-Mark „Ofenbogen mit vier Stufen": Ofenblauer Grundstein (Bogen = Praxisfall KI-Bäckerei/Ofen), vier aufsteigende Stufen (AIP→CAIO), oberste Stufe in Krustenorange; dazu Wortmarke „CAIO-Akademie" (Space Grotesk) mit Claim „Ausbildung zum Chief AI Officer" | ✔ Nav-Wortmarke 28 px, Footer-Lockup 40 px mit Claim, auf allen Seiten |
+| Favicon | Das Mark als URL-kodiertes SVG-Favicon auf allen Seiten (ersetzt das generische „C") | ✔ im DOM verifiziert |
+| Asset-Ablage | `assets/logo-mark.svg` für externe Nutzung (OG-Bild, Print etc.) | ✔ |
+| 360 px ohne horizontales Scrollen | ✔ | |
+
+**Design-Begründung (nicht generisch, kein KI-Slop):** geometrische Konstruktion aus zwei Bedeutungsträgern (Backofen-Bogen = handwerklicher Praxisfall; Stufenleiter = 4-stufiger Ausbildungspfad in den echten Stufenakzenten), auf 16 px Favicon-Größe lesbar reduziert, flach ohne Verläufe/Glow.
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
