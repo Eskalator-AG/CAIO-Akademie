@@ -46,6 +46,12 @@ tailwind.config = {
 <body class="bg-mehl text-espresso font-body text-[17px] leading-relaxed antialiased">
 
 <!-- 0. NAVIGATION -->
+<!-- FÖRDER-TOPBAR -->
+<div class="bg-ofen text-mehl text-center text-xs sm:text-sm px-4 py-2">
+  Förderfähig: 30–100&nbsp;% Zuschuss möglich —
+  <a href="#test" class="underline underline-offset-2 font-semibold">im kostenfreien Erstgespräch ermitteln</a>
+</div>
+
 <nav aria-label="Hauptnavigation" class="sticky top-0 z-40 bg-mehl/95 backdrop-blur border-b border-espresso/10">
   <div class="max-w-[1120px] mx-auto px-5 md:px-8 flex items-center justify-between min-h-[56px]">
     <a href="#top" class="font-head font-bold text-ofen text-[15px] sm:text-base whitespace-nowrap">CAIO-Akademie</a>
@@ -102,15 +108,15 @@ tailwind.config = {
     </div>
     <div class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
       <div>
-        <p class="font-head font-bold text-2xl text-orange">10+</p>
+        <p class="font-head font-bold text-2xl text-orange" data-count-to="10" data-suffix="+">10+</p>
         <p class="text-xs text-espresso/70 mt-1">Jahre Fördermittel-Expertise</p>
       </div>
       <div>
-        <p class="font-head font-bold text-2xl text-orange">bis 95 %</p>
+        <p class="font-head font-bold text-2xl text-orange" data-count-to="95" data-prefix="bis " data-suffix=" %">bis 95 %</p>
         <p class="text-xs text-espresso/70 mt-1">Bewilligungsquote bei Begleitung</p>
       </div>
       <div>
-        <p class="font-head font-bold text-2xl text-orange">18</p>
+        <p class="font-head font-bold text-2xl text-orange" data-count-to="18">18</p>
         <p class="text-xs text-espresso/70 mt-1">Dozenten &amp; Praxis-Experten</p>
       </div>
       <div>
@@ -342,6 +348,7 @@ tailwind.config = {
     </details>
   </div>
   <p class="mt-4 text-sm text-espresso/60">★ = großer Schwerpunkt der jeweiligen Stufe: AIP → Menschen &amp; Change · AIO → Wirtschaftlichkeit · AIA → Technologie &amp; Daten · CAIO → Sicherheit &amp; Recht.</p>
+  <p class="mt-3 text-sm"><a class="font-semibold text-ofen underline underline-offset-2" href="#stufen">Passt zu dir? Die vier Stufen im Detail ansehen →</a></p>
 </section>
 
 <!-- 5b. SPANNUNGSFELD -->
@@ -390,6 +397,47 @@ tailwind.config = {
     </div>
     <p class="mt-4 text-sm text-mehl/80">Begriffe wie DSGVO, CLOUD Act oder Risikoklassen erklärt unser <a class="underline underline-offset-2 font-semibold text-mehl" href="glossar.html">Glossar →</a></p>
   </div>
+  <p class="mt-4 text-sm"><a class="font-semibold text-ofen underline underline-offset-2" href="#test">Unklar, welche Regeln Ihr Vorhaben betreffen? Kostenfreies Erstgespräch anfragen →</a></p>
+</section>
+
+<!-- 5c. VERGLEICH -->
+<section id="vergleich" data-ort="Vergleich" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+  <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Drei Wege zur KI-Kompetenz</h2>
+  <p class="mt-3 max-w-[60ch]">Es gibt mehrere Wege. Sie unterscheiden sich vor allem darin, was am Ende in Ihrem Unternehmen bleibt.</p>
+  <div class="hidden md:block mt-6 bg-white rounded-2xl shadow-card overflow-x-auto">
+    <table class="w-full text-sm text-left">
+      <thead class="bg-ofen text-mehl font-head">
+        <tr><th class="p-4 bg-ofen">Kriterium</th><th class="p-4 bg-sand/70 text-espresso">Tool-Schulung</th><th class="p-4 bg-orange/70 text-espresso">KI-Agentur</th><th class="p-4 bg-nacht">CAIO-Akademie</th></tr>
+      </thead>
+      <tbody class="[&_td]:p-4 [&_tr]:border-t [&_tr]:border-espresso/10">
+        <tr><td class="font-semibold">Ziel</td><td>Bedienung einzelner Tools</td><td>Gelieferte Lösungen</td><td class="bg-nacht/15 font-semibold">Eigenständige Urteils- und Umsetzungskompetenz</td></tr>
+        <tr><td class="font-semibold">Was im Haus bleibt</td><td>Tool-Wissen, das veraltet</td><td>Abhängigkeit, Blackbox</td><td class="bg-nacht/15 font-semibold">Kompetenz — der Architekt statt des Handwerkers</td></tr>
+        <tr><td class="font-semibold">Zeithorizont</td><td>Tage</td><td>Wochen bis Monate</td><td class="bg-nacht/15 font-semibold">Gestuft: 32+ Stunden bis 12 Monate</td></tr>
+        <tr><td class="font-semibold">Förderfähigkeit</td><td>Selten</td><td>Selten</td><td class="bg-nacht/15 font-semibold">30–100 % Zuschuss möglich (AZAV-zertifiziert)</td></tr>
+        <tr><td class="font-semibold">Ergebnis</td><td>Zertifikat für ein Programm</td><td>Fremd umgesetztes Projekt</td><td class="bg-nacht/15 font-semibold">Nachweise je Stufe: AIP · AIO · AIA · CAIO</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="md:hidden mt-6 grid gap-3">
+    <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">Tool-Schulung</summary>
+      <ul class="mt-2 text-sm space-y-1 text-espresso/80 list-disc pl-5">
+        <li>Ziel: Bedienung einzelner Tools</li><li>Bleibt: Tool-Wissen, das veraltet</li><li>Zeit: Tage</li><li>Förderung: selten</li>
+      </ul>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">KI-Agentur</summary>
+      <ul class="mt-2 text-sm space-y-1 text-espresso/80 list-disc pl-5">
+        <li>Ziel: gelieferte Lösungen</li><li>Bleibt: Abhängigkeit, Blackbox</li><li>Zeit: Wochen bis Monate</li><li>Förderung: selten</li>
+      </ul>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card p-5 border-2 border-nacht/30">
+      <summary class="font-semibold text-ofen">CAIO-Akademie</summary>
+      <ul class="mt-2 text-sm space-y-1 text-espresso/80 list-disc pl-5">
+        <li>Ziel: eigenständige Kompetenz</li><li>Bleibt: der Architekt statt des Handwerkers</li><li>Zeit: gestuft, 32+ Stunden bis 12 Monate</li><li>Förderung: 30–100 % möglich</li><li>Nachweise: AIP · AIO · AIA · CAIO</li>
+      </ul>
+    </details>
+  </div>
 </section>
 
 <!-- 6. ÖKOSYSTEM -->
@@ -402,6 +450,43 @@ tailwind.config = {
     <li class="p-5"><strong class="font-head">Grenzenlos</strong> – trägt das Modell über Grenzen.</li>
     <li class="p-5"><strong class="font-head">KI-Bäckerei</strong> – zeigt bei all dem: So sieht Praxis aus.</li>
   </ul>
+  <p class="mt-4 text-sm"><a class="font-semibold text-ofen underline underline-offset-2" href="#test">Bereit durchzustarten? Selbsttest — 2 Minuten →</a></p>
+</section>
+
+<!-- 6b. STIMMEN & PRAXISFALL -->
+<section id="stimmen" data-ort="Stimmen" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+  <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Stimmen &amp; Praxisfall</h2>
+  <div class="mt-6 grid gap-4 md:grid-cols-3">
+    <figure class="bg-white rounded-2xl shadow-card p-6 flex flex-col">
+      <blockquote class="text-[15px] italic">„Der Kurs und die Unterstützung war wirklich top: freundlich, schnell und jederzeit erreichbar."</blockquote>
+      <figcaption class="mt-3 text-sm text-espresso/60 mt-auto">Thomas Thaller · Google-Rezension zur Wissensreich Academy</figcaption>
+    </figure>
+    <figure class="bg-white rounded-2xl shadow-card p-6 flex flex-col">
+      <blockquote class="text-[15px] italic">„Die Unterstützung war grandios, ich wurde wunderbar durch die (komplizierten) Antragsprozesse geführt und begleitet."</blockquote>
+      <figcaption class="mt-3 text-sm text-espresso/60 mt-auto">Augner Seminare · Google-Rezension zur Wissensreich Academy</figcaption>
+    </figure>
+    <figure class="bg-white rounded-2xl shadow-card p-6 flex flex-col">
+      <blockquote class="text-[15px] italic">„Die Unterstützung beim Förderantrag war großartig — von der Antragstellung bis zur Auszahlung."</blockquote>
+      <figcaption class="mt-3 text-sm text-espresso/60 mt-auto">Lantijn Zijlstra · Google-Rezension zur Wissensreich Academy</figcaption>
+    </figure>
+  </div>
+  <div class="mt-4 bg-white rounded-2xl shadow-card border-l-4 border-sand p-6 md:p-8">
+    <p class="font-head font-bold text-ofen text-lg">Der Praxisfall: die KI-Bäckerei</p>
+    <p class="mt-2 text-[15px] max-w-[64ch]">Alle Stufen arbeiten an einem echten Fall: einer Bäckerei-Gruppe, deren Einkauf die Bestellprognose mit KI verbessert. Das Ergebnis: weniger Ausschuss, weniger leere Regale — dokumentiert, mit Zahlen, von einer Fachkraft ohne formalen KI-Titel. Genau diese Arbeit macht die Akademie sichtbar, benennbar und wiederholbar.</p>
+  </div>
+</section>
+
+<!-- 6c. PASST ZU DIR? -->
+<section id="passt" data-ort="Passt zu dir?" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
+  <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Passt die Akademie zu dir?</h2>
+  <p class="mt-3 max-w-[60ch]">Vier ehrliche Fragen. Ehrlich beantwortet — in beide Richtungen.</p>
+  <div class="mt-6 grid gap-3 md:grid-cols-2">
+    <div class="bg-white rounded-2xl shadow-card p-5 flex gap-3"><span class="font-head font-bold text-orange">1</span><p class="text-[15px]">Du willst verstehen und entscheiden — nicht nur bedienen.</p></div>
+    <div class="bg-white rounded-2xl shadow-card p-5 flex gap-3"><span class="font-head font-bold text-orange">2</span><p class="text-[15px]">Dein Unternehmen hat reale Aufgaben, an denen du arbeiten kannst.</p></div>
+    <div class="bg-white rounded-2xl shadow-card p-5 flex gap-3"><span class="font-head font-bold text-orange">3</span><p class="text-[15px]">Du kannst 4–6 Stunden pro Woche investieren.</p></div>
+    <div class="bg-white rounded-2xl shadow-card p-5 flex gap-3"><span class="font-head font-bold text-orange">4</span><p class="text-[15px]">Deine Führung unterstützt das Vorhaben.</p></div>
+  </div>
+  <p class="mt-4 text-[15px]"><strong>Viermal Ja?</strong> Dann starte mit dem Selbsttest. <strong>Null bis zweimal Ja?</strong> Dann kläre im Erstgespräch, ob jetzt der richtige Zeitpunkt ist — auch das ist ein Ergebnis.</p>
 </section>
 
 <!-- 7. SELBSTTEST -->
@@ -459,6 +544,70 @@ tailwind.config = {
       <p id="kontakt-hinweis" class="hidden text-xs text-rose-600"></p>
       <p class="text-xs text-espresso/50">Öffnet dein E-Mail-Programm mit vorbereiteter Nachricht an concierge@wissensreich.academy — danach geht es zur Bestätigungsseite. Über diese Seite werden keine Formulardaten übertragen.</p>
     </form>
+  </div>
+  <div class="mt-6 bg-ofen rounded-2xl shadow-card p-6 md:p-8 text-mehl">
+    <p class="font-head font-bold text-lg">So läuft das kostenfreie Erstgespräch</p>
+    <div class="mt-4 grid gap-3 md:grid-cols-3 text-sm">
+      <p><strong class="font-head">1 · Anfrage.</strong> Formular oben oder direkt an concierge@wissensreich.academy.</p>
+      <p><strong class="font-head">2 · Termin.</strong> 20 Minuten Telefon oder Video — passend zu deinem Kalender.</p>
+      <p><strong class="font-head">3 · Ergebnis.</strong> Du erhältst schriftlich: Empfehlung, Förder-Check, nächste Schritte.</p>
+    </div>
+    <div class="mt-5 pt-4 border-t border-mehl/20">
+      <p class="text-sm font-semibold">Das nimmst du mit — kostenfrei und unverbindlich:</p>
+      <ul class="mt-2 grid gap-1.5 text-sm list-disc pl-5">
+        <li>Stufen-Empfehlung: AIP, AIO, AIA oder CAIO — inklusive Begründung</li>
+        <li>Förder-Check: deine individuelle Quote zwischen 30 und 100 %</li>
+        <li>Realistischer Zeitplan für dein Vorhaben</li>
+        <li>Die drei nächsten Schritte — schriftlich</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 8. FAQ -->
+<section id="faq" data-ort="FAQ" class="max-w-[760px] mx-auto px-5 md:px-8 py-12">
+  <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Häufige Fragen</h2>
+  <div class="mt-6 grid gap-3">
+    <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">Für wen ist die CAIO-Akademie?</summary>
+      <p class="mt-2 text-[15px] text-espresso/85">Für Fachkräfte mit Technik-Affinität, Teamleiter:innen und angehende KI-Verantwortliche — und für deren Chefs. Für Menschen wie Miriam, die die Arbeit bereits machen. Und für Unternehmen, die aus der KI-Pflicht einen Vorsprung machen wollen.</p>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">Muss ich Vorkenntnisse mitbringen?</summary>
+      <p class="mt-2 text-[15px] text-espresso/85">Für Stufe 1 (AI Professional, AIP) brauchst du keine Vorkenntnisse. Für Stufe 2 (AI Officer, AIO) genügt Stufe 1 — oder 6+ Punkte im Selbsttest.</p>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">Wie viel Zeit muss ich einplanen?</summary>
+      <p class="mt-2 text-[15px] text-espresso/85">Stufe 1: über 32 Stunden Fundament. Stufe 2: 4–6 Wochen mit 4–6 Stunden pro Woche. Stufe 3: 3–6 Monate am echten Fall. Stufe 4: 6–12 Monate mit Governance-Verantwortung.</p>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">Sind die Angebote förderfähig?</summary>
+      <p class="mt-2 text-[15px] text-espresso/85">Ja, grundsätzlich — je nach Zielgruppe und Programm sind 30 bis 100 % Zuschuss möglich. Die individuelle Quote ermitteln wir im kostenfreien Erstgespräch. Träger ist die AZAV-zertifizierte Wissensreich Academy.</p>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">Welche Nachweise erhalte ich?</summary>
+      <p class="mt-2 text-[15px] text-espresso/85">Jede Stufe endet mit einem Nachweis: Basis-Zertifikat (AIP), geprüfter Business Case (AIO), Meisterstück-Projekt (AIA) und das CAIO-Zertifikat in Stufe 4.</p>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">Was hat der EU AI Act damit zu tun?</summary>
+      <p class="mt-2 text-[15px] text-espresso/85">Artikel 4 verlangt seit Februar 2025 KI-Kompetenz in den Belegschaften. Stufe 1 erfüllt diese Basis. Wir machen aus der Pflicht einen Vorsprung — nicht umgekehrt.</p>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">Für wen ist die Akademie nicht geeignet?</summary>
+      <p class="mt-2 text-[15px] text-espresso/85">Für alle, die fertige Lösungen kaufen wollen, statt Kompetenz aufzubauen. Wer eine Umsetzung einkauft, ist bei einer Agentur besser aufgehoben — das sagen wir offen.</p>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">Was kostet die Teilnahme?</summary>
+      <p class="mt-2 text-[15px] text-espresso/85">Die Kosten hängen von Stufe und Förderung ab. Deshalb klären wir beides im Erstgespräch: erst der Zuschuss, dann das Budget. So planst du mit echten Zahlen.</p>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">Gibt es einen kostenlosen Einstieg?</summary>
+      <p class="mt-2 text-[15px] text-espresso/85">Ja, zwei: den Selbsttest (2 Minuten, sofortiges Ergebnis mit Kurs-Empfehlung) und das kostenfreie Erstgespräch mit Stufen-Empfehlung und Förder-Check.</p>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">Können ganze Teams oder Unternehmen teilnehmen?</summary>
+      <p class="mt-2 text-[15px] text-espresso/85">Ja. Firmen qualifizieren einzelne Mitarbeitende oder ganze Teams — von der AIP-Basisqualifizierung bis zur CAIO-Verantwortung. Sprechen Sie uns an, wir skizzieren den Pfad.</p>
+    </details>
   </div>
 </section>
 
@@ -580,6 +729,39 @@ function showResult(){
   history.replaceState(null,'',`?r=${b[2].includes('CAIO')?'caio':b[2].includes('Navigator')?'navigator':'entdecker'}`);
 }
 render();
+
+// Zahlen-Counter: zählt beim ersten Sichtbarwerden hoch (respektiert reduced-motion)
+const zahlEls=document.querySelectorAll('[data-count-to]');
+if(zahlEls.length&&'IntersectionObserver'in window){
+  const zaehlHoch=(el)=>{
+    const ziel=parseInt(el.dataset.countTo,10),vor=el.dataset.prefix||'',nach=el.dataset.suffix||'';
+    if(matchMedia('(prefers-reduced-motion: reduce)').matches){el.textContent=vor+ziel+nach;return;}
+    const start=performance.now(),dauer=900;
+    const schritt=(t)=>{
+      const p=Math.min((t-start)/dauer,1),wert=Math.round(ziel*(0.2+0.8*p*p));
+      el.textContent=vor+wert+nach;
+      if(p<1)requestAnimationFrame(schritt);else el.textContent=vor+ziel+nach;
+    };
+    requestAnimationFrame(schritt);
+  };
+  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){zaehlHoch(e.target);io.unobserve(e.target);}});},{threshold:0.5});
+  zahlEls.forEach(el=>io.observe(el));
+}
+</script>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Für wen ist die CAIO-Akademie?","acceptedAnswer":{"@type":"Answer","text":"Für Fachkräfte mit Technik-Affinität, Teamleiter:innen und angehende KI-Verantwortliche — und für deren Chefs. Für Menschen wie Miriam, die die Arbeit bereits machen. Und für Unternehmen, die aus der KI-Pflicht einen Vorsprung machen wollen."}},
+{"@type":"Question","name":"Muss ich Vorkenntnisse mitbringen?","acceptedAnswer":{"@type":"Answer","text":"Für Stufe 1 (AI Professional, AIP) brauchst du keine Vorkenntnisse. Für Stufe 2 (AI Officer, AIO) genügt Stufe 1 — oder 6+ Punkte im Selbsttest."}},
+{"@type":"Question","name":"Wie viel Zeit muss ich einplanen?","acceptedAnswer":{"@type":"Answer","text":"Stufe 1: über 32 Stunden Fundament. Stufe 2: 4–6 Wochen mit 4–6 Stunden pro Woche. Stufe 3: 3–6 Monate am echten Fall. Stufe 4: 6–12 Monate mit Governance-Verantwortung."}},
+{"@type":"Question","name":"Sind die Angebote förderfähig?","acceptedAnswer":{"@type":"Answer","text":"Ja, grundsätzlich — je nach Zielgruppe und Programm sind 30 bis 100 % Zuschuss möglich. Die individuelle Quote ermitteln wir im kostenfreien Erstgespräch. Träger ist die AZAV-zertifizierte Wissensreich Academy."}},
+{"@type":"Question","name":"Welche Nachweise erhalte ich?","acceptedAnswer":{"@type":"Answer","text":"Jede Stufe endet mit einem Nachweis: Basis-Zertifikat (AIP), geprüfter Business Case (AIO), Meisterstück-Projekt (AIA) und das CAIO-Zertifikat in Stufe 4."}},
+{"@type":"Question","name":"Was hat der EU AI Act damit zu tun?","acceptedAnswer":{"@type":"Answer","text":"Artikel 4 verlangt seit Februar 2025 KI-Kompetenz in den Belegschaften. Stufe 1 erfüllt diese Basis. Wir machen aus der Pflicht einen Vorsprung."}},
+{"@type":"Question","name":"Für wen ist die Akademie nicht geeignet?","acceptedAnswer":{"@type":"Answer","text":"Für alle, die fertige Lösungen kaufen wollen, statt Kompetenz aufzubauen. Wer eine Umsetzung einkauft, ist bei einer Agentur besser aufgehoben."}},
+{"@type":"Question","name":"Was kostet die Teilnahme?","acceptedAnswer":{"@type":"Answer","text":"Die Kosten hängen von Stufe und Förderung ab. Deshalb klären wir beides im Erstgespräch: erst der Zuschuss, dann das Budget."}},
+{"@type":"Question","name":"Gibt es einen kostenlosen Einstieg?","acceptedAnswer":{"@type":"Answer","text":"Ja, zwei: den Selbsttest (2 Minuten, sofortiges Ergebnis mit Kurs-Empfehlung) und das kostenfreie Erstgespräch mit Stufen-Empfehlung und Förder-Check."}},
+{"@type":"Question","name":"Können ganze Teams oder Unternehmen teilnehmen?","acceptedAnswer":{"@type":"Answer","text":"Ja. Firmen qualifizieren einzelne Mitarbeitende oder ganze Teams — von der AIP-Basisqualifizierung bis zur CAIO-Verantwortung."}}
+]}
 </script>
 </body>
 </html>
