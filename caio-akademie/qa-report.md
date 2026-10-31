@@ -286,6 +286,18 @@ Auftraggeber-Freigabe: P1–P6 + O1/O2 (O3 WhatsApp entfallen — im Wissensreic
 | Emotionale Hero-Bilder auf allen Unterseiten | Echte kuratierte Stockfotos (Unsplash, freie Lizenz, 1600 px quer, `aspect-16/7`, `fetchpriority=high`): Berufsbild = erfahrene Führungskraft mit Tablet · Über uns = warme Bäckerei (Praxisfall) · Glossar = offenes Buch im warmen Licht · Danke = Händedruck vor Laptop. Bewusst echte Fotos statt KI-Generierung (Realismus, kein KI-Slop) | ✔ 4/4 geladen (HTTP 200, naturalWidth > 0); Bildanalyse: 8,5/10 bzw. 8/10 („authentisch, keine KI-Artefakte") |
 | Sticky Conversion-Bubble „Diese Seite mit deiner KI zusammenfassen lassen" | Floating-Bubble rechts unten (bottom-24, über der Sticky-CTA) auf allen 5 Seiten; Popover mit ChatGPT / Claude / Z.ai; Prompt inkl. Seiten-URL wird in die Zwischenablage kopiert, ChatGPT & Claude öffnen mit vorausgefüllter Frage (`?q=`), Z.ai öffnet Chat mit Einfüge-Hinweis; Outside-Click schließt; aria-expanded/controls | ✔ Popover öffnet, 3 Anbieter, kein Overflow, keine Kollision mit Sticky-CTA, auf allen 5 Seiten live |
 
+---
+
+## Nachtrag: Glossar- & FAQ-Aktualisierung (31.10.2026, Commit `bc57d4d`)
+
+Bestandsaufnahme: Neue Seiteninhalte seit Erstellung (CAIO-Einschub mit C-Ebene, Spannungsfeld mit Risikoklassen, Förderfakten AZAV/BAFA/INQA/95 %, Stufen-Schwerpunkte, KI-Assistenten-Bubble, Über-uns-Trägerinfos) waren nicht abgedeckt.
+
+| Bereich | Ergänzung | Prüfergebnis |
+|---|---|---|
+| Glossar | +6 Begriffe (34 → **40**): AZAV · C-Level (C-Ebene, mit CEO/CFO/CTO) · Förderzugänge (BAFA · INQA · ESF/KOMPASS) · KI-Assistent (Chatbot) · Risikoklasse · Zuschuss; Stufen-Einträge AIO/AIA um ihre Schwerpunkte ergänzt | ✔ alle 6 live |
+| FAQ | +4 Fragen (10 → **14**): „Was bedeutet CAIO?" (Begriffszzerlegung) · „Welchen Schwerpunkt hat welche Stufe?" · „Wie löse ich den Konflikt zwischen KI-Einsatz und Datenschutz?" (Verweis Spannungsfeld) · „Wer steht hinter dem CAIO Institut?" (Verweis Über uns); Förder-Antwort um „bis 95 % Bewilligungsquote" angereichert; Grammatikfix „Für wen ist **das** CAIO Institut?" | ✔ alle live |
+| FAQ-JSON-LD | synchron auf 14 Fragen erweitert | ✔ JSON validiert |
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
