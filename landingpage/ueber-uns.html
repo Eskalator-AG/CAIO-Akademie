@@ -301,7 +301,7 @@ updateOrtU();
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CAIO Institut","item":"https://www.caio-institut.de/"},{"@type":"ListItem","position":2,"name":"Über uns & Leitbild","item":"https://www.caio-institut.de/ueber-uns.html"}]}</script>
 
-<!-- KI-Zusammenfassungs-Bubble (sticky) -->
+<!-- KI-Zusammenfassungs-Bubble (sticky, scroll-kollabierend) -->
 <div id="ai-bubble-wrap" class="fixed right-4 bottom-24 z-40 flex flex-col items-end gap-2">
   <div id="ai-popover" class="hidden bg-white rounded-2xl shadow-card border border-espresso/10 p-4 w-72 max-w-[calc(100vw-2rem)]">
     <p class="font-head font-bold text-ofen text-sm">Mit deiner KI zusammenfassen</p>
@@ -313,17 +313,30 @@ updateOrtU();
     </div>
     <p id="ai-hinweis" class="hidden mt-2 text-xs text-emerald-600"></p>
   </div>
-  <button id="ai-bubble" aria-expanded="false" aria-controls="ai-popover" class="inline-flex items-center gap-2 min-h-[48px] px-4 rounded-full bg-ofen text-mehl shadow-card font-head font-bold text-sm hover:bg-nacht max-w-[calc(100vw-2rem)]">
+  <button id="ai-bubble" aria-expanded="false" aria-controls="ai-popover" aria-label="Diese Seite mit deiner KI zusammenfassen"
+    class="inline-flex items-center justify-center gap-2 h-12 px-4 rounded-full bg-ofen text-mehl shadow-card font-head font-bold text-sm hover:bg-nacht max-w-[calc(100vw-2rem)] transition-all duration-200">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 flex-shrink-0" aria-hidden="true"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/></svg>
-    <span class="sm:hidden">Mit KI zusammenfassen</span><span class="hidden sm:inline">Diese Seite mit KI zusammenfassen</span>
+    <span class="ai-text whitespace-nowrap"><span class="sm:hidden">Mit KI zusammenfassen</span><span class="hidden sm:inline">Diese Seite mit KI zusammenfassen</span></span>
   </button>
 </div>
+<style>
+  #ai-bubble-wrap.ai-kollabiert #ai-bubble{padding-left:0;padding-right:0;width:48px;overflow:hidden}
+  #ai-bubble-wrap.ai-kollabiert .ai-text{display:none}
+  @media (hover:hover) and (min-width:640px){
+    #ai-bubble-wrap.ai-kollabiert #ai-bubble:hover{padding-left:1rem;padding-right:1rem;width:auto}
+    #ai-bubble-wrap.ai-kollabiert #ai-bubble:hover .ai-text{display:inline}
+  }
+  @media (prefers-reduced-motion: reduce){ #ai-bubble{transition:none!important} }
+</style>
 <script>
 (function(){
-  var b=document.getElementById('ai-bubble'),p=document.getElementById('ai-popover');
+  var w=document.getElementById('ai-bubble-wrap'),b=document.getElementById('ai-bubble'),p=document.getElementById('ai-popover');
   if(!b)return;
+  function kollaps(){w.classList.toggle('ai-kollabiert',scrollY>300);}
+  kollaps();
+  addEventListener('scroll',kollaps,{passive:true});
   b.addEventListener('click',function(){p.classList.toggle('hidden');b.setAttribute('aria-expanded',p.classList.contains('hidden')?'false':'true');});
-  document.addEventListener('click',function(e){if(!p.classList.contains('hidden')&&!document.getElementById('ai-bubble-wrap').contains(e.target)){p.classList.add('hidden');b.setAttribute('aria-expanded','false');}});
+  document.addEventListener('click',function(e){if(!p.classList.contains('hidden')&&!w.contains(e.target)){p.classList.add('hidden');b.setAttribute('aria-expanded','false');}});
   var url=location.origin+location.pathname;
   var prompt='Fasse bitte diese Seite knapp und strukturiert zusammen: Kernangebot, die vier Stufen (AIP, AIO, AIA, CAIO), Förder- und Kostenhinweise sowie die wichtigsten nächsten Schritte. Seite: '+url+' — Falls du sie nicht öffnen kannst, sage Bescheid, dann füge ich den Text ein.';
   var ziele={chatgpt:'https://chatgpt.com/?q=',claude:'https://claude.ai/new?q=',zai:'https://chat.z.ai/'};
