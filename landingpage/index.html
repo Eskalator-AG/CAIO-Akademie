@@ -356,7 +356,7 @@ tailwind.config = {
 <!-- 7. SELBSTTEST -->
 <section id="test" data-ort="Selbsttest" class="max-w-[640px] mx-auto px-5 md:px-8 py-12">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Bin ich ein versteckter CAIO?</h2>
-  <p class="mt-2">Fünf Fragen. Fünf Minuten. Ehrlich antworten – es gibt kein Richtig.</p>
+  <p class="mt-2">Fünf Fragen. 2 Minuten. Direkt orientiert sein.</p>
   <div class="mt-6 bg-white rounded-2xl shadow-card p-6">
     <div class="h-1.5 rounded-full bg-espresso/10 overflow-hidden">
       <div id="bar" class="h-full bg-orange transition-all duration-200" style="width:0%"></div>
@@ -366,6 +366,7 @@ tailwind.config = {
       <p id="badge" class="inline-block px-4 py-1.5 rounded-full font-head font-bold text-sm"></p>
       <h3 id="rtitle" class="font-head font-bold text-ofen text-xl mt-4"></h3>
       <p id="rtext" class="mt-2"></p>
+      <div id="rkurs" class="mt-3 text-[15px] bg-orange/10 border border-orange/30 rounded-xl px-4 py-3"></div>
       <form class="mt-5 grid gap-3" onsubmit="event.preventDefault(); this.querySelector('button').textContent='Danke! Ergebnis kommt per Mail.';">
         <input type="email" required placeholder="deine@mail.de"
           class="min-h-[56px] px-4 rounded-xl border border-espresso/20 bg-mehl text-base w-full">
@@ -412,7 +413,7 @@ tailwind.config = {
 <!-- Sticky CTA mobil -->
 <div id="sticky" class="fixed inset-x-0 bottom-0 z-50 p-3 bg-mehl/95 backdrop-blur border-t border-espresso/10 translate-y-full transition-transform duration-200">
   <a href="#test" class="flex items-center justify-center min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold">
-    Selbsttest starten – 5 Minuten
+    Selbsttest starten – 2 Minuten
   </a>
 </div>
 
@@ -479,13 +480,14 @@ function showResult(){
   elQuiz.classList.add('hidden'); elRes.classList.remove('hidden');
   elBar.style.width='100%';
   const bands=[
-    [5,'bg-sand/60','KI-Entdecker 🌱','Du bist neugierig. Das ist der beste Startpunkt. Stufe 1 öffnet dir die Augen – in rund 20 Stunden.'],
-    [10,'bg-licht/30','Versteckter Navigator 🧭','Du denkst schon weiter als viele. Dir fehlt das Urteil in Struktur. Stufe 2 macht aus deinem Blick ein Bewertungsinstrument.'],
-    [15,'bg-gold/50','Versteckter CAIO 👑','Du machst die Arbeit bereits. Es fehlen nur der Name und der Nachweis. Sprich mit uns – wir verkürzen den Weg.']
+    [5,'bg-sand/60','KI-Entdecker 🌱','Du bist neugierig. Das ist der beste Startpunkt. Stufe 1 öffnet dir die Augen – in rund 20 Stunden.',['AI Professional (AIP)']],
+    [10,'bg-licht/30','Versteckter Navigator 🧭','Du denkst schon weiter als viele. Dir fehlt das Urteil in Struktur. Stufe 2 macht aus deinem Blick ein Bewertungsinstrument.',['AI Officer (AIO)','AI Architekt (AIA)']],
+    [15,'bg-gold/50','Versteckter CAIO 👑','Du machst die Arbeit bereits. Es fehlen nur der Name und der Nachweis. Sprich mit uns – wir verkürzen den Weg.',['AI Officer (AIO) — verkürzt','AI Architekt (AIA) — verkürzt']]
   ];
   const b=bands.find(x=>score<=x[0]);
   elBadge.className=`inline-block px-4 py-1.5 rounded-full font-head font-bold text-sm ${b[1]}`;
   elBadge.textContent=b[2]; elT.textContent=`Dein Ergebnis: ${score} von 15 Punkten`; elX.textContent=b[3];
+  document.getElementById('rkurs').innerHTML='Sehr wahrscheinlich für dich passend: <strong>'+b[4].join('</strong> und <strong>')+'</strong>';
   history.replaceState(null,'',`?r=${b[2].includes('CAIO')?'caio':b[2].includes('Navigator')?'navigator':'entdecker'}`);
 }
 render();
