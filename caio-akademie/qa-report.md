@@ -182,6 +182,20 @@ Hinweis zum Test: Erste Browserprüfungen liefen auf die gecachte Vorversion (Gi
 | Neuer Absatz Förderfähigkeit (nach der Stufenleiter): grundsätzlich förderfähig, Ermittlung im individuellen Gespräch, 30–100 % Zuschuss möglich | ✔ live |
 | 360 px ohne horizontales Scrollen | ✔ |
 
+---
+
+## Nachtrag: Selbsttest-Titel, Formular-Absicherung & Dankesseite (31.10.2026, Commits `eb1bfd4`–`2269469`)
+
+| Anforderung | Umsetzung | Prüfergebnis |
+|---|---|---|
+| Testtitel neu | H2: „Wie viel KI-Kompetenz steckt schon in mir?" | ✔ live |
+| DSGVO-Checkbox in beiden Formularen | Pflicht-Checkbox mit Link zur Datenschutzerklärung (Selbsttest + Kontakt); Datenschutzerklärung um ALTCHA-Absatz ergänzt | ✔ live, Pflichtfeld wirksam |
+| ALTCHA in beiden Formularen | ALTCHA-Widget „Ich bin kein Roboter" (Proof of Work). Erst altcha.org-CDN, dann jsDelivr (altcha.org in Teilstücken der Welt blockiert). **Finale Lösung: statisch eingebettete Challenge (SHA-256, lokal generiert und gegenrechnet) — Verifizierung läuft komplett im Browser, ohne externe API** | ✔ E2E: beide Widgets lösen lokal → „Bestätigt", Payload 332 Zeichen |
+| Redirect auf Dankesseite `/danke` | Neue Seite `danke/index.html` (pretty URL `/CAIO-Akademie/danke/`), personalisiert per `?r=`: Selbsttest-Ergebnis (Badge + Kurs-Empfehlung) bzw. Kontakt-Text; drei nächste Schritte + CTAs; noindex | ✔ E2E Selbsttest: `/danke/?r=caio` zeigt „Versteckter CAIO 👑" + Kursempfehlung. E2E Kontakt: mailto wird gebaut, Redirect `/danke/?r=kontakt` mit Kontakttext |
+| Submit-Gate | Absenden erst nach DSGVO-Haken + ALTCHA-Verifizierung; sonst roter Hinweis. Gate prüft das Verifizierungs-Input (das `state`-Property existiert in der eingesetzten Widget-Version nicht — Fehler gefunden und behoben, Commit `2269469`) | ✔ |
+
+**Fehler und Fixes dieser Stufe:** (1) altcha.org-CDN netzwerkseitig blockert → jsDelivr; (2) Challenge-API ebenfalls blockiert → statische lokale Challenge; (3) `w.state`-Property fehlend → Gate prüft verstecktes Verifizierungs-Input. **Hinweis:** Die statische Challenge ist ein rein clientseitiges Puzzle (Spam-Vermeidung ohne Tracking); sobald ein Formular-Backend existiert (Backlog), sollte auf serverseitig generierte Challenges umgestellt werden.
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
