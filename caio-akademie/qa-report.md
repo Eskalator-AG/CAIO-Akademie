@@ -318,3 +318,15 @@ Bestandsaufnahme: Neue Seiteninhalte seit Erstellung (CAIO-Einschub mit C-Ebene,
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
 - Aus gleichem Grund wurde — nach Freigabe des Auftraggebers — die Landingpage in das neue Repo `dennis343/CAIO-Akademie` committet statt in das Transfer-Repo. Die Pages-URL weicht daher vom Briefing ab: `https://dennis343.github.io/CAIO-Akademie/` statt `…/KI-baeckerei/`.
 - **Nachtrag 30.10.2026:** Die Anhänge B–J wurden nachgereicht und am gleichen Tag wortidentisch committet (`00-leitbild.md`, `01-strategie.md`, `02-die-rolle.md`, `03-stufe-navigator.md`, `selbsttest.md`, 3 Templates, `README.md`). Damit ist JOB 2 vollständig: alle 10 Pfade vorhanden. Einzige bewusste Abweichung von der Wortidentität: die README-URL wurde auf die real existierende Live-URL `https://dennis343.github.io/CAIO-Akademie/` korrigiert (die im Anhang J genannte `…/KI-baeckerei/`-URL existiert nach dem Repo-Wechsel nicht). `landingpage/index.html` entspricht Anhang A (352 Zeilen) zzgl. der freigegebenen Typo-Korrektur.
+
+---
+
+## Nachtrag: Sondersektion Arbeitnehmer & Arbeitgeber (31.10.2026, Commit `583e3cf`)
+
+| Prüfpunkt | Ergebnis |
+|---|---|
+| Neue Sektion `#fuer-wen` auf berufsbild.html (zwischen „Wer die Rolle schon besetzt" und „Der Weg zur Rolle"), zwei Karten: Arbeitnehmer (Du-Form, orange) · Arbeitgeber (Sie-Form, nachtblau) | ✔ live |
+| Arbeitnehmer (6 Vorteile): Gehalts-Abschreckung explizit aufgelöst („hohe Summen = Ende des Pfads, nicht Anfang"), eigenes Wissen zählt (Miriam), Nähe zur Geschäftsführung, Urteil auf Augenhöhe, Zertifikate je Stufe, „KI macht dich nicht überflüssig" | ✔ |
+| Arbeitgeber (7 Vorteile): Direkter Draht zur Führung, Wirkung über Abteilungen, Know-how bleibt im Haus, Art.-4-Rechtssicherheit, weniger Fehlkäufe, Talentbindung, 30–100 % Zuschuss | ✔ |
+| Zielgruppen-CTAs je Karte (Selbsttest / Erstgespräch mit Förder-Check) | ✔ |
+| Ortsanzeige-Label, 360 px ohne Overflow | ✔ |
