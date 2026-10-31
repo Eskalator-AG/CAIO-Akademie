@@ -309,7 +309,7 @@ updateOrtU();
     <div class="mt-3 grid gap-2">
       <button data-ai="chatgpt" class="flex items-center gap-2 min-h-[44px] px-4 rounded-xl border border-espresso/15 bg-mehl hover:border-orange text-sm font-semibold text-left"><span aria-hidden="true" class="h-2.5 w-2.5 rounded-full bg-[#10a37f] flex-shrink-0"></span>ChatGPT öffnen</button>
       <button data-ai="claude" class="flex items-center gap-2 min-h-[44px] px-4 rounded-xl border border-espresso/15 bg-mehl hover:border-orange text-sm font-semibold text-left"><span aria-hidden="true" class="h-2.5 w-2.5 rounded-full bg-[#d97757] flex-shrink-0"></span>Claude öffnen</button>
-      <button data-ai="zai" class="flex items-center gap-2 min-h-[44px] px-4 rounded-xl border border-espresso/15 bg-mehl hover:border-orange text-sm font-semibold text-left"><span aria-hidden="true" class="h-2.5 w-2.5 rounded-full bg-licht flex-shrink-0"></span>Z.ai öffnen <span class="font-normal text-espresso/50">(Prompt einfügen)</span></button>
+      <button data-ai="mistral" class="flex items-center gap-2 min-h-[44px] px-4 rounded-xl border border-espresso/15 bg-mehl hover:border-orange text-sm font-semibold text-left"><span aria-hidden="true" class="h-2.5 w-2.5 rounded-full bg-[#FF8000] flex-shrink-0"></span>Mistral (Le Chat) öffnen <span class="font-normal text-espresso/50">(Prompt kopiert — Strg/Cmd+V)</span></button>
     </div>
     <p id="ai-hinweis" class="hidden mt-2 text-xs text-emerald-600"></p>
   </div>
@@ -344,13 +344,13 @@ updateOrtU();
   document.addEventListener('click',function(e){if(!p.classList.contains('hidden')&&!w.contains(e.target)){p.classList.add('hidden');b.setAttribute('aria-expanded','false');}});
   var url=location.origin+location.pathname;
   var prompt='Fasse bitte diese Seite knapp und strukturiert zusammen: Kernangebot, die vier Stufen (AIP, AIO, AIA, CAIO), Förder- und Kostenhinweise sowie die wichtigsten nächsten Schritte. Seite: '+url+' — Falls du sie nicht öffnen kannst, sage Bescheid, dann füge ich den Text ein.';
-  var ziele={chatgpt:'https://chatgpt.com/?q=',claude:'https://claude.ai/new?q=',zai:'https://chat.z.ai/'};
+  var ziele={chatgpt:'https://chatgpt.com/?q=',claude:'https://claude.ai/new?q=',mistral:'https://chat.mistral.ai/chat?q='};
   p.querySelectorAll('button[data-ai]').forEach(function(btn){
     btn.addEventListener('click',function(){
-      var ziel=ziele[btn.dataset.ai]+(btn.dataset.ai==='zai'?'':encodeURIComponent(prompt));
+      var ziel=ziele[btn.dataset.ai]+encodeURIComponent(prompt);
       try{if(navigator.clipboard)navigator.clipboard.writeText(prompt);}catch(e){}
       var h=document.getElementById('ai-hinweis');
-      h.textContent='Prompt kopiert — im Chat ggf. mit Strg/Cmd+V einfügen.';
+      h.textContent=btn.dataset.ai==='mistral'?'Prompt kopiert — im Le-Chat-Eingabefeld mit Strg/Cmd+V einfügen.':'Prompt kopiert und im Chat vorbereitet.';
       h.classList.remove('hidden');
       window.open(ziel,'_blank','noopener');
     });
