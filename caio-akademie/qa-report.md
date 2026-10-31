@@ -106,6 +106,26 @@ Anlass: Auftraggeber sah „nur die Selbsttestseite". Diagnose: Die Seite war vo
 
 **Hinweis zur Prüfung:** Betreiberangaben im Impressum (WissensReich Academy UG, Köln) wurden der bestehenden Wissensreich-Site entnommen und sollten vom Auftraggeber rechtlich gegengeprüft werden.
 
+---
+
+## Nachtrag: Berufsbild-Unterseite (31.10.2026)
+
+Anlass: Auftraggeber-Recherche zu Quellen wie Kienbaum („Chief AI Officer: Pro & Contra CAIO"). Umgesetzt (Commit `akademie: berufsbild-unterseite (recherchierte quellen) + handlungsfelder auf der startseite`):
+
+| Prüfpunkt | Ergebnis |
+|---|---|
+| `berufsbild.html` live, HTTP 200, indexierbar (kein noindex) | ✔ |
+| 7 Sektionen: Handlungsfelder, Pro & Contra, Zahlen, Gehalt, Beispiele, Weg zur Rolle, Quellen | ✔ alle IDs vorhanden |
+| 6 Handlungsfeld-Karten (entsprechen den 6 Matrix-Dimensionen) | ✔ |
+| 360 px ohne horizontales Scrollen (scrollWidth 360) | ✔ |
+| Visueller Screenshot-Check (Nav, Hero, CTA, Karten, Typografie) | ✔ keine Blocker |
+| Startseite: neuer Handlungsfelder-Block in „Was ist ein CAIO?" (6 Pills + Link zur Unterseite, Ofenblau-Karte mit Mehlweiß-Text) | ✔ verifiziert, 360 px fit |
+| 4 externe Quellen-Links erreichbar (Kienbaum 200, Bitkom 200, stellenmarkt.de 200, Business Insider 301→folgt) | ✔ |
+| Quellenangaben mit Datum und Autoren (Kienbaum: Cescatti/Lüscher/Spisa, 25.02.2025) | ✔ |
+| Gehaltsangaben mit Quellenbenennung und „ohne Gewähr"-Hinweis | ✔ |
+
+Verwendete Quellen: Kienbaum-Blog (25.02.2025), Bitkom-Pressemitteilung (25.09.2024), stellenmarkt.de-Berufsporträt, Business Insider/Gruenderszene, EU AI Act Art. 4. Reale CAIO-Beispiele: SAP (Philipp Herzig), Deutsche Bahn (Dr. Michael Drass) — laut Bitkom/Presseberichterstattung.
+
 ## Anmerkungen zur Umgebung (Abweichung vom Briefing)
 
 - Das Briefing (JOB 1) beschreibt einen offenen PR #2 „Wetterdaten-Integration" mit Branch `feature/wetterdaten` auf `dennis343/KI-baeckerei`. Dieser Stand existierte nicht: Das Repo wurde zur Eskalator-AG transferiert, PR #2 ist dort bereits gemergt (SEO-Landingpage), ein Wetter-Branch existierte nie, ebenso wenig `config.py`/`produkte.py`. JOB 1 ist damit obsolet; die DoD „kein Wetter-Code im Repo" ist durch Neuanlage des Repos `dennis343/CAIO-Akademie` erfüllt. Der gemergte PR #2 im Eskalator-AG-Repo wurde bewusst nicht angetastet.
