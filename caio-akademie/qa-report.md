@@ -371,3 +371,17 @@ Bestandsaufnahme: Neue Seiteninhalte seit Erstellung (CAIO-Einschub mit C-Ebene,
 ## Korrektur (31.10.2026, Commit `0107f49`)
 
 Dritter Anbieter-Button (Mistral) auf Wunsch des Auftraggebers entfernt — die Bubble bietet nur noch ChatGPT und Claude (beide mit funktionierendem URL-Prefill). Alle 5 Seiten bereinigt, live verifiziert (0 Mistral-Reste, genau 2 Anbieter-Buttons).
+
+---
+
+## Nachtrag: Tripwire-Produkt „Das CAIO-Playbook" (01.11.2026, Commit `fa5d636`)
+
+Vorlage analysiert: aifirstmasterclass.com/caio (Buch 14 $, 41 Kapitel + 12 Anhänge + 10 Workbooks, Long-Form-Salesletter, 4 Order-Bumps bis 77,90 $). Auftraggeber übersetzt das Buch; deutsche Ausgabe folgt.
+
+| Baustein | Umsetzung | Prüfergebnis |
+|---|---|---|
+| Separate Landingpage `buch.html` | Komprimierte deutsche Version in unserer Tonalität: Zwei-Personen-Hook, „Beweis-Problem, nicht Skill-Problem"-Kernsatz, Für-wen-Block, 6 Inhaltsbausteine (Beweis-Leiter, 4 Wege, leere Stühle, Geld-Sprache, Recht & Governance, 30-Tage-Sprint), 10-Workbook-Bonus, 3 Pakete (14 €/24 €/58 € statt Order-Bumps), Bestell-Formular (mailto-Reservierung, Zahlung erst bei Erscheinen — ehrlich, da kein Bezahlsystem), 5er-FAQ, Schluss-CTA; vollständige SEO/Canonical/OG-Ausstattung, Ortsanzeige, KI-Bubble | ✔ HTTP 200 |
+| Sales-Pipeline-Integration | Buch als Tripwire: Teaser auf Startseite (vor Selbsttest), Tripwire-Angebot auf Dankeseite (nach Selbsttest-Ergebnis), Footer-Link auf allen Seiten, sitemap (Prio 0.9) + llms.txt; Buch-FAQ verweist auf Stufen (Upsell-Pfad), Paketwahl ersetzt Order-Bumps | ✔ |
+| Ehrlichkeits-Anpassungen ggü. Vorbild | Kein Fake-Countdown/Verknappung, keine Composite-Listings; US-Zahlen des Originals nicht übernommen (Verweis auf eigene Gehaltsquellen); Arbeitstitel klar gekennzeichnet; Garantie 30 Tage bedingungslos formuliert | dokumentiert |
+
+**Offen:** Finale deutsche Inhalte/Titel sobald das Buch vorliegt („Arbeitstitel"-Markierungen im Code); Zahlungssystem-Entscheidung (Digistore24/Gumroad/FunnelCockpit) für echten Checkout; Order-Bump-Entscheidung (Empfehlung: Paketwahl statt 1:1-Checkbox-Bumps, da kein Card-Checkout vorhanden).
