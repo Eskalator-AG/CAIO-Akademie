@@ -385,3 +385,14 @@ Vorlage analysiert: aifirstmasterclass.com/caio (Buch 14 $, 41 Kapitel + 12 Anh�
 | Ehrlichkeits-Anpassungen ggü. Vorbild | Kein Fake-Countdown/Verknappung, keine Composite-Listings; US-Zahlen des Originals nicht übernommen (Verweis auf eigene Gehaltsquellen); Arbeitstitel klar gekennzeichnet; Garantie 30 Tage bedingungslos formuliert | dokumentiert |
 
 **Offen:** Finale deutsche Inhalte/Titel sobald das Buch vorliegt („Arbeitstitel"-Markierungen im Code); Zahlungssystem-Entscheidung (Digistore24/Gumroad/FunnelCockpit) für echten Checkout; Order-Bump-Entscheidung (Empfehlung: Paketwahl statt 1:1-Checkbox-Bumps, da kein Card-Checkout vorhanden).
+
+## Nachtrag: Funnel-Entscheidung umgesetzt (01.11.2026, Commit `64ab4fb`)
+
+Grundlage: OTO-Analyse „Complete CAIO Stack" (397 $, 6 Systeme, Value-Stacking, False-Urgency, Downsell-Pfad) + Auftraggeber-Entscheidung: (1) Buch-Gutschrift auf Stufe 1 statt eigenem Toolkit-OTO (keine Kannibalisierung der Stufen), (2) später echter Checkout mit Order-Bumps.
+
+| Baustein | Umsetzung | Prüfergebnis |
+|---|---|---|
+| Buch-Gutschrift | Volle 14 € werden auf Stufe 1 (AIP) angerechnet — kommuniziert auf Buchseite (Pakete + neue FAQ-Frage), Startseiten-Teaser und Dankeseite | ✔ live |
+| Eigene Buch-Dankeseite `/danke/buch/` | Reservierungsbestätigung + Stufe-1-Upsell mit Gutschrift-Karte + 3 nächste Schritte; Buch-Formular leitet nach dem mailto dorthin | ✔ HTTP 200, Inhalte verifiziert |
+| Bewusste Abgrenzung zum Vorbild-OTO | Kein 397-€-Toolkit (kannibalisierte AIP/AIO), keine False-Urgency, keine Anker-Inflation | dokumentiert |
+| Checkout-Vorbereitung | Bump-Produktdaten liegen bereit (Hörbuch ~10 €, Bewerbungspaket ~17 €, Interview-Kit ~27 €); Mailto-Flow ist als Übergang aktiviert, Button-Verdrahtung auf echten Checkout folgt mit Anbieterauswahl | offen: Anbieter (Digistore24/Gumroad/FunnelCockpit) + Buch-Endfassung |
