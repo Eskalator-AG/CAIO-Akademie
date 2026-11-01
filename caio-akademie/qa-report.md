@@ -396,3 +396,17 @@ Grundlage: OTO-Analyse „Complete CAIO Stack" (397 $, 6 Systeme, Value-Stacking
 | Eigene Buch-Dankeseite `/danke/buch/` | Reservierungsbestätigung + Stufe-1-Upsell mit Gutschrift-Karte + 3 nächste Schritte; Buch-Formular leitet nach dem mailto dorthin | ✔ HTTP 200, Inhalte verifiziert |
 | Bewusste Abgrenzung zum Vorbild-OTO | Kein 397-€-Toolkit (kannibalisierte AIP/AIO), keine False-Urgency, keine Anker-Inflation | dokumentiert |
 | Checkout-Vorbereitung | Bump-Produktdaten liegen bereit (Hörbuch ~10 €, Bewerbungspaket ~17 €, Interview-Kit ~27 €); Mailto-Flow ist als Übergang aktiviert, Button-Verdrahtung auf echten Checkout folgt mit Anbieterauswahl | offen: Anbieter (Digistore24/Gumroad/FunnelCockpit) + Buch-Endfassung |
+
+---
+
+## Nachtrag: Wettbewerbsanalyse komplett + neue Preislogik (01.11.2026, Commit `1548032`)
+
+**Wettbewerber AI First Masterclass (Ben Simkin)** —alle 9 Funnel-Ebenen analysiert (Buch 14 $ → 4 Order-Bumps → Bundle-OTO 397 $ → 6 Einzelsysteme 47–297 $ → High-Ticket-Zertifizierung ohne öffentlichen Preis). Dokumentiert inkl. Muster-Kritik (False Urgency, Value-Stack-Inflation, Shame-Opt-outs, aktionsgebundene Garantien) und Substanz-Übernahmen („dated, signed, measured proof", Proof-Ladder-Frame, Governance-als-Paket-Idee für Stufe 4) in `caio-akademie/wettbewerb-aifirstmasterclass.md`.
+
+| Umsetzung | Detail | Prüfergebnis |
+|---|---|---|
+| Buchpreis 17,50 € | Alle Preise aktualisiert: Buch 17,50 · Buch+Hörbuch 27,50 · Komplett 61,50 (Ersparnis 10 € ggü. 71,50) | ✔ 11× „17,50", 0 alte 14-€-Reste |
+| Doppelte Anrechnung (Funnel-Urgency) | 35-€-Gutschein **CAIO35** für Stufe 1, **ehrliche Frist: 14 Tage** nach Code-Erhalt (kein Fake-Countdown); danach einfache Anrechnung 17,50 € ohne Zeitlimit („auch später") | ✔ live auf danke/buch |
+| 1:1-KI-Consulting-Call | Frei buchbar während der Betreuung — kommuniziert auf Buchseite, Danke-Seite und Stufe-1-Karte | ✔ |
+| Gutschein-Mechanik | Code mit Buchauslieferung; Einlösung im Affilicon-Checkout geplant (Arbeitscode CAIO35 als Platzhalter bis Affilicon-Gutschein angelegt ist) | dokumentiert |
+| Checkout: Affilicon | Als Plattform festgezurrt (README/llms.txt/Wettbewerbs-Doku); Button-Verdrahtung folgt mit Produktdaten | offen |
