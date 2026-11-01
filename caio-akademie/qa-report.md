@@ -421,3 +421,19 @@ Grundlage: OTO-Analyse „Complete CAIO Stack" (397 $, 6 Systeme, Value-Stacking
 | Buchseite neu | Eigenständige deutsche Fassung (12 Kapitel/3 Teile), 1 Begleit-Workbook, Bewerbungs-Mappe nur im Komplett-Paket; Rahmen-Grafik „Ofenbogen mit 4 Stufen" (bewusst KEIN Kompass); Formulierung „gängig gemacht für den deutschen und europäischen Markt" statt „übersetzt" | ✔ 12 Treffer neu, 0 Alt-Reste |
 | Framework „Vom Beweis zur Verantwortung" | Fundament bereiten · Urteil schärfen · Projekte bauen · Verantwortung tragen — verankert auf Startseite (Stufen-Sektion), Berufsbild (Weg zur Rolle), Buch-Danke, Glossar (+2 Begriffe: Beweis-Leiter, Stufenmodell → 44), llms.txt | ✔ Index/berufsbild/danke verifiziert |
 | Durchgängige Logik | Buch → trägt bis Stufe 1 → Schwerpunkte der Stufen bleiben die forcierten Dimensionen; Mailto/Betreff auf CAIO-Handbuch umgestellt | ✔ |
+
+---
+
+## Nachtrag: Handbuch-Feinschliff nach Rückmeldung (01.11.2026, Commits `83090fc`+)
+
+| Rückmeldung | Umsetzung | Prüfergebnis |
+|---|---|---|
+| Grafik: Buch als Klammer, alle 4 Stufen in definierten Farben | Neue SVG: Buchrücken+Buchbasis (Ofenblau) umklammern die 4 Stufen; AIP Sand · AIO Orange · AIA Lichtblau · CAIO Nachtblau mit Kernhandlung+Schwerpunkt; Einstiegsmarkierung auf Stufe 1 | ✔ 4/4 Stufenfarben im Code |
+| Unternehmens-Chance + Geschwindigkeit | Neue Kapitel 4 (Umsatz, Zufriedenheit, Überlastung, Material/Personal/Dienstleister-Kosten) und 5 (Geschwindigkeit als Vorsprung) | ✔ |
+| Kapitel-Klarheit | K2 „Die neue Rolle im Unternehmen: der Architekt für KI, nicht der Handwerker" · K3 „was die Rolle heute bereits wert ist … mit Zukunftstrend" | ✔ |
+| Teil-Struktur | 18 Kapitel in 4 Teilen: Chance (6) · Beweise (4, inkl. neuer Erfolgsunternehmen-Zusammenfassung) · Verantwortung (3) · Praxis &amp; Ausblick (4: KI-Bäckerei-Pilot, Deal-Maker, Wissensreich Academy, kostenloser Ausbildungs-Auftakt mit Fördermittel-Check) | ✔ live |
+| Hörbuch | „Auslieferung direkt nach Fertigstellung" in der Paketkarte | ✔ |
+| Workbook: Gutschein-Überraschung | CAIO35-Hinweis aus Workbook-Inhaltsliste entfernt; „plus eine Überraschung zur Auslieferung" | ✔ |
+| Bewerbungs-Mappe → Aufstiegs-Mappe | Umbenannt + umgeframt: Lebenslauf bereichern, intern sichtbar werden, Verantwortungsgespräche — dezenter Hinweis „kein Wettbewerb mit Kollegen" | ✔ |
+| Übersetzungs-FAQ | Komplett entfernt | ✔ |
+| Starkes Buch-Statement | „Dieses Buch endet nicht auf der letzten Seite. Es endet in deiner neuen Rolle." (Hero) + „Kein Buch zum Lesen. Ein Fahrplan zum Tun." (Schluss) | ✔ |
