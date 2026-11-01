@@ -5,6 +5,7 @@
 Das CAIO Institut bildet Menschen und Unternehmen im deutschsprachigen Raum (DE/AT/CH) zur KI-Verantwortungsrolle „Chief AI Officer" aus. Praxisfall aller Stufen ist die KI-Bäckerei (Bestellvorhersage). Träger: Wissensreich Academy UG (haftungsbeschränkt), Köln — AZAV-zertifiziert, ISO 9001, ISO 56002:2019, BVMW-Mitglied.
 
 ## Kernfakten
+- Stufenmodell „Vom Beweis zur Verantwortung": Fundament bereiten (AIP) · Urteil schärfen (AIO) · Projekte bauen (AIA) · Verantwortung tragen (CAIO) — jede Stufe erzwingt einen Schwerpunkt.
 - Vier Stufen: AI Professional (AIP, 32+ Stunden, Basis-Zertifikat) → AI Officer (AIO, 4–6 Wochen, geprüfter Business Case) → AI Architekt (AIA, 3–6 Monate, Meisterstück-Projekt) → Chief AI Officer (CAIO, 6–12 Monate, CAIO-Zertifikat).
 - Stufen-Schwerpunkte: AIP = Menschen & Change · AIO = Wirtschaftlichkeit · AIA = Technologie & Daten · CAIO = Sicherheit & Recht.
 - Förderfähigkeit: grundsätzlich 30–100 % Zuschuss; Bewilligungsquote bei begleiteten Anträgen bis 95 %. Klärung im kostenfreien Erstgespräch.
@@ -17,8 +18,8 @@ Das CAIO Institut bildet Menschen und Unternehmen im deutschsprachigen Raum (DE/
 - [Startseite](https://www.caio-institut.de/): Hero, CAIO-Erklärung (Chief/AI/Officer), Leitbild-Story, Zahlen, 4 Stufen, Kompetenzmatrix (6 Dimensionen × 4 Tiefen), Spannungsfeld (DSGVO, EU AI Act, US CLOUD Act, Wirtschaftlichkeit), Vergleich (Tool-Schulung/KI-Agentur/Akademie), Stimmen, Selbsttest mit Kurs-Empfehlung, Kontakt, FAQ (14 Fragen).
 - [Berufsbild CAIO](https://www.caio-institut.de/berufsbild.html): 6 Handlungsfelder, Pro & Contra (Kienbaum), Zahlen mit Quellen, Gehaltsspannen, Beispiele (SAP, Deutsche Bahn), Weg zur Rolle.
 - [Über uns & Leitbild](https://www.caio-institut.de/ueber-uns.html): Leitbild (Miriam-Story), Zahlen/Daten/Fakten, Zertifikate & Awards, 18 Dozenten.
-- [Das CAIO-Playbook (Buch)](https://www.caio-institut.de/buch.html): Tripwire-Einstiegsprodukt — 41 Kapitel, 12 Anhänge, 10 Arbeitsbücher, Einführungspreis 17,50 € (Checkout: Affilicon; Reservierung per E-Mail, Zahlung bei Erscheinen); Pakete: Buch 17,50 € / Buch+Hörbuch 27,50 € / Komplett 61,50 €. Buch-Käufer: doppelte Anrechnung (35-€-Gutschein CAIO35, 14 Tage) auf Stufe 1 plus frei buchbarer 1:1-KI-Consulting-Call.
-- [Glossar](https://www.caio-institut.de/glossar.html): 42 KI-, Digitalisierungs- und Rechtsbegriffe auf Deutsch, inkl. AIP/AIO/AIA/CAIO.
+- [Das CAIO-Playbook (Buch)](https://www.caio-institut.de/buch.html): Tripwire-Einstiegsprodukt — eigenständige deutsche Fassung (12 Kapitel, 1 Begleit-Workbook; Bewerbungs-Mappe im Komplett-Paket), im Rahmen „Vom Beweis zur Verantwortung", Einführungspreis 17,50 € (Checkout: Affilicon; Reservierung per E-Mail, Zahlung bei Erscheinen); Pakete: Buch 17,50 € / Buch+Hörbuch 27,50 € / Komplett 61,50 €. Buch-Käufer: doppelte Anrechnung (35-€-Gutschein CAIO35, 14 Tage) auf Stufe 1 plus frei buchbarer 1:1-KI-Consulting-Call.
+- [Glossar](https://www.caio-institut.de/glossar.html): 44 KI-, Digitalisierungs- und Rechtsbegriffe auf Deutsch, inkl. AIP/AIO/AIA/CAIO.
 
 ## Kontakt
 E-Mail: concierge@wissensreich.academy · Formulare auf der Startseite (mailto-basiert, DSGVO-konform mit ALTCHA)
