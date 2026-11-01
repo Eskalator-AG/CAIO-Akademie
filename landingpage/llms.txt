@@ -17,6 +17,7 @@ Das CAIO Institut bildet Menschen und Unternehmen im deutschsprachigen Raum (DE/
 - [Startseite](https://www.caio-institut.de/): Hero, CAIO-Erklärung (Chief/AI/Officer), Leitbild-Story, Zahlen, 4 Stufen, Kompetenzmatrix (6 Dimensionen × 4 Tiefen), Spannungsfeld (DSGVO, EU AI Act, US CLOUD Act, Wirtschaftlichkeit), Vergleich (Tool-Schulung/KI-Agentur/Akademie), Stimmen, Selbsttest mit Kurs-Empfehlung, Kontakt, FAQ (14 Fragen).
 - [Berufsbild CAIO](https://www.caio-institut.de/berufsbild.html): 6 Handlungsfelder, Pro & Contra (Kienbaum), Zahlen mit Quellen, Gehaltsspannen, Beispiele (SAP, Deutsche Bahn), Weg zur Rolle.
 - [Über uns & Leitbild](https://www.caio-institut.de/ueber-uns.html): Leitbild (Miriam-Story), Zahlen/Daten/Fakten, Zertifikate & Awards, 18 Dozenten.
+- [Das CAIO-Playbook (Buch)](https://www.caio-institut.de/buch.html): Tripwire-Einstiegsprodukt — 41 Kapitel, 12 Anhänge, 10 Arbeitsbücher, Einführungspreis 14 € (Reservierung per E-Mail, Zahlung bei Erscheinen); Pakete: Buch 14 € / Buch+Hörbuch 24 € / Komplett 58 €.
 - [Glossar](https://www.caio-institut.de/glossar.html): 42 KI-, Digitalisierungs- und Rechtsbegriffe auf Deutsch, inkl. AIP/AIO/AIA/CAIO.
 
 ## Kontakt
