@@ -410,3 +410,14 @@ Grundlage: OTO-Analyse „Complete CAIO Stack" (397 $, 6 Systeme, Value-Stacking
 | 1:1-KI-Consulting-Call | Frei buchbar während der Betreuung — kommuniziert auf Buchseite, Danke-Seite und Stufe-1-Karte | ✔ |
 | Gutschein-Mechanik | Code mit Buchauslieferung; Einlösung im Affilicon-Checkout geplant (Arbeitscode CAIO35 als Platzhalter bis Affilicon-Gutschein angelegt ist) | dokumentiert |
 | Checkout: Affilicon | Als Plattform festgezurrt (README/llms.txt/Wettbewerbs-Doku); Button-Verdrahtung folgt mit Produktdaten | offen |
+
+---
+
+## Nachtrag: CAIO-Handbuch & Stufenmodell-Rahmen (01.11.2026, Commit `8f79aa4`)
+
+| Umsetzung | Detail | Prüfergebnis |
+|---|---|---|
+| Companion-Guides-Prüfung (Auftrag) | 10 Guides = Prinzipien-Unterstützung zum anderen Buch des Autors; 6 Skelette extrahiert: Veränderungsbegleitung (→AIP), Kennzahlen (→AIO), Anbieter-Bewertung (→Buch K10), Risiko-Rahmen (→CAIO), Nutzenfall-Menü (→AIA), Daten-Bereitschaft (→EU-Kapitel) | in tripwire-strategie.md |
+| Buchseite neu | Eigenständige deutsche Fassung (12 Kapitel/3 Teile), 1 Begleit-Workbook, Bewerbungs-Mappe nur im Komplett-Paket; Rahmen-Grafik „Ofenbogen mit 4 Stufen" (bewusst KEIN Kompass); Formulierung „gängig gemacht für den deutschen und europäischen Markt" statt „übersetzt" | ✔ 12 Treffer neu, 0 Alt-Reste |
+| Framework „Vom Beweis zur Verantwortung" | Fundament bereiten · Urteil schärfen · Projekte bauen · Verantwortung tragen — verankert auf Startseite (Stufen-Sektion), Berufsbild (Weg zur Rolle), Buch-Danke, Glossar (+2 Begriffe: Beweis-Leiter, Stufenmodell → 44), llms.txt | ✔ Index/berufsbild/danke verifiziert |
+| Durchgängige Logik | Buch → trägt bis Stufe 1 → Schwerpunkte der Stufen bleiben die forcierten Dimensionen; Mailto/Betreff auf CAIO-Handbuch umgestellt | ✔ |
