@@ -441,3 +441,20 @@ Grundlage: OTO-Analyse „Complete CAIO Stack" (397 $, 6 Systeme, Value-Stacking
 ## Korrektur-Runde (01.11.2026, Commit `3b8c516`)
 
 Kapitelübersicht als sequentielles Ganzbreiten-Design: Überzeile „Die Inhalte des Handbuchs" (18 Kapitel · vier Teile · ein Fahrplan), je Teil eine volle Karte mit Farbsaum (I Sand · II Orange · III Lichtblau · IV Nachtblau), Kapitel-Zweispaltigkeit innerhalb der Karte, zwischen den Teilen Farbpunkt-Umbrüche. FAQ von 5 auf 10 erweitert: Ersetzt das Buch die Ausbildung? (Vorbereitung + Klammer, auch für Nicht-Ausbildungs-Interessierte) · Kein weiteres Buch lesen (Hörbuch + digitale Vorlagen) · Format (rein digital, PDF/EPUB, Screenreader-kompatibel, ohne Papier) · Nur für Karrierewillige? (auch Führungskräfte/Unternehmer) · Aktualität (EU-Rechtsstand, E-Mail-Hinweise bei Änderungen). Live verifiziert: 3 Umbruch-Punkte, 10 FAQ-Fragen.
+
+---
+
+## Nachtrag: Edition-Fertigstellung (01.11.2026)
+
+| Baustein | Status |
+|---|---|
+| **CAIO-Handbuch Edition** (66 Seiten, 18 Kapitel, 4 Teile, 5 integrierte Vorlagen, Ren\u00e9 statt Miriam) | \u2714 PDF fertig |
+| **Workbook separat** (13 Seiten: Selbstcheck + 6 Vorlagen + Schatten-Check + 30-Tage-Fahrplan) | \u2714 PDF fertig |
+| **Buchseite aktualisiert** (66 Seiten/Edition/integrierte Vorlagen) | \u2714 live |
+| **Miriam \u2192 Ren\u00e9** auf allen Seiten | \u2714 live |
+| **caio-ausbildung.de** | HTTP funktioniert, TLS-Zertifikat pendent (GitHub/Let's Encrypt, bis 24h) |
+
+**Dateien:**
+- `CAIO-Produkt/caio-handbuch-edition_final.pdf` (66 Seiten, 1,6 MB)
+- `CAIO-Produkt/caio-workbook-separat_final.pdf` (13 Seiten, 482 KB)
+- Generatoren: `edition.js`, `build_edition{,2,3}.js`, `build_final.js`, `build_workbook_separat.js`
