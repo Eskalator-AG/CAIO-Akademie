@@ -437,3 +437,7 @@ Grundlage: OTO-Analyse „Complete CAIO Stack" (397 $, 6 Systeme, Value-Stacking
 | Bewerbungs-Mappe → Aufstiegs-Mappe | Umbenannt + umgeframt: Lebenslauf bereichern, intern sichtbar werden, Verantwortungsgespräche — dezenter Hinweis „kein Wettbewerb mit Kollegen" | ✔ |
 | Übersetzungs-FAQ | Komplett entfernt | ✔ |
 | Starkes Buch-Statement | „Dieses Buch endet nicht auf der letzten Seite. Es endet in deiner neuen Rolle." (Hero) + „Kein Buch zum Lesen. Ein Fahrplan zum Tun." (Schluss) | ✔ |
+
+## Korrektur-Runde (01.11.2026, Commit `3b8c516`)
+
+Kapitelübersicht als sequentielles Ganzbreiten-Design: Überzeile „Die Inhalte des Handbuchs" (18 Kapitel · vier Teile · ein Fahrplan), je Teil eine volle Karte mit Farbsaum (I Sand · II Orange · III Lichtblau · IV Nachtblau), Kapitel-Zweispaltigkeit innerhalb der Karte, zwischen den Teilen Farbpunkt-Umbrüche. FAQ von 5 auf 10 erweitert: Ersetzt das Buch die Ausbildung? (Vorbereitung + Klammer, auch für Nicht-Ausbildungs-Interessierte) · Kein weiteres Buch lesen (Hörbuch + digitale Vorlagen) · Format (rein digital, PDF/EPUB, Screenreader-kompatibel, ohne Papier) · Nur für Karrierewillige? (auch Führungskräfte/Unternehmer) · Aktualität (EU-Rechtsstand, E-Mail-Hinweise bei Änderungen). Live verifiziert: 3 Umbruch-Punkte, 10 FAQ-Fragen.
