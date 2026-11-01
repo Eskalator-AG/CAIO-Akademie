@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de" class="scroll-smooth">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buch reserviert – CAIO Institut</title>
+<meta name="description" content="Deine Buchreservierung ist notiert. Dein Guthaben: 14 € — voll anrechenbar auf Stufe 1 (AI Professional).">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FAF6EF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%2316425B'/%3E%3Cpath d='M12 38V22a12 12 0 0 1 24 0v16' fill='none' stroke='%23FAF6EF' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='16' y='32' width='4' height='6' fill='%23FAF6EF'/%3E%3Crect x='21' y='28' width='4' height='10' fill='%23FAF6EF'/%3E%3Crect x='26' y='24' width='4' height='14' fill='%23FAF6EF'/%3E%3Crect x='31' y='20' width='4' height='18' fill='%23E4572E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: { extend: {
+    colors: { mehl:'#FAF6EF', espresso:'#171310', ofen:'#16425B', orange:'#E4572E', sand:'#F2C57C', licht:'#2E86AB', nacht:'#0E3A53' },
+    fontFamily: { head:['"Space Grotesk"','sans-serif'], body:['Inter','sans-serif'] },
+    boxShadow: { card:'0 2px 8px rgba(23,19,16,.06)' }
+  }}
+}
+</script>
+<style>
+  @media (prefers-reduced-motion: reduce){ *{transition:none!important;animation:none!important} }
+  :focus-visible{ outline:3px solid #2E86AB; outline-offset:2px; }
+</style>
+</head>
+
+<body class="bg-mehl text-espresso font-body text-[17px] leading-relaxed antialiased">
+
+<nav aria-label="Hauptnavigation" class="sticky top-0 z-40 bg-mehl/95 backdrop-blur border-b border-espresso/10">
+  <div class="max-w-[1120px] mx-auto px-5 md:px-8 flex items-center justify-between min-h-[56px]">
+    <a href="../../index.html" class="flex items-center gap-2 min-h-[48px] font-head font-bold text-ofen text-[15px] sm:text-base whitespace-nowrap">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="h-7 w-7 flex-shrink-0" role="img" aria-hidden="true"><rect width="48" height="48" rx="10" fill="#16425B"/><path d="M12 38V22a12 12 0 0 1 24 0v16" fill="none" stroke="#FAF6EF" stroke-width="3" stroke-linecap="round"/><rect x="16" y="32" width="4" height="6" fill="#FAF6EF"/><rect x="21" y="28" width="4" height="10" fill="#FAF6EF"/><rect x="26" y="24" width="4" height="14" fill="#FAF6EF"/><rect x="31" y="20" width="4" height="18" fill="#E4572E"/></svg>
+      CAIO Institut
+    </a>
+    <div class="flex items-center gap-0.5 sm:gap-1">
+      <a href="../../index.html" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Start</a>
+      <a href="../../index.html#stufen" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Stufen</a>
+      <a href="../../index.html#test" class="inline-flex items-center min-h-[48px] px-2.5 sm:px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Selbsttest</a>
+    </div>
+  </div>
+  <div class="border-t border-espresso/5 bg-white/40">
+    <div class="max-w-[1120px] mx-auto px-5 md:px-8 min-h-[32px] flex items-center gap-2 text-xs text-espresso/60">
+      <span aria-hidden="true" class="h-1.5 w-1.5 rounded-full bg-orange inline-block flex-shrink-0"></span>
+      <span>Du bist hier:</span>
+      <span class="font-semibold text-espresso/80 truncate">Buch reserviert</span>
+    </div>
+  </div>
+</nav>
+
+<main class="max-w-[640px] mx-auto px-5 md:px-8 py-14 text-center">
+  <div class="mx-auto inline-flex items-center justify-center h-16 w-16 rounded-full bg-orange/15 ring-1 ring-orange/40">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="h-8 w-8 text-orange" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+  </div>
+  <h1 class="font-head font-bold text-ofen text-[clamp(28px,6vw,42px)] mt-6">Reservierung notiert!</h1>
+  <p class="mt-3 max-w-[46ch] mx-auto">Deine E-Mail ist vorbereitet — absenden genügt. Sobald das Buch erscheint, erhältst du den Zahlungslink und deine Ausgabe als Erste.</p>
+
+  <!-- BUCH-GUTSCHRIFT: Der nächste Schritt (Stufe 1 mit 14 € Gutschrift) -->
+  <div class="mt-8 bg-ofen rounded-2xl shadow-card p-6 md:p-8 text-mehl text-left">
+    <p class="text-xs font-semibold uppercase tracking-widest text-sand">Dein Vorteil als Buch-Käufer</p>
+    <p class="font-head font-bold text-xl mt-2">14&nbsp;€ Guthaben — voll angerechnet auf Stufe 1.</p>
+    <p class="mt-2 text-[15px] text-mehl/85">Der komplette Buchpreis wird dir auf <strong>Stufe 1 · AI Professional (AIP)</strong> gutgeschrieben: über 32 Stunden Fundament mit Schwerpunkt „Menschen &amp; Change", Art.-4-konform, mit Basis-Zertifikat — förderfähig mit 30–100&nbsp;% Zuschuss. Du verlierst also nichts: Das Buch ist dein erster Schritt der Ausbildung.</p>
+    <div class="mt-5 flex flex-col sm:flex-row gap-3">
+      <a href="../../index.html#stufen" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold">Stufe 1 mit Guthaben ansehen</a>
+      <a href="../../index.html#test" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl font-head font-medium text-mehl underline underline-offset-4">Erst Selbsttest — 2 Minuten</a>
+    </div>
+    <p class="mt-3 text-xs text-mehl/60">Gutschrift wird bei der Buchung der Stufe 1 abgezogen — einfach Reservierungs-E-Mail erwähnen. Förderfähigkeit klären wir im Erstgespräch.</p>
+  </div>
+
+  <div class="mt-8 grid gap-3 text-left">
+    <div class="bg-white rounded-2xl shadow-card p-5 flex items-start gap-3">
+      <span class="font-head font-bold text-orange">1</span>
+      <p class="text-[15px]">E-Mail im Programm absenden — damit ist deine Reservierung verbindlich.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-card p-5 flex items-start gap-3">
+      <span class="font-head font-bold text-orange">2</span>
+      <p class="text-[15px]">Du erhältst den Zahlungslink, sobald die deutsche Ausgabe erscheint — erst dann wird bezahlt.</p>
+    </div>
+    <div class="bg-white rounded-2xl shadow-card p-5 flex items-start gap-3">
+      <span class="font-head font-bold text-orange">3</span>
+      <p class="text-[15px]">Lies los, baue deine ersten Beweise — und löse das 14-€-Guthaben ein, wenn du bereit für Stufe 1 bist.</p>
+    </div>
+  </div>
+
+  <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+    <a href="../../index.html" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold shadow-card">Zurück zur Startseite</a>
+    <a href="../../berufsbild.html" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl font-head font-medium text-ofen underline underline-offset-4">Berufsbild CAIO lesen</a>
+  </div>
+</main>
+
+<footer class="max-w-[1120px] mx-auto px-5 md:px-8 pt-10 pb-16 text-sm text-espresso/60 text-center">
+  <p>CAIO Institut · Ein Projekt des Verbunds Conversion-Day · Wissensreich Academy · Deal-Maker · Grenzenlos</p>
+  <p class="mt-3">
+    <a class="underline underline-offset-2 hover:text-espresso" href="../../index.html">Startseite</a> ·
+    <a class="underline underline-offset-2 hover:text-espresso" href="../../buch.html">Das Buch</a> ·
+    <a class="underline underline-offset-2 hover:text-espresso" href="https://wissensreich.academy/impressum" target="_blank" rel="noopener">Impressum</a> ·
+    <a class="underline underline-offset-2 hover:text-espresso" href="https://wissensreich.academy/datenschutz" target="_blank" rel="noopener">Datenschutz</a>
+  </p>
+</footer>
+
+</body>
+</html>

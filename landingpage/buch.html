@@ -161,7 +161,7 @@ tailwind.config = {
 <!-- PAKETE -->
 <section id="pakete" data-ort="Pakete" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Wähle dein Paket</h2>
-  <p class="mt-3 max-w-[60ch]">Alle Pakete enthalten das Buch (41 Kapitel, 12 Anhänge) und alle 10 Arbeitsbücher.</p>
+  <p class="mt-3 max-w-[60ch]">Alle Pakete enthalten das Buch (41 Kapitel, 12 Anhänge) und alle 10 Arbeitsbücher. <strong>Extra: Der Buchpreis (14&nbsp;€) wird dir vollständig auf Stufe 1 der Ausbildung (AI Professional) gutgeschrieben.</strong></p>
   <div class="mt-6 grid gap-4 md:grid-cols-3">
     <div class="bg-white rounded-2xl shadow-card p-6 flex flex-col">
       <p class="font-head font-bold text-ofen">Buch</p>
@@ -249,6 +249,10 @@ tailwind.config = {
       <p class="mt-2 text-[15px] text-espresso/85">Das Buch ist der Einstieg (und der Beweis-Fahrplan). Wer tiefer will, geht den gestuften Weg des CAIO Instituts: AIP → AIO → AIA → CAIO — förderfähig mit 30–100 % Zuschuss. <a class="underline underline-offset-2 text-ofen" href="index.html#stufen">Zu den Stufen →</a></p>
     </details>
     <details class="bg-white rounded-2xl shadow-card p-5">
+      <summary class="font-semibold">Wird der Buchpreis anderswo angerechnet?</summary>
+      <p class="mt-2 text-[15px] text-espresso/85">Ja. Die vollen 14 € werden dir bei der Buchung von Stufe 1 (AI Professional) gutgeschrieben — das Buch ist damit zugleich dein erster Ausbildungsschritt. Einfach bei der Buchung deine Reservierungs-E-Mail erwähnen.</p>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card p-5">
       <summary class="font-semibold">Was, wenn es nichts für mich ist?</summary>
       <p class="mt-2 text-[15px] text-espresso/85">30 Tage nach Erhalt: einfache E-Mail, Geld zurück. Ohne Formular, ohne Fragen.</p>
     </details>
@@ -312,7 +316,7 @@ bf.addEventListener('submit',e=>{
   const paket=document.getElementById('buch-paket').value;
   const body='Reservierung: Das CAIO-Playbook\n\nName: '+name+'\nE-Mail: '+mail+'\nPaket: '+paket+'\n\nBitte sendet mir den Zahlungslink, sobald das Buch erscheint.\n\n—Gesendet über die CAIO-Institut-Landingpage';
   location.href='mailto:concierge@wissensreich.academy?subject='+encodeURIComponent('Reservierung CAIO-Playbook: '+paket)+'&body='+encodeURIComponent(body);
-  bf.querySelector('button').textContent='Reservierung vorbereitet — Danke!';
+  setTimeout(function(){location.href='danke/buch/';},600);
 });
 </script>
 
