@@ -328,12 +328,17 @@ tailwind.config = {
         <option>Komplett-Paket — 61,50 €</option>
       </select>
       <label class="flex items-start gap-2 text-xs text-espresso/70">
+        <input type="checkbox" id="buch-widerruf" required class="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E4572E]">
+        <span>Ich habe die <a class="underline underline-offset-2" href="widerruf.html">Widerrufsbelehrung</a> gelesen. Ich weiß, dass das Widerrufsrecht bei digitalen Inhalten mit dem Download erlischt.</span>
+      </label>
+      <label class="flex items-start gap-2 text-xs text-espresso/70">
         <input type="checkbox" id="buch-dsgvo" required class="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E4572E]">
         <span>Ich habe die <a class="underline underline-offset-2" href="https://wissensreich.academy/datenschutz" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a> gelesen und bin mit der Kontaktaufnahme zur Reservierung einverstanden.</span>
       </label>
-      <button type="submit" class="min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold">Reservierung per E-Mail anfragen</button>
+      <button type="submit" class="min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold">Kostenpflichtig bestellen</button>
       <p id="buch-hinweis" class="hidden text-xs text-rose-600"></p>
-      <p class="text-xs text-espresso/50">Öffnet dein E-Mail-Programm mit vorbereiteter Reservierung an concierge@wissensreich.academy. Bezahlt wird erst mit Erscheinen (Zahlungslink per E-Mail). 30-Tage-Geld-zurück.</p>
+      <p class="text-xs text-espresso/50">Mit Klick auf „Kostenpflichtig bestellen“ schließen Sie einen Kaufvertrag ab. Alle Pflichtinformationen finden Sie <a href="verbraucherinformationen.html" style="underline">hier</a>.
+      Öffnet dein E-Mail-Programm mit vorbereiteter Reservierung an concierge@wissensreich.academy. Bezahlt wird erst mit Erscheinen (Zahlungslink per E-Mail). 30-Tage-Geld-zurück.</p>
     </form>
   </div>
 </section>
@@ -405,6 +410,9 @@ tailwind.config = {
     <a class="underline underline-offset-2 hover:text-espresso" href="ueber-uns.html">Über uns</a> ·
     <a class="underline underline-offset-2 hover:text-espresso" href="berufsbild.html">Berufsbild CAIO</a> ·
     <a class="underline underline-offset-2 hover:text-espresso" href="glossar.html">Glossar</a> ·
+    <a class="underline underline-offset-2 hover:text-espresso" href="agb.html">AGB</a> ·
+    <a class="underline underline-offset-2 hover:text-espresso" href="widerruf.html">Widerruf</a> ·
+    <a class="underline underline-offset-2 hover:text-espresso" href="verbraucherinformationen.html">Verbraucherinfo</a> ·
     <a class="underline underline-offset-2 hover:text-espresso" href="https://wissensreich.academy/impressum" target="_blank" rel="noopener noreferrer">Impressum</a> ·
     <a class="underline underline-offset-2 hover:text-espresso" href="https://wissensreich.academy/datenschutz" target="_blank" rel="noopener noreferrer">Datenschutz</a>
   </p>
