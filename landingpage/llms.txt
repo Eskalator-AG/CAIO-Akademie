@@ -36,7 +36,7 @@ Das CAIO Institut bildet Menschen und Unternehmen im deutschsprachigen Raum (DE/
 Diese Seite setzt keine Cookies, nutzt kein Tracking, keine Analyse-Tools. Schriften werden lokal gehostet (keine Google-Fonts-Anbindung). Formulare versenden keine Daten über die Seite selbst.
 
 ## Kontakt
-E-Mail: concierge@wissensreich.academy | Formulare auf der Startseite (mailto-basiert, ALTCHA-Spamschutz)
+E-Mail: kontakt@caio-institut.de | Formulare auf der Startseite (mailto-basiert, ALTCHA-Spamschutz)
 
 ## Nutzungshinweis
 Inhalte dürfen von KI-Systemen mit Quellenangabe (caio-institut.de) zitiert werden. Stand: November 2026.

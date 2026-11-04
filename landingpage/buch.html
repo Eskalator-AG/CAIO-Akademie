@@ -346,7 +346,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
       <button type="submit" class="min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold">Kostenpflichtig bestellen</button>
       <p id="buch-hinweis" class="hidden text-xs text-rose-600"></p>
       <p class="text-xs text-espresso/50">Mit Klick auf „Kostenpflichtig bestellen“ schließen Sie einen Kaufvertrag ab. Alle Pflichtinformationen finden Sie <a href="verbraucherinformationen.html" style="underline">hier</a>.
-      Öffnet dein E-Mail-Programm mit vorbereiteter Reservierung an concierge@wissensreich.academy. Bezahlt wird erst mit Erscheinen (Zahlungslink per E-Mail). 30-Tage-Geld-zurück.</p>
+      Öffnet dein E-Mail-Programm mit vorbereiteter Reservierung an kontakt@caio-institut.de. Bezahlt wird erst mit Erscheinen (Zahlungslink per E-Mail). 30-Tage-Geld-zurück.</p>
     </form>
   </div>
 </section>
@@ -457,7 +457,7 @@ bf.addEventListener('submit',e=>{
   const mail=bf.querySelector('input[type=email]').value.trim();
   const paket=document.getElementById('buch-paket').value;
   const body='Reservierung: Das CAIO-Handbuch\n\nName: '+name+'\nE-Mail: '+mail+'\nPaket: '+paket+'\n\nBitte sendet mir den Zahlungslink, sobald das Buch erscheint.\n\n—Gesendet über die CAIO-Institut-Landingpage';
-  location.href='mailto:concierge@wissensreich.academy?subject='+encodeURIComponent('Reservierung CAIO-Handbuch: '+paket)+'&body='+encodeURIComponent(body);
+  location.href='mailto:kontakt@caio-institut.de?subject='+encodeURIComponent('Reservierung CAIO-Handbuch: '+paket)+'&body='+encodeURIComponent(body);
   setTimeout(function(){location.href='danke/buch/';},600);
 });
 </script>
