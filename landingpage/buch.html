@@ -42,6 +42,9 @@ tailwind.config = {
   @media (prefers-reduced-motion: reduce){ *{transition:none!important;animation:none!important} }
   :focus-visible{ outline:3px solid #2E86AB; outline-offset:2px; }
   header[id],section[id]{ scroll-margin-top:104px }
+p{overflow-wrap:break-word;word-wrap:break-word}
+li{overflow-wrap:break-word}
+td{overflow-wrap:break-word}
 </style>
 <style>
 details>summary{position:relative;padding-right:28px;cursor:pointer;list-style:none}
@@ -50,6 +53,9 @@ details>summary::after{content:'';position:absolute;right:6px;top:50%;transform:
   width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
   rotate:-45deg;transition:rotate .2s ease;opacity:.6}
 details[open]>summary::after{rotate:45deg;top:40%}
+p{overflow-wrap:break-word;word-wrap:break-word}
+li{overflow-wrap:break-word}
+td{overflow-wrap:break-word}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Book","name":"Das CAIO-Handbuch — Edition","author":{"@type":"Organization","name":"CAIO Institut"},"description":"Vom KI-Wissen zur KI-Verantwortung. 18 Kapitel, 4 Teile, integriertes Workbook mit 5 Vorlagen. Eigenständige Fassung für den deutschen und europäischen Markt.","inLanguage":"de","numberOfPages":62,"bookFormat":"https://schema.org/EBook","offers":{"@type":"Offer","price":"17.50","priceCurrency":"EUR","availability":"https://schema.org/PreOrder"}}
@@ -132,7 +138,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
 <!-- INHALT -->
 <section id="inhalt" data-ort="Inhalt &amp; Rahmen" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Vom Beweis zur Verantwortung</h2>
-  <p class="mt-3 max-w-[64ch]">Das Handbuch und die Ausbildung folgen einem gemeinsamen Rahmen — dem Stufenmodell des CAIO Instituts: <strong>Fundament bereiten (bis 90 % Förderung) · Urteil schärfen (ca. 80 %, Team-Qualifizierung) · Projekte bauen (exakt 3 Monate, bis 100 %) · Verantwortung tragen (exakt 7 Monate inkl. AIA, bis 100 %).</strong> Das Handbuch ist die Klammer: Es bereitet das Fundament vor, vereinfacht den Einstieg und zeigt den ganzen Weg bis zur Verantwortung.</p>
+  <p class="mt-3 max-w-[80ch]">Das Handbuch und die Ausbildung folgen einem gemeinsamen Rahmen — dem Stufenmodell des CAIO Instituts: <strong>Fundament bereiten (bis 90 % Förderung) · Urteil schärfen (ca. 80 %, Team-Qualifizierung) · Projekte bauen (exakt 3 Monate, bis 100 %) · Verantwortung tragen (exakt 7 Monate inkl. AIA, bis 100 %).</strong> Das Handbuch ist die Klammer: Es bereitet das Fundament vor, vereinfacht den Einstieg und zeigt den ganzen Weg bis zur Verantwortung.</p>
 
   <!-- Rahmen-Grafik: Das Handbuch als Klammer um die Ausbildung -->
   <div class="mt-8 bg-white rounded-2xl shadow-card p-6 md:p-8">
@@ -192,12 +198,12 @@ details[open]>summary::after{rotate:45deg;top:40%}
       <span class="text-sm text-espresso/50">Kapitel 1–6</span>
     </div>
     <div class="mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-2">
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">1</span><span>Das Zeitfenster — warum der Einstieg jetzt zählt (2025 bis 2028)</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">2</span><span>Die neue Rolle im Unternehmen: der Architekt für KI, nicht der Handwerker</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">3</span><span>Was die Rolle heute bereits wert ist — Gehälter in Deutschland, Österreich und der Schweiz, mit Zukunftstrend</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">4</span><span>Die Chance für das Unternehmen — mehr Umsatz, höhere Zufriedenheit, weniger Überlastung, geringere Kosten für Material, Personal und Dienstleister</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">5</span><span>Geschwindigkeit als Vorsprung — wie KI-Verantwortung den Abstand zum Wettbewerb bestimmt</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">6</span><span>Kein Technik-Studium nötig — Urteil zählt, nicht Code</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">1</span><span>Das Zeitfenster — warum der Einstieg jetzt zählt (2025 bis 2028)</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">2</span><span>Die neue Rolle im Unternehmen: der Architekt für KI, nicht der Handwerker</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">3</span><span>Was die Rolle heute bereits wert ist — Gehälter in Deutschland, Österreich und der Schweiz, mit Zukunftstrend</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">4</span><span>Die Chance für das Unternehmen — mehr Umsatz, höhere Zufriedenheit, weniger Überlastung, geringere Kosten für Material, Personal und Dienstleister</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">5</span><span>Geschwindigkeit als Vorsprung — wie KI-Verantwortung den Abstand zum Wettbewerb bestimmt</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">6</span><span>Kein Technik-Studium nötig — Urteil zählt, nicht Code</span></p>
     </div>
   </div>
   <div aria-hidden="true" class="my-5 flex items-center justify-center gap-2">
@@ -212,10 +218,10 @@ details[open]>summary::after{rotate:45deg;top:40%}
       <span class="text-sm text-espresso/50">Kapitel 7–10</span>
     </div>
     <div class="mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-2">
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">7</span><span>Die Beweis-Leiter — fünf dokumentierte Arbeitsproben in 30 Tagen</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">8</span><span>Der erste Monat — ein Fahrplan, der in den Betriebsalltag passt</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">9</span><span>Der Schatten-Check — die unaufgeforderte Diagnose des eigenen Unternehmens</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">10</span><span>Erfolgreiche Unternehmen und ihre KI-Initiativen — was sie besser machen als ihre Begleiter im Markt</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">7</span><span>Die Beweis-Leiter — fünf dokumentierte Arbeitsproben in 30 Tagen</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">8</span><span>Der erste Monat — ein Fahrplan, der in den Betriebsalltag passt</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">9</span><span>Der Schatten-Check — die unaufgeforderte Diagnose des eigenen Unternehmens</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">10</span><span>Erfolgreiche Unternehmen und ihre KI-Initiativen — was sie besser machen als ihre Begleiter im Markt</span></p>
     </div>
   </div>
   <div aria-hidden="true" class="my-5 flex items-center justify-center gap-2">
@@ -230,9 +236,9 @@ details[open]>summary::after{rotate:45deg;top:40%}
       <span class="text-sm text-espresso/50">Kapitel 11–13</span>
     </div>
     <div class="mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-2">
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">11</span><span>Recht und Rahmen in Europa — KI-Gesetz, DSGVO, Daten-Souveränität</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">12</span><span>In Geld sprechen — Berichte, die die Geschäftsleitung versteht</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">13</span><span>Dienstleister steuern — klare Anforderungen, klare Abnahme</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">11</span><span>Recht und Rahmen in Europa — KI-Gesetz, DSGVO, Daten-Souveränität</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">12</span><span>In Geld sprechen — Berichte, die die Geschäftsleitung versteht</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">13</span><span>Dienstleister steuern — klare Anforderungen, klare Abnahme</span></p>
     </div>
   </div>
   <div aria-hidden="true" class="my-5 flex items-center justify-center gap-2">
@@ -247,11 +253,11 @@ details[open]>summary::after{rotate:45deg;top:40%}
       <span class="text-sm text-espresso/50">Kapitel 14–18</span>
     </div>
     <div class="mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-2">
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">14</span><span>Der erste echte Einsatz — ein Pilot von der Idee zur Messung, am Fall KI-Bäckerei</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">15</span><span>Alle Facetten in einem Werkzeug — wie Deal-Maker das Unternehmen insgesamt effektiver macht</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">16</span><span>Die Wissensreich Academy — der gestufte Weg zur Rolle (AIP bis CAIO)</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">17</span><span>Dein nächster Schritt — kostenloser Ausbildungs-Auftakt mit Fördermittel-Check</span></p>
-      <p class="flex gap-3 text-[15px]"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">18</span><span>Der Ausblick — wie du dranbleibst und deine Rolle wächst</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">14</span><span>Der erste echte Einsatz — ein Pilot von der Idee zur Messung, am Fall KI-Bäckerei</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">15</span><span>Alle Facetten in einem Werkzeug — wie Deal-Maker das Unternehmen insgesamt effektiver macht</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">16</span><span>Die Wissensreich Academy — der gestufte Weg zur Rolle (AIP bis CAIO)</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">17</span><span>Dein nächster Schritt — kostenloser Ausbildungs-Auftakt mit Fördermittel-Check</span></p>
+      <p class="flex gap-3 text-[15px] break-words"><span class="font-head font-bold text-ofen w-6 flex-shrink-0">18</span><span>Der Ausblick — wie du dranbleibst und deine Rolle wächst</span></p>
     </div>
   </div>
 
@@ -283,7 +289,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
 <!-- PAKETE -->
 <section id="pakete" data-ort="Pakete" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Wähle dein Paket</h2>
-  <p class="mt-3 max-w-[60ch]">Alle Preise verstehen sich in Euro <strong>inkl. gesetzlicher Mehrwertsteuer</strong>. Alle Pakete enthalten das <strong>CAIO-Handbuch — Edition</strong> (66 Seiten, 18 Kapitel, 5 integrierte Vorlagen) und das separate Workbook. <strong>Extra: Doppelte Anrechnung — deine 17,50&nbsp;€ werden dir als 35&nbsp;€-Gutschein auf Stufe 1 (AI Professional) gutgeschrieben, plus 1:1-KI-Consulting-Call während der Betreuung.</strong></p>
+  <p class="mt-3 max-w-[75ch]">Alle Preise verstehen sich in Euro <strong>inkl. gesetzlicher Mehrwertsteuer</strong>. Alle Pakete enthalten das <strong>CAIO-Handbuch — Edition</strong> (66 Seiten, 18 Kapitel, 5 integrierte Vorlagen) und das separate Workbook. <strong>Extra: Doppelte Anrechnung — deine 17,50&nbsp;€ werden dir als 35&nbsp;€-Gutschein auf Stufe 1 (AI Professional) gutgeschrieben, plus 1:1-KI-Consulting-Call während der Betreuung.</strong></p>
   <div class="mt-6 grid gap-4 md:grid-cols-3">
     <div class="bg-white rounded-2xl shadow-card p-6 flex flex-col">
       <p class="font-head font-bold text-ofen">Buch</p>
@@ -408,7 +414,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
 <section class="max-w-[1120px] mx-auto px-5 md:px-8 pb-14">
   <div class="bg-orange rounded-2xl shadow-card p-6 md:p-10 text-center">
     <p class="font-head font-bold text-espresso text-[clamp(22px,4vw,32px)] leading-tight">Kein Buch zum Lesen. Ein Fahrplan zum Tun.</p>
-    <p class="mt-3 text-espresso/80 max-w-[52ch] mx-auto">Und dieser Fahrplan endet nicht auf der letzten Seite, sondern in deiner neuen Rolle. 17,50 € inkl. MwSt., 30 Tage Geld-zurück — und 35&nbsp;€ Gutschrift auf Stufe 1.</p>
+    <p class="mt-3 text-espresso/80 max-w-[72ch] mx-auto">Und dieser Fahrplan endet nicht auf der letzten Seite, sondern in deiner neuen Rolle. 17,50 € inkl. MwSt., 30 Tage Geld-zurück — und 35&nbsp;€ Gutschrift auf Stufe 1.</p>
     <a href="#bestellen" class="mt-6 inline-flex items-center justify-center min-h-[48px] px-7 rounded-xl bg-espresso text-mehl font-head font-bold shadow-card">Jetzt kaufen — 17,50 € inkl. MwSt.</a>
   </div>
 </section>

@@ -46,6 +46,9 @@ tailwind.config = {
   details>summary{ list-style:none; cursor:pointer; }
   details>summary::-webkit-details-marker{ display:none; }
   header[id],section[id]{ scroll-margin-top:104px }
+p{overflow-wrap:break-word;word-wrap:break-word}
+li{overflow-wrap:break-word}
+td{overflow-wrap:break-word}
 </style>
 <style>
 details>summary{position:relative;padding-right:28px;cursor:pointer;list-style:none}
@@ -54,6 +57,9 @@ details>summary::after{content:'';position:absolute;right:6px;top:50%;transform:
   width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
   rotate:-45deg;transition:rotate .2s ease;opacity:.6}
 details[open]>summary::after{rotate:45deg;top:40%}
+p{overflow-wrap:break-word;word-wrap:break-word}
+li{overflow-wrap:break-word}
+td{overflow-wrap:break-word}
 </style>
 </head>
 
@@ -88,7 +94,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
   <h1 class="font-head font-bold text-ofen text-[clamp(28px,6vw,44px)] leading-tight mt-3 max-w-[24ch]">
     Chief AI Officer: die Rolle, die Unternehmen gerade neu erfinden.
   </h1>
-  <p class="mt-4 max-w-[56ch]">Diese Seite bündelt, was die Rolle ausmacht: sechs Handlungsfelder, die ehrliche Pro-&-Contra-Debatte, Zahlen aus Studien und Gehaltsspannen. Jede Angabe mit Quelle.</p>
+  <p class="mt-4 max-w-[72ch]">Diese Seite bündelt, was die Rolle ausmacht: sechs Handlungsfelder, die ehrliche Pro-&-Contra-Debatte, Zahlen aus Studien und Gehaltsspannen. Jede Angabe mit Quelle.</p>
   <div class="mt-7 flex flex-col sm:flex-row gap-3">
     <a href="index.html#test" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold text-lg shadow-card">
       Selbsttest starten
@@ -115,7 +121,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
 <!-- HANDLUNGSFELDER -->
 <section id="handlungsfelder" data-ort="Handlungsfelder" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Sechs Handlungsfelder</h2>
-  <p class="mt-3 max-w-[60ch]">Sie entsprechen den sechs Dimensionen unserer Kompetenzmatrix. Kienbaum beschreibt die Rolle ähnlich: „visionärer Leader und technischer Experte in Personalunion".</p>
+  <p class="mt-3 max-w-[75ch]">Sie entsprechen den sechs Dimensionen unserer Kompetenzmatrix. Kienbaum beschreibt die Rolle ähnlich: „visionärer Leader und technischer Experte in Personalunion".</p>
   <div class="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
     <div class="bg-white rounded-2xl shadow-card p-6">
       <p class="font-head font-bold text-orange">1 · Strategie &amp; Wirtschaftlichkeit</p>
@@ -147,7 +153,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
 <!-- PRO & CONTRA -->
 <section id="pro-contra" data-ort="Pro &amp; Contra" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Die ehrliche Debatte: Pro &amp; Contra</h2>
-  <p class="mt-3 max-w-[60ch]">Kienbaum führt die Argumente beider Seiten (Februar 2025). Wir verheimlichen keine Seite. Wer die Rolle besetzen will, muss beide kennen.</p>
+  <p class="mt-3 max-w-[75ch]">Kienbaum führt die Argumente beider Seiten (Februar 2025). Wir verheimlichen keine Seite. Wer die Rolle besetzen will, muss beide kennen.</p>
   <div class="mt-6 grid gap-4 md:grid-cols-2">
     <div class="bg-white rounded-2xl shadow-card p-6 border-t-4 border-emerald-500">
       <p class="font-head font-bold text-ofen text-lg">Pro — dafür spricht</p>
@@ -191,14 +197,14 @@ details[open]>summary::after{rotate:45deg;top:40%}
       <p class="mt-1 text-[15px]">verlangt der EU AI Act (Art. 4) KI-Kompetenz der Belegschaft. Die Pflicht steht im Gesetz. <span class="text-espresso/60">(EU AI Act)</span></p>
     </div>
   </div>
-  <p class="mt-4 text-[15px] text-espresso/80 max-w-[64ch]">Kienbaum nennt zudem Praxisbeispiele: 20–30 % Produktionseffizienz durch dediziertes KI-Management, −40 % Entwicklungszeit bei BASF-Materialien, −45 % Ausschussraten in der Qualitätskontrolle, 60 % weniger Compliance-Verstöße durch KI-Governance.</p>
+  <p class="mt-4 text-[15px] text-espresso/80 max-w-[80ch]">Kienbaum nennt zudem Praxisbeispiele: 20–30 % Produktionseffizienz durch dediziertes KI-Management, −40 % Entwicklungszeit bei BASF-Materialien, −45 % Ausschussraten in der Qualitätskontrolle, 60 % weniger Compliance-Verstöße durch KI-Governance.</p>
 </section>
 
 <!-- GEHALT -->
 <section id="gehalt" data-ort="Gehalt" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Was die Rolle wert ist</h2>
   <div class="mt-6 bg-white rounded-2xl shadow-card p-6 md:p-8">
-    <p class="text-[15px] max-w-[64ch]">Öffentliche Stellenmarkt-Analysen nennen für Deutschland eine Spanne von rund <strong>90.000 bis 130.000 €</strong> im Jahr. In Konzernen und Scale-ups liegt die Gesamtvergütung deutlich höher — Business Insider berichtet von hohen sechsstelligen Beträgen bis etwa <strong>500.000 €</strong>. Die Spanne ist weit. Sie hängt von Branche, Unternehmensgröße und Verantwortung ab.</p>
+    <p class="text-[15px] max-w-[80ch]">Öffentliche Stellenmarkt-Analysen nennen für Deutschland eine Spanne von rund <strong>90.000 bis 130.000 €</strong> im Jahr. In Konzernen und Scale-ups liegt die Gesamtvergütung deutlich höher — Business Insider berichtet von hohen sechsstelligen Beträgen bis etwa <strong>500.000 €</strong>. Die Spanne ist weit. Sie hängt von Branche, Unternehmensgröße und Verantwortung ab.</p>
     <p class="mt-3 text-sm text-espresso/60">Quellen: stellenmarkt.de (Berufsporträt CAIO), Business Insider / Gruenderszene. Angaben ohne Gewähr; der Markt bildet sich gerade erst.</p>
   </div>
 </section>
@@ -216,7 +222,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
 <!-- FÜR ARBEITNEHMER & ARBEITGEBER -->
 <section id="fuer-wen" data-ort="Für Arbeitnehmer &amp; Arbeitgeber" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Was eine CAIO-Ausbildung Ihnen — und dir — einzigartig bringt</h2>
-  <p class="mt-3 max-w-[60ch]">Zwei Perspektiven, ein Pfad. Arbeitnehmer gewinnen Sichtbarkeit und Zukunft; Arbeitgeber gewinnen Steuerung und Unabhängigkeit.</p>
+  <p class="mt-3 max-w-[75ch]">Zwei Perspektiven, ein Pfad. Arbeitnehmer gewinnen Sichtbarkeit und Zukunft; Arbeitgeber gewinnen Steuerung und Unabhängigkeit.</p>
   <div class="mt-6 grid gap-4 md:grid-cols-2">
 
     <div class="bg-white rounded-2xl shadow-card p-6 md:p-8 border-t-4 border-orange">
@@ -252,7 +258,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
 <!-- WEG ZUR ROLLE -->
 <section id="weg" data-ort="Weg zur Rolle" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Der Weg zur Rolle</h2>
-  <p class="mt-3 max-w-[60ch]">Vier Stufen. Ein Pfad — „Vom Beweis zur Verantwortung". Jede Stufe erzwingt einen Schwerpunkt und endet mit einem Nachweis: Fundament bereiten · Urteil schärfen · Projekte bauen · Verantwortung tragen. Einstieg ohne Vorkenntnisse oder mit dem <a class="underline underline-offset-2 text-ofen" href="buch.html">CAIO-Handbuch</a>.</p>
+  <p class="mt-3 max-w-[75ch]">Vier Stufen. Ein Pfad — „Vom Beweis zur Verantwortung". Jede Stufe erzwingt einen Schwerpunkt und endet mit einem Nachweis: Fundament bereiten · Urteil schärfen · Projekte bauen · Verantwortung tragen. Einstieg ohne Vorkenntnisse oder mit dem <a class="underline underline-offset-2 text-ofen" href="buch.html">CAIO-Handbuch</a>.</p>
   <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-[15px]">
     <div class="bg-white rounded-2xl shadow-card p-5 border-l-4 border-sand">
       <p class="font-head font-bold text-ofen">Stufe 1 · AI Professional (AIP)</p>

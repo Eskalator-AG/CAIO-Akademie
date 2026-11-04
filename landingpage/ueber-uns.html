@@ -44,6 +44,9 @@ tailwind.config = {
   @media (prefers-reduced-motion: reduce){ *{transition:none!important;animation:none!important} }
   :focus-visible{ outline:3px solid #2E86AB; outline-offset:2px; }
   header[id],section[id]{ scroll-margin-top:104px }
+p{overflow-wrap:break-word;word-wrap:break-word}
+li{overflow-wrap:break-word}
+td{overflow-wrap:break-word}
 </style>
 <style>
 details>summary{position:relative;padding-right:28px;cursor:pointer;list-style:none}
@@ -52,6 +55,9 @@ details>summary::after{content:'';position:absolute;right:6px;top:50%;transform:
   width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
   rotate:-45deg;transition:rotate .2s ease;opacity:.6}
 details[open]>summary::after{rotate:45deg;top:40%}
+p{overflow-wrap:break-word;word-wrap:break-word}
+li{overflow-wrap:break-word}
+td{overflow-wrap:break-word}
 </style>
 </head>
 
@@ -84,7 +90,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
   <h1 class="font-head font-bold text-ofen text-[clamp(28px,6vw,44px)] leading-tight mt-3 max-w-[24ch]">
     Ein Projekt der Wissensreich Academy.
   </h1>
-  <p class="mt-4 max-w-[56ch]">Das CAIO Institut baut auf dem Rückgrat eines Bildungshauses auf: über 10 Jahre Fördermittel-Expertise, AZAV-zertifizierte Qualität und Praxis-Dozenten aus der Wirtschaft. Hier stehen Leitbild, Zahlen und Menschen.</p>
+  <p class="mt-4 max-w-[72ch]">Das CAIO Institut baut auf dem Rückgrat eines Bildungshauses auf: über 10 Jahre Fördermittel-Expertise, AZAV-zertifizierte Qualität und Praxis-Dozenten aus der Wirtschaft. Hier stehen Leitbild, Zahlen und Menschen.</p>
   <figure class="mt-8 overflow-hidden rounded-2xl shadow-card">
     <img src="assets/hero/ueber-uns.jpg" alt="Warme Bäckerei voller frischer Backwaren — unser Praxisfall: die KI-Bäckerei" class="w-full aspect-[16/7] object-cover" width="1600" height="700" fetchpriority="high">
   </figure>
@@ -99,7 +105,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
       Niemand hat ihr dafür eine Rolle gegeben. Sie hat sich die Rolle selbst gebaut."
     </blockquote>
     <p class="mt-3 text-sm text-espresso/60">Aus dem Leitbild des CAIO Instituts</p>
-    <p class="mt-4 text-[15px] max-w-[62ch]">Diese Rolle hat heute einen Namen: <strong>Chief AI Officer</strong>. René weiß das nicht. Ihr Vorstand auch nicht. Genau hier setzen wir an.</p>
+    <p class="mt-4 text-[15px] max-w-[75ch]">Diese Rolle hat heute einen Namen: <strong>Chief AI Officer</strong>. René weiß das nicht. Ihr Vorstand auch nicht. Genau hier setzen wir an.</p>
   </div>
 
   <div class="mt-6 grid gap-4 md:grid-cols-2">
@@ -148,7 +154,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
 <!-- ZERTIFIKATE & AUSZEICHNUNGEN -->
 <section id="zertifikate" data-ort="Zertifikate &amp; Awards" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Zertifikate &amp; Auszeichnungen</h2>
-  <p class="mt-3 max-w-[60ch]">Getragen von der Wissensreich Academy — AZAV-zertifiziert, geprüfte Qualitäts- und Innovationsstandards, anerkannt für geförderte Weiterbildung.</p>
+  <p class="mt-3 max-w-[75ch]">Getragen von der Wissensreich Academy — AZAV-zertifiziert, geprüfte Qualitäts- und Innovationsstandards, anerkannt für geförderte Weiterbildung.</p>
   <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
     <div class="bg-white rounded-2xl shadow-card p-6 flex items-center gap-4">
       <img src="assets/siegel/certqua-azav-iso9001.webp" alt="CERTQUA — AZAV und ISO 9001" class="h-14 w-14 object-contain flex-shrink-0" loading="lazy">
@@ -181,7 +187,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
 <!-- DOZENTEN -->
 <section id="dozenten" data-ort="Dozenten" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Dozenten &amp; Praxis-Experten</h2>
-  <p class="mt-3 max-w-[60ch]">13 namentlich genannte Dozenten und Experten stehen hinter den Programmen des Verbunds — aus Marketing, Vertrieb, Produkt, Strategie und KI-Praxis.</p>
+  <p class="mt-3 max-w-[75ch]">13 namentlich genannte Dozenten und Experten stehen hinter den Programmen des Verbunds — aus Marketing, Vertrieb, Produkt, Strategie und KI-Praxis.</p>
   <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
     <div class="bg-white rounded-2xl shadow-card p-4 text-center">
       <img src="assets/dozenten/hermann-fuerstenau.webp" alt="Hermann Fürstenau" class="w-full aspect-square object-cover rounded-xl" loading="lazy">
@@ -243,7 +249,7 @@ details[open]>summary::after{rotate:45deg;top:40%}
 <section class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <div class="bg-ofen rounded-2xl shadow-card p-6 md:p-8 text-mehl text-center">
     <p class="font-head font-bold text-lg">Der erste Schritt ist klein.</p>
-    <p class="mt-2 text-[15px] max-w-[52ch] mx-auto">Fünf Fragen. 2 Minuten. Du weißt sofort, wo du stehst.</p>
+    <p class="mt-2 text-[15px] max-w-[72ch] mx-auto">Fünf Fragen. 2 Minuten. Du weißt sofort, wo du stehst.</p>
     <div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
       <a href="index.html#test" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold">Selbsttest starten</a>
       <a href="index.html#stufen" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl font-head font-medium text-mehl underline underline-offset-4">Die vier Stufen ansehen</a>
