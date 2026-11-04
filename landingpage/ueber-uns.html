@@ -43,6 +43,14 @@ tailwind.config = {
   :focus-visible{ outline:3px solid #2E86AB; outline-offset:2px; }
   header[id],section[id]{ scroll-margin-top:104px }
 </style>
+<style>
+details>summary{position:relative;padding-right:28px;cursor:pointer;list-style:none}
+details>summary::-webkit-details-marker{display:none}
+details>summary::after{content:'';position:absolute;right:6px;top:50%;transform:translateY(-50%);
+  width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+  rotate:-45deg;transition:rotate .2s ease;opacity:.6}
+details[open]>summary::after{rotate:45deg;top:40%}
+</style>
 </head>
 
 <body class="bg-mehl text-espresso font-body text-[17px] leading-relaxed antialiased">

@@ -5,10 +5,10 @@
 Das CAIO Institut bildet Menschen und Unternehmen im deutschsprachigen Raum (DE/AT/CH) zur KI-Verantwortungsrolle „Chief AI Officer" aus. Praxisfall aller Stufen ist die KI-Bäckerei (Bestellvorhersage). Träger: Wissensreich Academy UG (haftungsbeschränkt), Köln — AZAV-zertifiziert, ISO 9001, ISO 56002:2019, BVMW-Mitglied.
 
 ## Stufenmodell „Vom Beweis zur Verantwortung"
-- Stufe 1 · AI Professional (AIP): Fundament bereiten — über 32 Stunden, Schwerpunkt Menschen & Change, Basis-Zertifikat, Art.-4-konform
-- Stufe 2 · AI Officer (AIO): Urteil schärfen — 4–6 Wochen, Schwerpunkt Wirtschaftlichkeit, geprüfter Business Case
-- Stufe 3 · AI Architekt (AIA): Projekte bauen — 3–6 Monate, Schwerpunkt Technologie & Daten, Meisterstück
-- Stufe 4 · Chief AI Officer (CAIO): Verantwortung tragen — 6–12 Monate, Schwerpunkt Sicherheit & Recht, CAIO-Zertifikat
+- Stufe 1 · AI Professional (AIP): Fundament bereiten — über 32 Stunden, bis 90 % Förderung, Schwerpunkt Menschen & Change, Basis-Zertifikat, Art.-4-konform
+- Stufe 2 · AI Officer (AIO): Urteil schärfen — 4–6 Wochen als Team-Qualifizierung (bis 3 Mitarbeitende an konkreten Projekten), durchschnittlich 80 % Förderung, Schwerpunkt Wirtschaftlichkeit, geprüfter Business Case
+- Stufe 3 · AI Architekt (AIA): Projekte bauen — exakt 3 Monate, bis 100 % Förderung für Beschäftigte, Schwerpunkt Technologie & Daten, Meisterstück
+- Stufe 4 · Chief AI Officer (CAIO): Verantwortung tragen — exakt 7 Monate (inkl. 3 Monate AIA), bis 100 % Förderung, baut auf dem AI Architekten auf, Schwerpunkt Sicherheit & Recht, CAIO-Zertifikat
 
 ## Kernfakten
 - Förderfähigkeit: 30–100 % Zuschuss möglich; Bewilligungsquote bis 95 % bei begleiteten Anträgen
