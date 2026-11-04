@@ -282,66 +282,144 @@ td{overflow-wrap:break-word}
   </div>
 </section>
 
-<!-- 4. STUFENLEITER -->
+<!-- 4. STUFENLEITER — Produktvergleichsmatrix -->
 <section id="stufen" data-ort="Vier Stufen" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
-  <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Vier Stufen. Ein Pfad.</h2>
-  <p class="mt-3 max-w-[80ch]">Unser Rahmen: <strong>„Vom Beweis zur Verantwortung"</strong> — Fundament bereiten, Urteil schärfen, Projekte bauen, Verantwortung tragen. Jede Stufe erzwingt einen Schwerpunkt; das <a class="underline underline-offset-2 text-ofen" href="buch.html">CAIO-Handbuch</a> macht diese Logik von Tag eins an sichtbar.</p>
-  <div class="mt-8 grid gap-4 md:grid-cols-4">
-    <div class="md:rounded-2xl md:bg-white md:shadow-card md:p-6 border-l-4 border-sand pb-6 pl-6">
-      <p class="hidden md:block font-head font-bold text-sm text-espresso/50">Stufe 1</p>
-      <div class="flex items-center gap-2 mt-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0 text-sand" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-        <h3 class="font-head font-bold text-ofen text-lg">AI Professional (AIP)</h3>
+  <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Vier Rollen. Ein Pfad.</h2>
+  <p class="mt-3">Unser Rahmen: <strong>„Vom Beweis zur Verantwortung“</strong> — jede Stufe baut auf der vorherigen auf. Vergleichen Sie alle vier auf einen Blick.</p>
+
+  <!-- DESKTOP: Vergleichstabelle -->
+  <div class="hidden md:block mt-8 bg-white rounded-2xl shadow-card overflow-x-auto">
+    <table class="w-full text-sm text-left">
+      <thead>
+        <tr>
+          <th class="p-4 bg-ofen text-mehl font-head">Vergleich</th>
+          <th class="p-4 bg-sand text-espresso font-head">Professional<br><span class="text-xs font-normal opacity-70">AIP</span></th>
+          <th class="p-4 bg-orange text-espresso font-head">Officer<br><span class="text-xs font-normal opacity-70">AIO</span></th>
+          <th class="p-4 bg-licht text-mehl font-head">Architekt<br><span class="text-xs font-normal opacity-70">AIA</span></th>
+          <th class="p-4 bg-nacht text-mehl font-head">Chief Officer<br><span class="text-xs font-normal opacity-70">CAIO</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="p-3 font-semibold bg-mehl/50">Dauer</td>
+          <td class="p-3 bg-sand/10">Über 32 Stunden</td>
+          <td class="p-3 bg-orange/5">4–6 Wochen</td>
+          <td class="p-3 bg-licht/5">Exakt 3 Monate</td>
+          <td class="p-3 bg-nacht/5">Exakt 7 Monate (inkl. AIA)</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold bg-mehl/50">Förderung</td>
+          <td class="p-3 bg-sand/10"><strong>Bis 90 %</strong></td>
+          <td class="p-3 bg-orange/5"><strong>Durchschn. 80 %</strong></td>
+          <td class="p-3 bg-licht/5"><strong>Bis 100 %</strong></td>
+          <td class="p-3 bg-nacht/5"><strong>Bis 100 %</strong></td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold bg-mehl/50">Schwerpunkt</td>
+          <td class="p-3 bg-sand/10">Menschen &amp; Change</td>
+          <td class="p-3 bg-orange/5">Wirtschaftlichkeit</td>
+          <td class="p-3 bg-licht/5">Technologie &amp; Daten</td>
+          <td class="p-3 bg-nacht/5">Sicherheit &amp; Recht</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold bg-mehl/50">Format</td>
+          <td class="p-3 bg-sand/10">Selbstlernen + Live-Termine + Praxisauftrag</td>
+          <td class="p-3 bg-orange/5">Team-Qualifizierung: bis 3 Mitarbeitende aus einer Firma an konkreten Projekten</td>
+          <td class="p-3 bg-licht/5">Projektarbeit am echten Fall (KI-Bäckerei)</td>
+          <td class="p-3 bg-nacht/5">Governance &amp; Portfolio, baut auf Architekt auf</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold bg-mehl/50">Nachweis</td>
+          <td class="p-3 bg-sand/10">Basis-Zertifikat</td>
+          <td class="p-3 bg-orange/5">Geprüfter Business Case</td>
+          <td class="p-3 bg-licht/5">Meisterstück-Projekt</td>
+          <td class="p-3 bg-nacht/5">CAIO-Zertifikat</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold bg-mehl/50">Vorteil<br>Mitarbeiter</td>
+          <td class="p-3 bg-sand/10 text-xs">KI-Grundverständnis, Art.-4-konform, Handlungssicherheit im Alltag, 1:1-Call inklusive</td>
+          <td class="p-3 bg-orange/5 text-xs">Business Cases priorisieren, Dienstleister beurteilen, Projektvorschläge strukturieren, im Team arbeiten</td>
+          <td class="p-3 bg-licht/5 text-xs">Echte Projekte planen, umsetzen und messen; Ergebnis-Notizen schreiben, die überzeugen</td>
+          <td class="p-3 bg-nacht/5 text-xs">Governance-Verantwortung tragen, Recht und Risiko ordnen, Geschäftsführung beraten, KI-Portfolio steuern</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold bg-mehl/50">Vorteil<br>Unternehmen</td>
+          <td class="p-3 bg-sand/10 text-xs">Belegschaft wird Art.-4-konform; gemeinsame Sprache; geringe Einstiegshürde</td>
+          <td class="p-3 bg-orange/5 text-xs">Bis 3 Mitarbeitende qualifizieren sich parallel an internen Projekten; Fehlkäufe sinken</td>
+          <td class="p-3 bg-licht/5 text-xs">Ein echtes KI-Projekt entsteht mit messbarem Ergebnis (Vorher/Nachher)</td>
+          <td class="p-3 bg-nacht/5 text-xs">Verankerte KI-Verantwortung im Haus; unabhängig von Agenturen; Rechtssicherheit</td>
+        </tr>
+        <tr>
+          <td class="p-3 font-semibold bg-mehl/50">Bonus</td>
+          <td class="p-3 bg-sand/10 text-xs">1:1-KI-Consulting-Call während der Betreuung</td>
+          <td class="p-3 bg-orange/5 text-xs">Arbeit an konkreten Projekten der eigenen Firma</td>
+          <td class="p-3 bg-licht/5 text-xs">Meisterstück dokumentiert als Arbeitsprobe</td>
+          <td class="p-3 bg-nacht/5 text-xs">Chief AI Officer enthält den vollständigen AI Architekten</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- MOBIL: Gestapelte Karten mit gleichen Kategorien -->
+  <div class="md:hidden mt-8 grid gap-4">
+    <details class="bg-white rounded-2xl shadow-card border-l-4 border-sand p-5" open>
+      <summary class="font-head font-bold text-ofen text-lg">Professional <span class="text-sm opacity-60">AIP</span></summary>
+      <div class="mt-4 space-y-2 text-sm">
+        <p><b>Dauer:</b> Über 32 Stunden</p>
+        <p><b>Förderung:</b> Bis 90 %</p>
+        <p><b>Schwerpunkt:</b> Menschen &amp; Change</p>
+        <p><b>Nachweis:</b> Basis-Zertifikat</p>
+        <p><b>Vorteil Mitarbeiter:</b> KI-Grundverständnis, Handlungssicherheit, 1:1-Call inklusive</p>
+        <p><b>Vorteil Unternehmen:</b> Belegschaft wird Art.-4-konform, gemeinsame Sprache</p>
+        <p><b>Bonus:</b> 1:1-KI-Consulting-Call</p>
       </div>
-      <p class="font-story italic">Bereitet das Fundament vor.</p>
-      <details class="mt-2 md:mt-3">
-        <summary class="text-licht font-semibold text-sm">Details</summary>
-        <ul class="mt-2 text-sm space-y-1 text-espresso/80">
-          <li>Über 32 Stunden · für viele mit bis zu 90 % Förderung</li><li>Schwerpunkt: Menschen &amp; Change</li><li>Art.-4-konforme Basis</li><li>1:1-KI-Consulting-Call inklusive</li><li>Nachweis: Basis-Zertifikat</li>
-        </ul>
-      </details>
-    </div>
-    <div class="md:rounded-2xl md:bg-white md:shadow-card md:p-6 border-l-4 border-orange pb-6 pl-6">
-      <p class="hidden md:block font-head font-bold text-sm text-espresso/50">Stufe 2</p>
-      <div class="flex items-center gap-2 mt-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0 text-orange" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-        <h3 class="font-head font-bold text-ofen text-lg">AI Officer (AIO)</h3>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card border-l-4 border-orange p-5">
+      <summary class="font-head font-bold text-ofen text-lg">Officer <span class="text-sm opacity-60">AIO</span></summary>
+      <div class="mt-4 space-y-2 text-sm">
+        <p><b>Dauer:</b> 4–6 Wochen</p>
+        <p><b>Förderung:</b> Durchschn. 80 %</p>
+        <p><b>Schwerpunkt:</b> Wirtschaftlichkeit</p>
+        <p><b>Format:</b> Team-Qualifizierung (bis 3 Mitarbeitende)</p>
+        <p><b>Nachweis:</b> Geprüfter Business Case</p>
+        <p><b>Vorteil Mitarbeiter:</b> Business Cases priorisieren, Dienstleister beurteilen</p>
+        <p><b>Vorteil Unternehmen:</b> 3 Mitarbeitende parallel qualifizieren an internen Projekten</p>
+        <p><b>Bonus:</b> Arbeit an konkreten Projekten der eigenen Firma</p>
       </div>
-      <p class="font-story italic">Schärft das Urteil.</p>
-      <details class="mt-2 md:mt-3">
-        <summary class="text-licht font-semibold text-sm">Details</summary>
-        <ul class="mt-2 text-sm space-y-1 text-espresso/80">
-          <li>4–6 Wochen · Team-Qualifizierung: bis 3 Mitarbeitende aus einer Firma</li><li>Durchschnittlich 80 % Förderung</li><li>Schwerpunkt: Wirtschaftlichkeit</li><li>Konzipiert Projekte und überwacht den Fortschritt</li><li>Dienstleister-Gespräche, Bewertungsraster</li><li>Nachweis: geprüfter Business Case</li>
-        </ul>
-      </details>
-    </div>
-    <div class="md:rounded-2xl md:bg-white md:shadow-card md:p-6 border-l-4 border-licht pb-6 pl-6">
-      <p class="hidden md:block font-head font-bold text-sm text-espresso/50">Stufe 3</p>
-      <div class="flex items-center gap-2 mt-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0 text-licht" aria-hidden="true"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.3 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/></svg>
-        <h3 class="font-head font-bold text-ofen text-lg">AI Architekt (AIA)</h3>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card border-l-4 border-licht p-5">
+      <summary class="font-head font-bold text-ofen text-lg">Architekt <span class="text-sm opacity-60">AIA</span></summary>
+      <div class="mt-4 space-y-2 text-sm">
+        <p><b>Dauer:</b> Exakt 3 Monate</p>
+        <p><b>Förderung:</b> Bis 100 %</p>
+        <p><b>Schwerpunkt:</b> Technologie &amp; Daten</p>
+        <p><b>Nachweis:</b> Meisterstück-Projekt</p>
+        <p><b>Vorteil Mitarbeiter:</b> Echte Projekte planen, umsetzen und messen</p>
+        <p><b>Vorteil Unternehmen:</b> Ein echtes KI-Projekt entsteht mit messbarem Ergebnis</p>
+        <p><b>Bonus:</b> Meisterstück als Arbeitsprobe dokumentiert</p>
       </div>
-      <p class="font-story italic">Baut Projekte.</p>
-      <details class="mt-2 md:mt-3">
-        <summary class="text-licht font-semibold text-sm">Details</summary>
-        <ul class="mt-2 text-sm space-y-1 text-espresso/80">
-          <li>3 Monate (exakt) · Praxisfall KI-Bäckerei</li><li>Schwerpunkt: Technologie &amp; Daten</li><li>Meisterstück: ein echtes Projekt</li><li>Nachweis: Projekt mit Business Case</li>
-        </ul>
-      </details>
-    </div>
-    <div class="md:rounded-2xl md:bg-white md:shadow-card md:p-6 border-l-4 border-nacht pb-2 pl-6">
-      <p class="hidden md:block font-head font-bold text-sm text-espresso/50">Stufe 4</p>
-      <div class="flex items-center gap-2 mt-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 flex-shrink-0 text-nacht" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1 1 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-        <h3 class="font-head font-bold text-ofen text-lg">Chief AI Officer (CAIO)</h3>
+    </details>
+    <details class="bg-white rounded-2xl shadow-card border-l-4 border-nacht p-5">
+      <summary class="font-head font-bold text-ofen text-lg">Chief Officer <span class="text-sm opacity-60">CAIO</span></summary>
+      <div class="mt-4 space-y-2 text-sm">
+        <p><b>Dauer:</b> Exakt 7 Monate (inkl. AIA)</p>
+        <p><b>Förderung:</b> Bis 100 %</p>
+        <p><b>Schwerpunkt:</b> Sicherheit &amp; Recht</p>
+        <p><b>Nachweis:</b> CAIO-Zertifikat</p>
+        <p><b>Vorteil Mitarbeiter:</b> Governance-Verantwortung, Geschäftsführung beraten</p>
+        <p><b>Vorteil Unternehmen:</b> Verankerte KI-Verantwortung, unabhängig von Agenturen</p>
+        <p><b>Bonus:</b> Enthält den vollständigen AI Architekten</p>
       </div>
-      <p class="font-story italic">Trägt Verantwortung.</p>
-      <details class="mt-2 md:mt-3">
-        <summary class="text-licht font-semibold text-sm">Details</summary>
-        <ul class="mt-2 text-sm space-y-1 text-espresso/80">
-          <li>7 Monate (inkl. AIA) · Governance &amp; Portfolio</li><li>Schwerpunkt: Sicherheit &amp; Recht</li><li>EU AI Act, ISO 42001, Skalierung</li><li>Nachweis: CAIO-Zertifikat</li>
-        </ul>
-      </details>
+    </details>
+  </div>
+
+  <!-- CTA direkt unter der Matrix -->
+  <div class="mt-8 bg-ofen rounded-2xl shadow-card p-6 md:p-8 text-mehl text-center">
+    <p class="font-head font-bold text-lg">Welche Rolle passt zu Ihnen?</p>
+    <p class="mt-2 text-sm text-mehl/80">20 Minuten. Kostenlos. Fördermittel-Check. Schriftliche Empfehlung.</p>
+    <div class="mt-5 flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="#test" class="inline-flex items-center justify-center min-h-[48px] px-7 rounded-xl bg-orange text-espresso font-head font-bold shadow-card">Karriere-Booster-Gespräch buchen</a>
+      <a href="#test" class="inline-flex items-center justify-center min-h-[48px] px-7 rounded-xl bg-mehl text-espresso font-head font-bold shadow-card">Selbsttest — 2 Minuten</a>
     </div>
   </div>
 </section>
@@ -360,7 +438,7 @@ td{overflow-wrap:break-word}
   <div class="hidden md:block mt-6 bg-white rounded-2xl shadow-card overflow-x-auto">
     <table class="w-full text-sm text-left">
       <thead class="bg-ofen text-mehl font-head">
-        <tr><th class="p-4 bg-ofen">Dimension</th><th class="p-4 bg-sand text-espresso">S1 · AIP</th><th class="p-4 bg-orange text-espresso">S2 · AIO</th><th class="p-4 bg-licht text-mehl">S3 · AIA</th><th class="p-4 bg-nacht text-mehl">S4 · CAIO</th></tr>
+        <tr><th class="p-4 bg-ofen">Dimension</th><th class="p-4 bg-sand text-espresso">Professional<br><span class="text-xs font-normal">AIP</span></th><th class="p-4 bg-orange text-espresso">Officer<br><span class="text-xs font-normal">AIO</span></th><th class="p-4 bg-licht text-mehl">Architekt<br><span class="text-xs font-normal">AIA</span></th><th class="p-4 bg-nacht text-mehl">Chief Officer<br><span class="text-xs font-normal">CAIO</span></th></tr>
       </thead>
       <tbody class="[&_td]:p-4 [&_tr]:border-t [&_tr]:border-espresso/10">
         <tr><td class="font-semibold">Wirtschaftlichkeit</td><td class="bg-sand/15">Nutzen an Beispielen einschätzen</td><td class="bg-orange/30 font-semibold">★ Business Cases priorisieren</td><td class="bg-licht/15">Business Case bauen</td><td class="bg-nacht/15">Portfolio steuern</td></tr>
