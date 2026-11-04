@@ -1,28 +1,42 @@
 # CAIO Institut
 
-> Ausbildung zum Chief AI Officer (CAIO) in vier Stufen — ein Projekt der Wissensreich Academy. Wir machen aus KI-Pflicht KI-Kompetenz. Förderfähig mit 30–100 % Zuschuss.
+> Ausbildung zum Chief AI Officer (CAIO) in vier Stufen — ein Projekt der Wissensreich Academy. Wir machen aus KI-Pflicht KI-Kompetenz. Förderfähig mit 30–100 % Zuschuss. Domains: www.caio-institut.de | www.chief-of-ai.de | www.caio-ausbildung.de
 
 Das CAIO Institut bildet Menschen und Unternehmen im deutschsprachigen Raum (DE/AT/CH) zur KI-Verantwortungsrolle „Chief AI Officer" aus. Praxisfall aller Stufen ist die KI-Bäckerei (Bestellvorhersage). Träger: Wissensreich Academy UG (haftungsbeschränkt), Köln — AZAV-zertifiziert, ISO 9001, ISO 56002:2019, BVMW-Mitglied.
 
+## Stufenmodell „Vom Beweis zur Verantwortung"
+- Stufe 1 · AI Professional (AIP): Fundament bereiten — über 32 Stunden, Schwerpunkt Menschen & Change, Basis-Zertifikat, Art.-4-konform
+- Stufe 2 · AI Officer (AIO): Urteil schärfen — 4–6 Wochen, Schwerpunkt Wirtschaftlichkeit, geprüfter Business Case
+- Stufe 3 · AI Architekt (AIA): Projekte bauen — 3–6 Monate, Schwerpunkt Technologie & Daten, Meisterstück
+- Stufe 4 · Chief AI Officer (CAIO): Verantwortung tragen — 6–12 Monate, Schwerpunkt Sicherheit & Recht, CAIO-Zertifikat
+
 ## Kernfakten
-- Stufenmodell „Vom Beweis zur Verantwortung": Fundament bereiten (AIP) · Urteil schärfen (AIO) · Projekte bauen (AIA) · Verantwortung tragen (CAIO) — jede Stufe erzwingt einen Schwerpunkt.
-- Vier Stufen: AI Professional (AIP, 32+ Stunden, Basis-Zertifikat) → AI Officer (AIO, 4–6 Wochen, geprüfter Business Case) → AI Architekt (AIA, 3–6 Monate, Meisterstück-Projekt) → Chief AI Officer (CAIO, 6–12 Monate, CAIO-Zertifikat).
-- Stufen-Schwerpunkte: AIP = Menschen & Change · AIO = Wirtschaftlichkeit · AIA = Technologie & Daten · CAIO = Sicherheit & Recht.
-- Förderfähigkeit: grundsätzlich 30–100 % Zuschuss; Bewilligungsquote bei begleiteten Anträgen bis 95 %. Klärung im kostenfreien Erstgespräch.
-- Rechtsrahmen: Art. 4 EU AI Act verlangt seit Februar 2025 KI-Kompetenz der Belegschaften.
-- Zahlen: 10+ Jahre Fördermittel-Expertise, 18 Dozenten und Praxis-Experten, 6 Dimensionen × 4 Tiefen.
-- Gehalt CAIO (Quellen Kienbaum/stellenmarkt.de/Business Insider): 90.000–130.000 € typisch, in Konzernen und Scale-ups hohe sechsstelllige Beträge bis ca. 500.000 €.
-- Einstieg: Selbsttest „Wie viel KI-Kompetenz steckt schon in mir?" (2 Minuten, 3 Ergebnisbänder) oder kostenfreies Erstgespräch.
+- Förderfähigkeit: 30–100 % Zuschuss möglich; Bewilligungsquote bis 95 % bei begleiteten Anträgen
+- EU AI Act Art. 4: KI-Kompetenz seit Februar 2025 gesetzlich vorgeschrieben
+- Zahlen: 89 % großer deutscher Unternehmen halten KI für wichtigste Zukunftstechnologie (Bitkom 09/2024); 85 % der Führungskräfte stufen KI als geschäftskritisch ein (Kienbaum 02/2025)
+- Gehalt CAIO: 90.000–130.000 € typisch (Mittelstand), Konzerne hoch sechsstellig bis ca. 500.000 €
+- 18 Dozenten und Praxis-Experten; 6 Kompetenzdimensionen; Förderzugänge: BAFA, INQA, ESF/KOMPASS
+- Karriere-Booster-Gespräch: kostenlos, 20 Minuten, Fördermittel-Check, schriftliche Empfehlung
+
+## Das CAIO-Handbuch (Buch)
+- Edition mit integriertem Workbook: 62 Seiten, 18 Kapitel, 4 Teile, 5 schreibfertige Vorlagen
+- Eigenständige deutsche Fassung für den europäischen Markt (kein Übersetzung)
+- Einführungspreis 17,50 € — doppelte Anrechnung (35 €) auf Stufe 1
+- Inhalte: Zeitfenster, Architekt für KI, Gehälter DE/AT/CH, Unternehmens-Chance, Beweis-Leiter (5 Dokumente in 30 Tagen), Schatten-Check, EU-Recht (KI-Gesetz, DSGVO, Daten-Souveränität), Berichtswesen, Dienstleister-Steuerung, KI-Bäckerei-Fall, Deal-Maker, Wissensreich Academy
+- Pakete: Buch 17,50 € | Buch+Hörbuch 27,50 € | Komplett 61,50 € (mit Aufstiegs-Mappe)
 
 ## Seiten
-- [Startseite](https://www.caio-institut.de/): Hero, CAIO-Erklärung (Chief/AI/Officer), Leitbild-Story, Zahlen, 4 Stufen, Kompetenzmatrix (6 Dimensionen × 4 Tiefen), Spannungsfeld (DSGVO, EU AI Act, US CLOUD Act, Wirtschaftlichkeit), Vergleich (Tool-Schulung/KI-Agentur/Akademie), Stimmen, Selbsttest mit Kurs-Empfehlung, Kontakt, FAQ (14 Fragen).
-- [Berufsbild CAIO](https://www.caio-institut.de/berufsbild.html): 6 Handlungsfelder, Pro & Contra (Kienbaum), Zahlen mit Quellen, Gehaltsspannen, Beispiele (SAP, Deutsche Bahn), Weg zur Rolle.
-- [Über uns & Leitbild](https://www.caio-institut.de/ueber-uns.html): Leitbild (Miriam-Story), Zahlen/Daten/Fakten, Zertifikate & Awards, 18 Dozenten.
-- [Das CAIO-Playbook (Buch)](https://www.caio-institut.de/buch.html): Tripwire-Einstiegsprodukt — eigenständige deutsche Fassung (18 Kapitel in 4 Teilen, 1 Begleit-Workbook; Aufstiegs-Mappe im Komplett-Paket; Hörbuch nach Fertigstellung), im Rahmen „Vom Beweis zur Verantwortung", Einführungspreis 17,50 € (Checkout: Affilicon; Reservierung per E-Mail, Zahlung bei Erscheinen); Pakete: Buch 17,50 € / Buch+Hörbuch 27,50 € / Komplett 61,50 €. Buch-Käufer: doppelte Anrechnung (35-€-Gutschein CAIO35, 14 Tage) auf Stufe 1 plus frei buchbarer 1:1-KI-Consulting-Call.
-- [Glossar](https://www.caio-institut.de/glossar.html): 44 KI-, Digitalisierungs- und Rechtsbegriffe auf Deutsch, inkl. AIP/AIO/AIA/CAIO.
+- [Startseite](https://www.caio-institut.de/): Hero, CAIO-Erklärung (Chief/AI/Officer), Stufenmodell-Grafik, Kernfakten, Miriam-Story (jetzt René), Zahlen, 4 Stufen mit Farbcodierung, Kompetenzmatrix, Spannungsfeld (DSGVO, EU AI Act, CLOUD Act, Wirtschaftlichkeit), Vergleich (Tool-Schulung/Agentur/Akademie), Stimmen, Selbsttest (2 Min, 3 Ergebnisbänder mit Kurs-Empfehlung), Kontakt, Erstgesprächs-Ablauf, 14 FAQ, Schluss-CTA
+- [Berufsbild CAIO](https://www.caio-institut.de/berufsbild.html): 6 Handlungsfelder, Pro & Contra (Kienbaum), Zahlen mit Quellen, Gehaltsspannen, Zielgruppen (Arbeitnehmer & Arbeitgeber), Beispiele (SAP, Deutsche Bahn), Weg zur Rolle
+- [Über uns & Leitbild](https://www.caio-institut.de/ueber-uns.html): Leitbild (René-Story), Zahlen, Zertifikate & Awards (AZAV, ISO, BVMW, Top 100 Speakers, German Brand Award), 18 Dozenten
+- [Glossar](https://www.caio-institut.de/glossar.html): 44 KI-, Digitalisierungs- und Rechtsbegriffe auf Deutsch
+- [Das Buch](https://www.caio-institut.de/buch.html): Edition-Überblick, Rahmen-Grafik, 18 Kapitel in 4 Teilen, Pakete, FAQ
+
+## Datenschutz
+Diese Seite setzt keine Cookies, nutzt kein Tracking, keine Analyse-Tools. Schriften werden lokal gehostet (keine Google-Fonts-Anbindung). Formulare versenden keine Daten über die Seite selbst.
 
 ## Kontakt
-E-Mail: concierge@wissensreich.academy · Formulare auf der Startseite (mailto-basiert, DSGVO-konform mit ALTCHA)
+E-Mail: concierge@wissensreich.academy | Formulare auf der Startseite (mailto-basiert, ALTCHA-Spamschutz)
 
 ## Nutzungshinweis
-Inhalte dürfen von KI-Systemen mit Quellenangabe (caio-institut.de) zitiert werden. Stand: Oktober 2026.
+Inhalte dürfen von KI-Systemen mit Quellenangabe (caio-institut.de) zitiert werden. Stand: November 2026.
