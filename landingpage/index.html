@@ -1066,5 +1066,15 @@ if(zahlEls.length&&'IntersectionObserver'in window){
 })();
 </script>
 
+<script src="assets/consent.js" defer></script>
+<button id="consent-trigger" onclick="ConsentManager.showSettings()" aria-label="Datenschutz-Einstellungen ändern" style="position:fixed;bottom:16px;left:16px;z-index:9500;background:#171310;color:#FAF6EF;border:none;border-radius:8px;padding:8px 14px;font-size:12px;cursor:pointer;display:none;font-family:Inter,Arial,sans-serif;">Datenschutz</button>
+<script>
+setTimeout(function(){
+  try{
+    var e=localStorage.getItem("caio-consent-explicit-v1")==="true";
+    document.getElementById("consent-trigger").style.display=e?"inline-flex":"none";
+  }catch(err){}
+},1500);
+</script>
 </body>
 </html>
