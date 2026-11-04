@@ -1,24 +1,5 @@
-# CAIO Institut — www.caio-institut.de
-# Alle Suchmaschinen und KI-Systeme willkommen
-
+# CAIO Institut — WARTUNGSMODUS (noch nicht intern freigegeben)
 User-agent: *
-Allow: /
-Disallow: /danke/
-
-# Explizit erlaubt f\u00fcr KI-Systeme (GEO)
-User-agent: GPTBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: CCBot
-Allow: /
+Disallow: /
 
 Sitemap: https://www.caio-institut.de/sitemap.xml
