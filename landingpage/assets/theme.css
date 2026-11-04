@@ -1,0 +1,147 @@
+/* ═══════════════════════════════════════════════
+   CAIO Institut — Theme: Hell (Standard) / Dunkel
+   ═══════════════════════════════════════════════ */
+
+/* Definitionen: Heller Modus (Standard) */
+:root {
+  --c-mehl: #FAF6EF;
+  --c-espresso: #171310;
+  --c-ofen: #16425B;
+  --c-orange: #E4572E;
+  --c-sand: #F2C57C;
+  --c-licht: #2E86AB;
+  --c-nacht: #0E3A53;
+  --c-gold: #D4AF37;
+  --c-bg: #FAF6EF;
+  --c-bg-card: #FFFFFF;
+  --c-bg-nav: rgba(250,246,239,0.95);
+  --c-text: #171310;
+  --c-text-muted: rgba(23,19,16,0.6);
+  --c-text-faint: rgba(23,19,16,0.5);
+  --c-border: rgba(23,19,16,0.1);
+  --c-border-card: rgba(23,19,16,0.06);
+  --c-shadow: 0 2px 8px rgba(23,19,16,0.06);
+  --c-focus: #2E86AB;
+}
+
+/* Definitionen: Dunkler Modus */
+.dark {
+  --c-mehl: #1A1E28;
+  --c-espresso: #E8E4DD;
+  --c-ofen: #7BB5DC;
+  --c-orange: #FF6B3D;
+  --c-sand: #D4A76A;
+  --c-licht: #5BA8D0;
+  --c-nacht: #26303E;
+  --c-gold: #E4C46A;
+  --c-bg: #0F1218;
+  --c-bg-card: #1A1E28;
+  --c-bg-nav: rgba(15,18,24,0.95);
+  --c-text: #E8E4DD;
+  --c-text-muted: rgba(232,228,221,0.65);
+  --c-text-faint: rgba(232,228,221,0.5);
+  --c-border: rgba(232,228,221,0.12);
+  --c-border-card: rgba(232,228,221,0.08);
+  --c-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  --c-focus: #5BA8D0;
+}
+
+/* Anwendung auf Body + h\u00e4ufigste Elemente */
+html { background: var(--c-bg); }
+body { background: var(--c-bg); color: var(--c-text); }
+nav { background: var(--c-bg-nav); border-color: var(--c-border) !important; }
+
+/* Karten */
+.bg-white { background: var(--c-bg-card) !important; }
+.shadow-card { box-shadow: var(--c-shadow) !important; }
+
+/* Farben \u00fcber Variablen */
+.bg-mehl { background: var(--c-mehl) !important; }
+.bg-ofen { background: var(--c-ofen) !important; }
+.bg-nacht { background: var(--c-nacht) !important; }
+.bg-orange { background: var(--c-orange) !important; }
+.bg-sand { background: var(--c-sand) !important; }
+.bg-licht { background: var(--c-licht) !important; }
+
+.text-espresso { color: var(--c-text) !important; }
+.text-ofen { color: var(--c-ofen) !important; }
+.text-mehl { color: var(--c-mehl) !important; }
+.text-orange { color: var(--c-orange) !important; }
+.text-licht { color: var(--c-licht) !important; }
+.text-sand { color: var(--c-sand) !important; }
+
+.border-espresso\/10 { border-color: var(--c-border) !important; }
+.border-espresso\/15 { border-color: var(--c-border) !important; }
+.border-espresso\/20 { border-color: var(--c-border) !important; }
+.border-espresso\/30 { border-color: var(--c-border) !important; }
+.border-ofen { border-color: var(--c-ofen) !important; }
+.border-sand { border-color: var(--c-sand) !important; }
+.border-orange\/30 { border-color: var(--c-orange) !important; }
+.border-orange\/40 { border-color: var(--c-orange) !important; }
+
+/* Text-Abschw\u00e4chungen */
+.text-espresso\/60 { color: var(--c-text-muted) !important; }
+.text-espresso\/50 { color: var(--c-text-faint) !important; }
+.text-espresso\/70 { color: var(--c-text-muted) !important; }
+.text-espresso\/80 { color: var(--c-text-muted) !important; }
+.text-espresso\/85 { color: var(--c-text-muted) !important; }
+.text-mehl\/60 { color: var(--c-text-muted) !important; }
+.text-mehl\/70 { color: var(--c-text-muted) !important; }
+.text-mehl\/80 { color: var(--c-text-muted) !important; }
+.text-mehl\/50 { color: var(--c-text-faint) !important; }
+
+/* Streifen-Hintergr\u00fcnde in Tabellen */
+tr:nth-child(even) td { background: rgba(128,128,128,0.04); }
+
+/* Details/Summary Anpassungen */
+details > summary { color: inherit; }
+details > summary::after { opacity: 0.5; }
+
+/* Scrollbar (dunkel) */
+.dark ::-webkit-scrollbar { width: 10px; }
+.dark ::-webkit-scrollbar-track { background: var(--c-bg); }
+.dark ::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 5px; }
+.dark ::-webkit-scrollbar-thumb:hover { background: var(--c-text-faint); }
+
+/* Consent-Banner */
+#consent-banner { background: var(--c-nacht) !important; color: var(--c-mehl) !important; }
+#consent-banner button { border-color: var(--c-border) !important; }
+
+/* Vorlage-K\u00e4sten */
+.vorlage { background: var(--c-bg-card) !important; border-color: var(--c-ofen) !important; }
+.vorlage::before { background: var(--c-ofen) !important; color: var(--c-mehl) !important; }
+
+/* Zahlen-Kasten */
+.zahlen { background: var(--c-nacht) !important; }
+.zahlen h4 { color: var(--c-sand) !important; }
+.zahlen p, .zahlen li { color: var(--c-mehl) !important; }
+
+/* Merk-Kasten */
+.merk { background: var(--c-mehl) !important; border-color: var(--c-orange) !important; }
+.merk p { color: var(--c-ofen) !important; }
+
+/* Am-Werk-Kasten */
+.amwerk { background: var(--c-bg-card) !important; border-color: var(--c-sand) !important; }
+
+/* Tabellen */
+table { color: var(--c-text); }
+th { background: var(--c-nacht) !important; color: var(--c-mehl) !important; }
+td { border-color: var(--c-border) !important; }
+
+/* Spezialf\u00e4lle */
+.border-espresso\/5 { border-color: var(--c-border) !important; }
+.divide-espresso\/10 > :not([hidden]) ~ :not([hidden]) { border-color: var(--c-border) !important; }
+
+/* Fokus-Ring */
+:focus-visible { outline: 3px solid var(--c-focus); outline-offset: 2px; }
+
+/* Links */
+a { color: inherit; }
+a.text-ofen { color: var(--c-ofen) !important; }
+a.underline { text-decoration-color: currentColor; }
+
+/* SVG-Text in Grafiken */
+svg text { fill: currentColor; }
+
+/* \u00dcbergang */
+html, body, nav, .bg-white, .bg-mehl, .bg-ofen { transition: background-color 0.2s ease, color 0.2s ease; }
