@@ -209,3 +209,20 @@ nav, .bg-white, .bg-mehl { transition: background-color 0.2s ease; }
 /* Der Tailwind-Schutz: Verhindert dass Tailwind-CDN nach uns kommt */
 .dark body.bg-mehl { background: var(--c-bg) !important; }
 .dark .bg-mehl.text-espresso { background: var(--c-bg) !important; color: var(--c-text) !important; }
+
+/* ═══════════════════════════════════════════════════
+   MOBILE-HARDENING (SEO/Mobile-Pass 2026-11-09)
+   ═══════════════════════════════════════════════════ */
+
+/* iOS: kein Auto-Zoom bei Fokus (>=16px) */
+@media (max-width: 640px) {
+  input, select, textarea { font-size: 16px !important; }
+}
+
+/* Tipp-Ziele: Consent- und Formular-Buttons mindestens 44px */
+button, [role="button"] { touch-action: manipulation; }
+
+/* Seitenzahl-/Karten-Tabellen kompakt auf Mobil (Fallszellen) */
+@media (max-width: 640px) {
+  td, th { overflow-wrap: break-word; }
+}

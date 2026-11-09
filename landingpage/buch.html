@@ -12,7 +12,7 @@
 <meta name="geo.placename" content="Köln">
 <meta name="geo.position" content="50.938361;6.959974">
 <meta name="ICBM" content="50.938361, 6.959974">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.tailwindcss.com https://altcha.org; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://altcha.org; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://altcha.org">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://altcha.org; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://altcha.org; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://altcha.org">
 <meta name="theme-color" content="#FAF6EF">
 <link rel="canonical" href="https://www.caio-institut.de/buch">
 <meta property="og:type" content="product">
@@ -27,17 +27,7 @@
 <meta name="twitter:image" content="https://www.caio-institut.de/assets/og-image.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%2316425B'/%3E%3Cpath d='M12 38V22a12 12 0 0 1 24 0v16' fill='none' stroke='%23FAF6EF' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='16' y='32' width='4' height='6' fill='%23FAF6EF'/%3E%3Crect x='21' y='28' width='4' height='10' fill='%23FAF6EF'/%3E%3Crect x='26' y='24' width='4' height='14' fill='%23FAF6EF'/%3E%3Crect x='31' y='20' width='4' height='18' fill='%23E4572E'/%3E%3C/svg%3E">
 <link href="assets/fonts/fonts.css" rel="stylesheet">
-<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: { extend: {
-    colors: { mehl:'#FAF6EF', espresso:'#171310', ofen:'#16425B', orange:'#E4572E', sand:'#F2C57C', licht:'#2E86AB', nacht:'#0E3A53', gold:'#D4AF37' },
-    fontFamily: { head:['"Space Grotesk"','sans-serif'], body:['Inter','sans-serif'], story:['Fraunces','serif'] },
-    boxShadow: { card:'0 2px 8px rgba(23,19,16,.06)' }
-  }}
-}
-</script>
+<link rel="stylesheet" href="assets/tw.css">
 <style>
   @media (prefers-reduced-motion: reduce){ *{transition:none!important;animation:none!important} }
   :focus-visible{ outline:3px solid #2E86AB; outline-offset:2px; }
@@ -60,6 +50,9 @@ td{overflow-wrap:break-word}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Book","name":"Das CAIO-Handbuch — Edition","author":{"@type":"Organization","name":"CAIO Institut"},"description":"Vom KI-Wissen zur KI-Verantwortung. 18 Kapitel, 4 Teile, integriertes Workbook mit 5 Vorlagen. Eigenständige Fassung für den deutschen und europäischen Markt.","inLanguage":"de","numberOfPages":79,"bookFormat":"https://schema.org/EBook","offers":{"@type":"Offer","price":"17.50","priceCurrency":"EUR","availability":"https://schema.org/PreOrder"}}
 </script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Startseite","item":"https://www.caio-institut.de/"},{"@type":"ListItem","position":2,"name":"Das CAIO-Handbuch","item":"https://www.caio-institut.de/buch"}]}
+</script>
 <link href="assets/theme.css" rel="stylesheet">
 </head>
 
@@ -79,6 +72,7 @@ td{overflow-wrap:break-word}
     <div class="flex items-center gap-0.5 sm:gap-1">
       <a href="/" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Start</a>
       <a href="/berufsbild" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Berufsbild</a>
+      <a href="/buch" class="inline-flex items-center min-h-[48px] px-2.5 sm:px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Handbuch</a>
       <a href="/#test" class="inline-flex items-center min-h-[48px] px-2.5 sm:px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Selbsttest</a>
     </div>
   </div>
@@ -102,7 +96,7 @@ td{overflow-wrap:break-word}
   <div class="mt-8 grid md:grid-cols-[2fr_3fr] gap-6 items-start">
     <!-- Buch-Cover (Platzhalter-Design) -->
     <figure class="rounded-2xl shadow-card overflow-hidden">
-      <img src="assets/buch-cover-1.png" alt="Das CAIO-Handbuch — Vom KI-Wissen zur KI-Verantwortung" class="w-full aspect-[3/2] object-cover" width="1536" height="1024" fetchpriority="high">
+      <picture><source type="image/webp" srcset="assets/img-opt/buch-cover-1-480.webp 480w, assets/img-opt/buch-cover-1-768.webp 768w, assets/img-opt/buch-cover-1.webp 1536w" sizes="(max-width:768px) 100vw, 600px"><img src="assets/img-opt/buch-cover-1.webp" alt="Das CAIO-Handbuch — Vom KI-Wissen zur KI-Verantwortung" class="w-full aspect-[3/2] object-cover" width="1536" height="1024" fetchpriority="high" decoding="async"></picture>
       <figcaption class="bg-ofen text-mehl p-4 text-center">
         <p class="font-head font-bold text-lg">Das CAIO-Handbuch — Edition</p>
         <p class="text-sm text-mehl/70 mt-1">79 Seiten · 18 Kapitel · 6 Praxis-Anhänge · 4 Teile · Workbook integriert</p>
@@ -291,7 +285,7 @@ td{overflow-wrap:break-word}
 <section id="pakete" data-ort="Pakete" class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
   <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Wähle dein Paket</h2>
   <p class="mt-3 max-w-[75ch]">Alle Preise verstehen sich in Euro <strong>inkl. gesetzlicher Mehrwertsteuer</strong>. Alle Pakete enthalten das <strong>CAIO-Handbuch — Edition</strong> (79 Seiten, 18 Kapitel, 6 Praxis-Anhänge, 7 integrierte Vorlagen, 25+ Nutzenfälle, Reifegrad-Check, Werkzeug-Landschaft) und das separate Workbook. <strong>Extra: Doppelte Anrechnung — deine 17,50&nbsp;€ werden dir als 35&nbsp;€-Gutschein auf Stufe 1 (AI Professional) gutgeschrieben, plus 1:1-KI-Consulting-Call während der Betreuung.</strong></p>
-  <figure class="rounded-2xl shadow-card overflow-hidden mb-6"><img src="assets/buch-cover-2.png" alt="CAIO-Handbuch mit Workbook-Set" class="w-full aspect-[3/2] object-cover" loading="lazy" width="1536" height="1024"></figure>
+  <figure class="rounded-2xl shadow-card overflow-hidden mb-6"><picture><source type="image/webp" srcset="assets/img-opt/buch-cover-2-480.webp 480w, assets/img-opt/buch-cover-2-768.webp 768w, assets/img-opt/buch-cover-2.webp 1536w" sizes="(max-width:768px) 100vw, 600px"><img src="assets/img-opt/buch-cover-2.webp" alt="CAIO-Handbuch mit Workbook-Set" class="w-full aspect-[3/2] object-cover" loading="lazy" width="1536" height="1024" decoding="async"></picture></figure>
   <div class="mt-6 grid gap-4 md:grid-cols-3">
     <div class="bg-white rounded-2xl shadow-card p-6 flex flex-col">
       <p class="font-head font-bold text-ofen">Buch</p>

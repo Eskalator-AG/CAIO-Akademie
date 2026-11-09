@@ -12,7 +12,7 @@
 <meta name="geo.placename" content="Köln">
 <meta name="geo.position" content="50.938361;6.959974">
 <meta name="ICBM" content="50.938361, 6.959974">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://cdn.tailwindcss.com https://altcha.org; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://altcha.org; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://altcha.org">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' https://altcha.org; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://altcha.org; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://altcha.org">
 <meta name="theme-color" content="#FAF6EF">
   <link rel="canonical" href="https://www.caio-institut.de/glossar">
   <meta property="og:image" content="https://www.caio-institut.de/assets/og-image.png">
@@ -29,17 +29,7 @@
 <meta property="og:locale" content="de_DE">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%2316425B'/%3E%3Cpath d='M12 38V22a12 12 0 0 1 24 0v16' fill='none' stroke='%23FAF6EF' stroke-width='3' stroke-linecap='round'/%3E%3Crect x='16' y='32' width='4' height='6' fill='%23FAF6EF'/%3E%3Crect x='21' y='28' width='4' height='10' fill='%23FAF6EF'/%3E%3Crect x='26' y='24' width='4' height='14' fill='%23FAF6EF'/%3E%3Crect x='31' y='20' width='4' height='18' fill='%23E4572E'/%3E%3C/svg%3E">
 <link href="assets/fonts/fonts.css" rel="stylesheet">
-<link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: { extend: {
-    colors: { mehl:'#FAF6EF', espresso:'#171310', ofen:'#16425B', orange:'#E4572E', sand:'#F2C57C', licht:'#2E86AB', nacht:'#0E3A53', gold:'#D4AF37' },
-    fontFamily: { head:['"Space Grotesk"','sans-serif'], body:['Inter','sans-serif'] },
-    boxShadow: { card:'0 2px 8px rgba(23,19,16,.06)' }
-  }}
-}
-</script>
+<link rel="stylesheet" href="assets/tw.css">
 <style>
   @media (prefers-reduced-motion: reduce){ *{transition:none!important;animation:none!important} }
   :focus-visible{ outline:3px solid #2E86AB; outline-offset:2px; }
@@ -75,6 +65,7 @@ td{overflow-wrap:break-word}
       <a href="/" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Start</a>
       <a href="/ueber-uns" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Über uns</a>
       <a href="/#stufen" class="hidden sm:inline-flex items-center min-h-[48px] px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Stufen</a>
+      <a href="/buch" class="inline-flex items-center min-h-[48px] px-2.5 sm:px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Handbuch</a>
       <a href="/#test" class="inline-flex items-center min-h-[48px] px-2.5 sm:px-3 rounded-lg text-sm font-medium text-espresso/80 hover:text-espresso hover:bg-espresso/5">Selbsttest</a>
     </div>
   </div>
@@ -101,7 +92,7 @@ td{overflow-wrap:break-word}
     <a href="#s-z" class="px-3 py-1.5 rounded-full bg-white shadow-card font-head font-medium">S–Z</a>
   </nav>
   <figure class="mt-8 overflow-hidden rounded-2xl shadow-card">
-    <img src="assets/hero/glossar.jpg" alt="Offenes Buch auf einem Schreibtisch im warmen Licht — Begriffe klären, Verständnis aufbauen" class="w-full aspect-[16/7] object-cover" width="1600" height="700" fetchpriority="high">
+    <picture><source type="image/webp" srcset="assets/img-opt/hero-glossar-800.webp 800w, assets/img-opt/hero-glossar.webp 1600w" sizes="100vw"><img src="assets/img-opt/hero-glossar.webp" alt="Offenes Buch auf einem Schreibtisch im warmen Licht — Begriffe klären, Verständnis aufbauen" class="w-full aspect-[16/7] object-cover" width="1600" height="700" fetchpriority="high" decoding="async"></picture>
   </figure>
 </header>
 
@@ -344,6 +335,237 @@ addEventListener('scroll',updateOrtG,{passive:true});
 updateOrtG();
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"CAIO Institut","item":"https://www.caio-institut.de/"},{"@type":"ListItem","position":2,"name":"Glossar","item":"https://www.caio-institut.de/glossar"}]}</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "DefinedTermList",
+ "name": "Glossar KI & Digitalisierung — 44 Begriffe auf Deutsch",
+ "description": "Deutsche Begriffserklärungen rund um Künstliche Intelligenz, EU AI Act, DSGVO und die CAIO-Rolle.",
+ "url": "https://www.caio-institut.de/glossar",
+ "hasDefinedTerm": [
+  {
+   "@type": "DefinedTerm",
+   "name": "AI Professional (AIP)",
+   "description": "Stufe 1 unserer Ausbildung. Bereitet das Fundament vor: über 32 Stunden, bis zu 90 % Förderung mit Schwerpunkt „Menschen &amp; Change\", Art.-4-konforme Basis, Nachweis per Basis-Zertifikat. Zu den Stufen →"
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "AI Officer (AIO)",
+   "description": "Stufe 2. Schärft das Urteil: 4–6 Wochen als Team-Qualifizierung (bis 3 Mitarbeitende), durchschnittlich 80 % Förderung, Bewertungsraster, Dienstleister-Gespräche, Nachweis per geprüftem Business Case. Schwerpunkt der Stufe: Wirtschaftlichkeit."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "AI Architekt (AIA)",
+   "description": "Stufe 3. Baut Projekte: exakt 3 Monate am echten Fall, bis 100 % Förderung für Beschäftigte. (KI-Bäckerei), Nachweis per Meisterstück-Projekt mit Business Case. Schwerpunkt der Stufe: Technologie &amp; Daten."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "API (Schnittstelle)",
+   "description": "Programmierschnittstelle. Sie lässt Systeme miteinander sprechen. Wer APIs kennt, kann einschätzen, wie gut sich ein KI-Dienst ins Bestehende einbauen lässt."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Art. 4 EU AI Act",
+   "description": "Der Paragraf, der seit Februar 2025 KI-Kompetenz der Belegschaft verlangt. Aus der Pflicht machen wir einen Vorsprung: unsere Stufen 1 und 2 erfüllen die Basis."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "AVV (Auftragsverarbeitungsvertrag)",
+   "description": "Vertrag, den die DSGVO verlangt, wenn ein Dienstleister personenbezogene Daten verarbeitet. Fehlt er, darf die Datenweitergabe nicht starten."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Automatisierung (betrieblich)",
+   "description": "Abläufe so gestalten, dass sie ohne manuelle Schritte laufen. Betriebliche Automatisierung erledigt Wiederholarbeit schneller und fehlerärmer — ihr Nutzen steht und fällt mit der Prozessqualität davor."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "AZAV",
+   "description": "Anerkennungs- und Zulassungsverordnung Weiterbildung. Wer nach ihr als Träger anerkannt ist (wie die Wissensreich Academy), darf geförderte Weiterbildung anbieten — die Grundlage für Zuschüsse von 30 bis 100 %."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Beweis-Leiter",
+   "description": "Fünf dokumentierte Arbeitsproben in 30 Tagen (Vorher-Nachher, Anbieter-Prüfung, KI-Richtlinie, Bewertungsraster, Ergebnis-Notiz) — „datiert, gemessen, unterschrieben\". Kern des CAIO-Handbuchs und der Überzeugung: Du hast kein Könnens-Problem, du hast ein Nachweis-Problem."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Bias (Verzerrung)",
+   "description": "Systematische Schieflage in Daten oder Modellen. KI kann bestehende Vorurteile verstärken. Prüfen statt vertrauen — deshalb gehört Bias zur Dimension „Sicherheit &amp; Recht\"."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Business Case",
+   "description": "Nutzen, Kosten und Payback eines Vorhabens auf einer Seite. Wer nicht streichen kann, hat nicht verstanden. Kernteil der Stufe 2."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "C-Level (C-Ebene)",
+   "description": "Die oberste Führungsetage: Chief Executive Officer (CEO), Chief Financial Officer (CFO), Chief Technology Officer (CTO) — und zunehmend der Chief AI Officer (CAIO). Deutsch schlicht: die Geschäftsleitung."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Chief AI Officer (CAIO)",
+   "description": "Stufe 4 — baut auf dem AI Architekten auf, exakt 7 Monate (inkl. 3 Monate AIA), bis 100 % Förderung. Der Architekt der KI im Unternehmen. Er plant, steuert, prüft und nimmt ab. Er mauert nicht. Zum Berufsbild →"
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "CLOUD Act (USA)",
+   "description": "US-Gesetz von 2018. Es erlaubt US-Behörden, bei US-Anbietern gespeicherte Daten zu verlangen — auch wenn sie in Europa liegen. Deshalb ist die Cloud-Wahl eine Datenschutz-Entscheidung."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "CX (Customer Experience)",
+   "description": "Kundenerlebnis über alle Berührungspunkte. Für den CAIO ist CX eine Kennzahl, kein Nebeneffekt."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Datensparsamkeit",
+   "description": "Grundsatz der DSGVO: Erhebe nur Daten, die du wirklich brauchst. Die faulste KI-Lösung ist oft die sicherste."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Daten-Souveränität",
+   "description": "Die Fähigkeit eines Unternehmens, selbst zu bestimmen, wo seine Daten liegen und wer sie nutzt. Wer KI-Dienste einkauft, entscheidet damit über Souveränität — Stichwort US CLOUD Act und europäische Alternativen."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "DSGVO",
+   "description": "Datenschutz-Grundverordnung der EU, seit 2018. Sie regelt Verarbeitung personenbezogener Daten: Rechtsgrundlage, Auskunft, Löschung, AVV."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "EU AI Act",
+   "description": "Das KI-Gesetz der EU. Es stuft Anwendungen nach Risiko ein (verboten, Hochrisiko, begrenzt, minimal) und verlangt Transparenz sowie KI-Kompetenz (Art. 4)."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Fine-Tuning",
+   "description": "Nachtraining eines bestehenden Modells mit eigenen Daten. Aufwendig und meist unnötig — oft reicht gutes Prompting oder RAG."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Förderzugänge (BAFA · INQA · ESF/KOMPASS)",
+   "description": "Wege, mit denen Weiterbildung bezuschusst wird: BAFA (Beratungszuschüsse des Bundes), INQA-Coaching (Initiative Neue Qualität der Arbeit) sowie ESF-/KOMPASS-Programme des Europäischen Sozialfonds. Welcher Zugang passt, klären wir im Erstgespräch."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Generative KI",
+   "description": "KI, die neue Inhalte erzeugt: Texte, Bilder, Code. Sie schreibt nicht ab, sie erzeugt — deshalb prüft man ihre Ausgaben."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Governance",
+   "description": "Regeln, Rollen und Prozesse, mit denen ein Unternehmen KI steuert. Ohne Governance wird jede KI-Strategie zum Zufallsprodukt."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Halluzination",
+   "description": "Wenn ein KI-Modell überzeugend Falsches erfindet. Gegenmittel: Quellen prüfen, Ausgaben kontrollieren, Verantwortung benennen."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "KI (Künstliche Intelligenz)",
+   "description": "Oberbegriff für Systeme, die Aufgaben lösen, für die man früher Menschen brauchte: erkennen, vorhersagen, formulieren, sortieren."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "KI-Kompetenz",
+   "description": "Fähigkeit von Belegschaften, KI sachgerecht zu nutzen und ihre Risiken einzuschätzen. Seit Februar 2025 gesetzlich gefordert (Art. 4 EU AI Act)."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "KI-Assistent (Chatbot)",
+   "description": "Ein Dialogprogramm auf Basis von Sprachmodellen — wie ChatGPT, Claude oder Z.ai. Gut für Fragen und Entwürfe; Ergebnisse prüft trotzdem der Mensch."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "KI-Reifegrad",
+   "description": "Gibt an, wie weit ein Unternehmen mit KI ist: von ersten Versuchen bis zu Governance und Portfolio-Steuerung. Unsere Stufen bauen ihn systematisch auf."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "KPI (Kennzahl)",
+   "description": "Messbare Größe für Erfolg. „KI einführen\" ist keine KPI. „Ausschuss −20 % bis Q4\" ist eine."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "LLM (Large Language Model)",
+   "description": "Sprachmodell, das auf riesigen Textmengen trainiert wurde. Die Technik hinter Chatbots und Textgenerierung. Gute Eingaben entscheiden über gute Ausgaben."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Machine Learning (maschinelles Lernen)",
+   "description": "Verfahren, bei dem Systeme aus Daten Muster lernen, statt Regeln vorgegeben zu bekommen. Basis der meisten KI-Anwendungen."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "On-Premise",
+   "description": "Betrieb im eigenen Haus, auf eigener Hardware. Maximale Kontrolle, höherer Aufwand. Gegenteil der Cloud."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Pilot",
+   "description": "Klein gestarteter Testlauf mit festen Erfolgskriterien. Im Navigator-Raster das Urteil zwischen GO und REWORK: erst zeigen, dann skalieren."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Prompt / Prompt Engineering",
+   "description": "Die Eingabe an ein KI-System — und die Kunst, sie präzise zu formulieren. Rolle, Ziel, Kontext, Format: Wer gut fragt, bekommt bessere Antworten."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "RAG (Retrieval-Augmented Generation)",
+   "description": "KI antwortet nicht aus dem Gedächtnis, sondern aus bereitgestellten Dokumenten. Reduziert Halluzinationen — wenn die Dokumente stimmen."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Risikoklasse",
+   "description": "Die Einstufung einer KI-Anwendung nach dem EU AI Act: verboten, Hochrisiko, begrenzt oder minimal. Sie bestimmt, welche Prüf- und Transparenzpflichten gelten — Kern unserer Spannungsfeld-Sektion und des CAIO-Schwerpunkts „Sicherheit &amp; Recht\"."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Roadmap (Fahrplan)",
+   "description": "Zeitliche Abfolge geplanter Schritte. Eine gute Roadmap nennt Verantwortliche, Meilensteine und Abbruchkriterien."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "SaaS (Software as a Service)",
+   "description": "Software aus der Cloud im Abo. Schnell startklar — aber Lizenzmodell, Datenort und Ausstieg prüfen. Jahr 2 und 3 kosten anders als Jahr 1."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Schnittstelle",
+   "description": "Verbindung zwischen Systemen (siehe API). Nicht benannte Schnittstellen sind der häufigste Grund, warum KI-Projekte teurer werden als geplant."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Trainingsdaten",
+   "description": "Die Daten, aus denen ein Modell lernt. Ihre Qualität entscheidet über die Qualität der Ausgaben. „Garbage in, garbage out.\""
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Use Case (Anwendungsfall)",
+   "description": "Ein konkretes Vorhaben mit Nutzen, Aufwand und Verantwortlichem. Erst der Use Case, dann das Tool — nie umgekehrt."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Stufenmodell („Vom Beweis zur Verantwortung\")",
+   "description": "Der durchgängige Rahmen des CAIO Instituts: Fundament bereiten (AIP, Menschen &amp; Change) · Urteil schärfen (AIO, Wirtschaftlichkeit) · Projekte bauen (AIA, Technologie &amp; Daten) · Verantwortung tragen (CAIO, Sicherheit &amp; Recht). Das CAIO-Handbuch führt bis Stufe 1 und z"
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Zustimmung (Consent)",
+   "description": "Einwilligung der Betroffenen zur Datenverarbeitung. Sie muss freiwillig, informiert und widerrufbar sein. Ein vorangekreuztes Kästchen genügt nicht."
+  },
+  {
+   "@type": "DefinedTerm",
+   "name": "Zuschuss (Förderzuschuss)",
+   "description": "Der Anteil der Weiterbildungskosten, den ein Träger übernimmt. Bei uns sind 30 bis 100 % möglich — die individuelle Quote ermitteln wir im kostenfreien Erstgespräch. Bei begleiteten Anträgen liegt die Bewilligungsquote bei bis zu 95 %."
+  }
+ ]
+}
+</script>
 
 <!-- KI-Zusammenfassungs-Bubble (sticky, scroll-kollabierend) -->
 <div id="ai-bubble-wrap" class="fixed right-4 bottom-24 z-40 flex flex-col items-end gap-2">

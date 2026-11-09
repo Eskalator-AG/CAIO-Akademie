@@ -1,5 +1,38 @@
 # CAIO Institut — WARTUNGSMODUS (noch nicht intern freigegeben)
+# Bei Freischaltung ("Seite freischalten"): unteren Block aktivieren, diesen Block entfernen,
+# UND in allen HTML-Dateien die robots-Metas auf index,follow umstellen.
+
 User-agent: *
 Disallow: /
 
 Sitemap: https://www.caio-institut.de/sitemap.xml
+
+# ═══════════════════════════════════════════════════════════
+# LAUNCH-VERSION (bei Freischaltung aktivieren):
+#
+# User-agent: *
+# Disallow: /danke/
+# Disallow: /danke/buch/
+#
+# # KI-Assistenten explizit willkommen (GEO): Inhalte zitierbar machen
+# User-agent: GPTBot
+# Allow: /
+# User-agent: OAI-SearchBot
+# Allow: /
+# User-agent: ChatGPT-User
+# Allow: /
+# User-agent: ClaudeBot
+# Allow: /
+# User-agent: Claude-Web
+# Allow: /
+# User-agent: PerplexityBot
+# Allow: /
+# User-agent: Google-Extended
+# Allow: /
+# User-agent: Applebot-Extended
+# Allow: /
+# User-agent: CCBot
+# Allow: /
+#
+# Sitemap: https://www.caio-institut.de/sitemap.xml
+# ═══════════════════════════════════════════════════════════

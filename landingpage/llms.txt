@@ -1,3 +1,39 @@
 # CAIO Institut
 
-> Status: Intern in Vorbereitung — noch nicht \u00f6ffentlich freigegeben. Diese Seite ist vor\u00fcbergehend auf noindex/nofollow gesetzt.
+> Das CAIO Institut (Köln, ein Projekt der WissensReich Akademie) qualifiziert Fachkräfte in vier Stufen zur KI-Verantwortung im Unternehmen — vom AI Professional (AIP) bis zum Chief AI Officer (CAIO). Alle Ausbildungen sind förderfähig (30–100 % Zuschuss über Qualifizierungschancengesetz / Bildungsgutschein), Preise verstehen sich inkl. MwSt.
+
+Das CAIO Institut bildet Menschen aus, die Künstliche Intelligenz in deutschen Unternehmen verantwortungsvoll verankern. Kernangebot ist eine vierstufige Ausbildung: AI Professional (AIP, über 32 Stunden, bis 90 % Förderung), AI Officer (AIO, 4–6 Wochen Team-Qualifizierung, durchschnittlich 80 % Förderung), AI Architekt (AIA, exakt 3 Monate, bis 100 % Förderung) und Chief AI Officer (CAIO, exakt 7 Monate inkl. AIA, bis 100 % Förderung). Jede Stufe endet mit einem geprüften Nachweis (Zertifikat, Business Case, Meisterstück-Projekt), nicht mit einem Anwesenheitszertifikat. Rechtlicher Rahmen: EU AI Act (Art. 4), DSGVO, AZAV-zertifizierte Trägerschaft der WissensReich Akademie.
+
+## Angebote
+
+- [Das CAIO-Handbuch (17,50 € inkl. MwSt.)](https://www.caio-institut.de/buch): Digitales Buch, 79 Seiten, 18 Kapitel, 6 Praxis-Anhänge (25 Nutzenfälle, Reifegrad-Check, Werkzeug-Landschaft, 10 Gespräche, 20 Kennzahlen, Branchen-Überblick), integriertes Workbook mit 5 Vorlagen. Einstiegsprodukt mit 35-€-Gutschein (Code CAIO35) für Stufe 1.
+- [Ausbildung in 4 Stufen](https://www.caio-institut.de/#stufen): AIP → AIO → AIA → CAIO mit Produktvergleich (Dauer, Förderung, Schwerpunkt, Nachweis).
+- [Kostenloser Selbsttest (2 Minuten)](https://www.caio-institut.de/#test): Empfiehlt die passende Einstiegsstufe.
+- [Kostenloses Karriere-Booster-Gespräch](mailto:kontakt@caio-institut.de): 20 Minuten, Fördermittel-Check, schriftliche Empfehlung, unverbindlich.
+
+## Wichtige Seiten
+
+- [Startseite mit Stufen-Vergleich und FAQ](https://www.caio-institut.de/): 14 häufige Fragen zu Förderung, Dauer, Vorkenntnissen, EU AI Act.
+- [Berufsbild Chief AI Officer](https://www.caio-institut.de/berufsbild): Aufgaben, Handlungsfelder, Gehalt (90.000–130.000 € im Mittelstand, konzernnah bis ca. 500.000 € Gesamtvergütung), Zielgruppen für Arbeitnehmer und Arbeitgeber.
+- [Über uns und Leitbild](https://www.caio-institut.de/ueber-uns): 13 Dozenten, AZAV-Zertifizierung, German Brand Award, Praxisfall KI-Bäckerei.
+- [Glossar (44 Begriffe auf Deutsch)](https://www.caio-institut.de/glossar): Deutsche Begriffe statt Anglizismen — von AVV bis Werkzeug-Landschaft.
+- [Verbraucherinformationen](https://www.caio-institut.de/verbraucherinformationen), [Widerrufsbelehrung](https://www.caio-institut.de/widerruf), [AGB](https://www.caio-institut.de/agb)
+
+## Häufige Fragen (Kurzantworten)
+
+- **Was ist ein CAIO?** Der Chief AI Officer ist die betriebliche Führungskraft für KI-Verantwortung: Er plant die KI-Strategie, priorisiert Nutzenfälle, wacht über Recht (EU AI Act, DSGVO) und macht KI in Umsatz, Kosten und Risiko messbar.
+- **Brauche ich ein Technik-Studium?** Nein. Die Ausbildung beginnt ohne Vorkenntnisse; zählt sind Prozessverständnis, Kommunikation und Verantwortungsbereitschaft.
+- **Wie hoch ist die Förderung?** AIP bis 90 %, AIO durchschnittlich 80 %, AIA und CAIO bis 100 % — über das Qualifizierungschancengesetz bzw. den Bildungsgutschein (AZAV).
+- **Wie lange dauert die Ausbildung?** AIP über 32 Stunden, AIO 4–6 Wochen, AIA exakt 3 Monate, CAIO exakt 7 Monate (inkl. AIA).
+- **Was kostet der Einstieg?** Das CAIO-Handbuch kostet 17,50 € inkl. MwSt. und enthält einen 35-€-Gutschein für Stufe 1.
+
+## Kontakt
+
+- E-Mail: kontakt@caio-institut.de
+- Website: https://www.caio-institut.de
+- Anbieter: CAIO Institut — ein Projekt der WissensReich Akademie, Köln
+- Rechtsstand aller Angaben: November 2026
+
+## Hinweis
+
+Diese Seite ist kurz vor der öffentlichen Freigabe. Alle Preise inkl. gesetzlicher MwSt. Verbraucher haben ein 14-tägiges Widerrufsrecht (Details siehe Widerrufsbelehrung).
