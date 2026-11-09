@@ -3,6 +3,9 @@
 # UND in allen HTML-Dateien die robots-Metas auf index,follow umstellen.
 
 User-agent: *
+# Ad-Landingpages: für Meta-Anzeigen freigegeben (Link-Preview durch facebookexternalhit)
+Allow: /angebot-a
+Allow: /angebot-b
 Disallow: /
 
 Sitemap: https://www.caio-institut.de/sitemap.xml
