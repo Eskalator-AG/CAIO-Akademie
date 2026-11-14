@@ -177,7 +177,7 @@ nav > div:last-child { background: var(--c-bg-strip) !important; }
 
 /* Vorlagen */
 .dark .vorlage { background: var(--c-bg-card) !important; border-color: #5BA8D0 !important; }
-.dark .vorlage::before { background: #5BA8D0 !important; color: #E8E4DD !important; }
+.dark .vorlage::before { background: #5BA8D0 !important; color: #0F1218 !important; }
 
 /* Consent-Banner */
 #consent-banner { background: #171310 !important; color: #FAF6EF !important; }

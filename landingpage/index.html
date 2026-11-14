@@ -650,7 +650,7 @@ td{overflow-wrap:break-word}
   <p class="mt-2">Fünf Fragen. 2 Minuten. Direkt orientiert sein.</p>
   <div class="mt-6 bg-white rounded-2xl shadow-card p-6">
     <div class="h-1.5 rounded-full bg-espresso/10 overflow-hidden">
-      <div id="bar" class="h-full bg-orange transition-all duration-200" style="width:0%"></div>
+      <div id="bar" class="h-full w-full bg-orange origin-left transition-transform duration-200" style="transform:scaleX(0)"></div>
     </div>
     <div id="quiz" class="mt-6"></div>
     <div id="result" class="hidden">
@@ -895,7 +895,7 @@ const elQuiz=document.getElementById('quiz'),elBar=document.getElementById('bar'
       elT=document.getElementById('rtitle'),elX=document.getElementById('rtext');
 
 function render(){
-  elBar.style.width=(step/quiz.length*100)+'%';
+  elBar.style.transform='scaleX('+(step/quiz.length)+')';
   if(step>=quiz.length)return showResult();
   const {q,o}=quiz[step];
   elQuiz.innerHTML=`<p class="font-head font-bold text-lg">${step+1}/5 · ${q}</p>
@@ -908,7 +908,7 @@ function render(){
 }
 function showResult(){
   elQuiz.classList.add('hidden'); elRes.classList.remove('hidden');
-  elBar.style.width='100%';
+  elBar.style.transform='scaleX(1)';
   const bands=[
     [5,'bg-sand/60','KI-Entdecker 🌱','Du bist neugierig. Das ist der beste Startpunkt. Stufe 1 bereitet dein Fundament vor – in über 32 Stunden. Bis zu 90 % Förderung für viele möglich.',['AI Professional (AIP)']],
     [10,'bg-licht/30','Versteckter Navigator 🧭','Du denkst schon weiter als viele. Dir fehlt das Urteil in Struktur. Stufe 2 macht aus deinem Blick ein Bewertungsinstrument.',['AI Officer (AIO)','AI Architekt (AIA)']],
@@ -974,7 +974,7 @@ if(zahlEls.length&&'IntersectionObserver'in window){
     <p id="ai-hinweis" class="hidden mt-2 text-xs text-emerald-600"></p>
   </div>
   <button id="ai-bubble" aria-expanded="false" aria-controls="ai-popover" aria-label="Diese Seite mit deiner KI zusammenfassen"
-    class="inline-flex items-center justify-center gap-2 h-12 px-4 rounded-full bg-ofen text-mehl shadow-card font-head font-bold text-sm hover:bg-nacht max-w-[calc(100vw-2rem)] transition-all duration-200">
+    class="inline-flex items-center justify-center gap-2 h-12 px-4 rounded-full bg-ofen text-mehl shadow-card font-head font-bold text-sm hover:bg-nacht max-w-[calc(100vw-2rem)] transition-bubble">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 flex-shrink-0" aria-hidden="true"><path d="M12 3l1.9 5.8a2 2 0 0 0 1.3 1.3L21 12l-5.8 1.9a2 2 0 0 0-1.3 1.3L12 21l-1.9-5.8a2 2 0 0 0-1.3-1.3L3 12l5.8-1.9a2 2 0 0 0 1.3-1.3z"/></svg>
     <span class="ai-text whitespace-nowrap"><span class="sm:hidden">Mit KI zusammenfassen</span><span class="hidden sm:inline">Diese Seite mit KI zusammenfassen</span></span>
   </button>
