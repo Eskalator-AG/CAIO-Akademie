@@ -1,6 +1,6 @@
 # CAIO Institut
 
-> Das CAIO Institut (Köln, ein Projekt der WissensReich Akademie) qualifiziert Fachkräfte in vier Stufen zur KI-Verantwortung im Unternehmen — vom AI Professional (AIP) bis zum Chief AI Officer (CAIO). Alle Ausbildungen sind förderfähig (30–100 % Zuschuss über Qualifizierungschancengesetz / Bildungsgutschein), Preise verstehen sich inkl. MwSt.
+> Das CAIO Institut — eine Gemeinschaftsinitiative der WissensReich Academy (Deutschland), der Eskalator AG und der Grenzenlos Ltd., verankert in Deutschland, der Schweiz und Irland — qualifiziert Fachkräfte in vier Stufen zur KI-Verantwortung im Unternehmen — vom AI Professional (AIP) bis zum Chief AI Officer (CAIO). Alle Ausbildungen sind förderfähig (30–100 % Zuschuss über Qualifizierungschancengesetz / Bildungsgutschein), Preise verstehen sich inkl. MwSt.
 
 Das CAIO Institut bildet Menschen aus, die Künstliche Intelligenz in deutschen Unternehmen verantwortungsvoll verankern. Kernangebot ist eine vierstufige Ausbildung: AI Professional (AIP, über 32 Stunden, bis 90 % Förderung), AI Officer (AIO, 4–6 Wochen Team-Qualifizierung, durchschnittlich 80 % Förderung), AI Architekt (AIA, exakt 3 Monate, bis 100 % Förderung) und Chief AI Officer (CAIO, exakt 7 Monate inkl. AIA, bis 100 % Förderung). Jede Stufe endet mit einem geprüften Nachweis (Zertifikat, Business Case, Meisterstück-Projekt), nicht mit einem Anwesenheitszertifikat. Rechtlicher Rahmen: EU AI Act (Art. 4), DSGVO, AZAV-zertifizierte Trägerschaft der WissensReich Akademie.
 
@@ -31,7 +31,7 @@ Das CAIO Institut bildet Menschen aus, die Künstliche Intelligenz in deutschen 
 
 - E-Mail: kontakt@caio-institut.de
 - Website: https://www.caio-institut.de
-- Anbieter: CAIO Institut — ein Projekt der WissensReich Akademie, Köln
+- Anbieter: CAIO Institut — eine Gemeinschaftsinitiative der WissensReich Academy, der Eskalator AG und der Grenzenlos Ltd. Ansprechpartner für Deutschland: WissensReich Academy UG (haftungsbeschränkt), Köln
 - Rechtsstand aller Angaben: November 2026
 
 ## Hinweis
