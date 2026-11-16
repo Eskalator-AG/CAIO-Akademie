@@ -39,11 +39,18 @@
   var utm = captureUtms();
 
   // ── 2. Marketing-Einwilligung (aus consent.js: Kategorie 'marketing') ──
+  // consent.js speichert unter 'caio-consent-v1' als {essential, analytics, marketing}
   function marketingOk() {
     try {
-      var c = JSON.parse(localStorage.getItem('caio-consent') || 'null');
+      var c = JSON.parse(localStorage.getItem('caio-consent-v1') || 'null');
       return !!(c && c.marketing);
     } catch (e) { return false; }
+  }
+
+  // ── 2b. Conversion-Signal auf der Reservierungs-Bestätigungsseite ──
+  // (Andromeda/Auktions-Ranking optimiert nur, wenn Klick→Conversion zurückfließt)
+  if (/\/danke\/buch\/?$/.test(location.pathname)) {
+    track('Lead');
   }
 
   // ── 3. Meta-Pixel-Stomp (inaktiv bis META_PIXEL_ID gesetzt) ──

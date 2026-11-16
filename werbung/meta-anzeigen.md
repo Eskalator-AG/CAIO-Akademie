@@ -124,6 +124,38 @@ Zuordnung LP-Variante ↔ Anzeige ↔ Conversion ist damit ab Tag 1 möglich.
    - Affilicon-Checkout-URL in `adtrack.js` eintragen (`CHECKOUT_URL`) — dann werden Bestellungen direkt weitergeleitet und UTM-Parameter durchgereicht
    - Anzeigen freigeben + Kampagne in Meta Business Suite anlegen
 
+## Andromeda 2.0 (seit Q3 2026 live) — was das für diese Kampagne bedeutet
+
+Metas Retrieval-Stufe bewertet jetzt **jede** berechtigte Anzeige mit nahezu
+Ranking-Qualität ( statt nur der beliebtesten) und matcht semantisch gegen
+ein generiertes „ideales Anzeigen“-Profil pro Person. Konsequenzen:
+
+1. **Distinkte Konzepte statt Near-Copies** — wir sind korrekt aufgestellt:
+   A1/A2/A3 (Karriere) und B1/B2 (Pflicht) sind inhaltlich verschiedene
+   Einstiege. **Nie** dieselbe Anzeige nur farblich/leicht umformuliert
+   duplizieren — das erhöht die Anzahl, nicht die Auswahlqualität.
+2. **Bündeln statt streuen:** Farb-/Bildvarianten eines Konzepts als
+   Assets in EINE Anzeige (bis 10), nicht als separate Ads. Neue
+   inhaltliche Konzepte wöchentlich gebündelt launchen (jede neue Ad
+   startet Lernphase).
+3. **Ad-Sets groß genug:** ~50 Ergebnisse/Woche pro Ad-Set, sonst bleibt
+   die Lernphase offen. Start: 2 Ad-Sets (A: Karriere, B: Pflicht) à
+   20–30 €/Tag — nicht splitten, bevor ein Set 50/ Woche liefert.
+4. **Budget ruhig halten:** keine Sprünge >20–30 %/Tag (Lernphase-Reset);
+   die „15–20 %/Tag“-Regel ist Community-Erfahrung, keine Meta-Angabe.
+5. **Kein Oktober-Trennstrich:** Andromeda lief bereits vor der öffentlichen
+   Beschreibung (28.10.2026) — Performance-Schwankungen sind eher
+   Lernphase/Fatigue/Q4 als „das Update“.
+6. **Conversion-Loop schließen (unser Teil):** Der Ranking-Nutzen der guten
+   Landingpage entsteht erst, wenn das Reservierungs-Ereignis zurückfließt.
+   Vorbereitet in `assets/adtrack.js` — aktiv werden erst mit:
+   - `META_PIXEL_ID` in adtrack.js eintragen (PageView/InitiateCheckout/Lead
+     feuern dann nur nach erteilter Marketing-Einwilligung)
+   - Danke-Seite sendet `Lead` (Reservierung) — das Ereignis, auf das die
+     Kampagne optimiert
+   - Optional: CAPI (Conversions-API) über Affilicon-Webhook für
+     iOS-verlorene Signale — Phase 2, nicht Start-Blocker
+
 ## Regeln für alle Anzeigen (Selbstcheck vor Freigabe)
 
 - Keine Countdown-Timer, keine künstlichen Limits, keine „nur noch heute“-Formulierungen
