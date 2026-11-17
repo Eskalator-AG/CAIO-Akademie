@@ -6,7 +6,7 @@ Das CAIO Institut bildet Menschen aus, die Künstliche Intelligenz in deutschen 
 
 ## Angebote
 
-- [Das CAIO-Handbuch (17,50 € inkl. MwSt.)](https://www.caio-institut.de/buch): Digitales Buch, 79 Seiten, 18 Kapitel, 6 Praxis-Anhänge (25 Nutzenfälle, Reifegrad-Check, Werkzeug-Landschaft, 10 Gespräche, 20 Kennzahlen, Branchen-Überblick), integriertes Workbook mit 5 Vorlagen. Einstiegsprodukt mit 35-€-Gutschein (Code CAIO35) für Stufe 1.
+- [Das CAIO-Handbuch (17,50 € inkl. MwSt.)](https://www.caio-institut.de/buch): Digitales Buch, 85 Seiten, 18 Kapitel, 8 Praxis-Anhänge (25 Nutzenfälle, Reifegrad-Check, Werkzeug-Landschaft, 10 Gespräche, 20 Kennzahlen, Branchen-Überblick, Umsetzungs-Werkstatt mit 4 Eigenbau-Fallstudien, Projektbaukasten mit 8 beauftragbaren Bausteinen), integriertes Workbook mit 5 Vorlagen. Einstiegsprodukt mit 35-€-Gutschein (Code CAIO35) für Stufe 1.
 - [Ausbildung in 4 Stufen](https://www.caio-institut.de/#stufen): AIP → AIO → AIA → CAIO mit Produktvergleich (Dauer, Förderung, Schwerpunkt, Nachweis).
 - [Direktbeauftragung: Digitalisierungs- und KI-Projekte](https://www.caio-institut.de/direktbeauftragung): Das Institut setzt Projekte direkt um — KI-Roadmap, innerbetriebliche Digitalisierung, Pflichtschulung nach EU AI Act Art. 4, Projektmanagementsysteme, CRM, eigene Plattformen und Kunden-Integration, Vernetzung von Datensilos. Anfrage mit Ist-Zustand, Zielbild, Dauer und Teamgröße.
 - [Kostenloser Selbsttest (2 Minuten)](https://www.caio-institut.de/#test): Empfiehlt die passende Einstiegsstufe.
