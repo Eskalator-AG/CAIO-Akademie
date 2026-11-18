@@ -1,6 +1,6 @@
 {
   "schema_version": "mimosa-task-review/v2",
-  "run_id": "20261116T160537877Z-76904-b6104ea55173",
+  "run_id": "20261117T151924800Z-47241-39c036387a6c",
   "run_status": "inconclusive",
   "errors": [
     {
@@ -93,10 +93,10 @@
     ],
     "reasons_truncated": false
   },
-  "generated_at": "2026-11-16T16:05:37.877Z",
+  "generated_at": "2026-11-17T15:19:24.800Z",
   "session_id": "sess_b8509876-c53d-485a-b008-f6c2c616cf02",
   "target": ".",
-  "revision": "98cec2bd5938b5f47cb295b355f4eedd562a78dc",
+  "revision": "36248886de9d21ba6da847314c432e79e6ae1793",
   "rules_version": "unavailable",
   "diff_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
   "diff": {
@@ -105,9 +105,9 @@
     "changed_files": []
   },
   "timing": {
-    "started_at": "2026-11-16T16:05:37.572Z",
-    "completed_at": "2026-11-16T16:05:37.877Z",
-    "duration_ms": 305,
+    "started_at": "2026-11-17T15:19:24.528Z",
+    "completed_at": "2026-11-17T15:19:24.800Z",
+    "duration_ms": 272,
     "measurement": "hook_wall_clock"
   },
   "tokens": {
@@ -122,8 +122,8 @@
     "profile": "gate",
     "operation": "Stop",
     "outcome": "partial/INCONCLUSIVE",
-    "latencyMs": 305,
-    "peakMemoryBytes": 112312320,
+    "latencyMs": 272,
+    "peakMemoryBytes": 107003904,
     "memoryMeasurement": "max-observed-process-rss",
     "scannedFiles": 0,
     "cache": {
@@ -150,8 +150,8 @@
   "finding_events": [],
   "findings": [],
   "artifacts": {
-    "immutable_report": ".mimosa/reports/task-review-sess_b8509876-c53d-485a-b008-f6c2c616cf02-20261116T160537877Z-76904-b6104ea55173.json",
+    "immutable_report": ".mimosa/reports/task-review-sess_b8509876-c53d-485a-b008-f6c2c616cf02-20261117T151924800Z-47241-39c036387a6c.json",
     "latest_report": ".mimosa/reports/task-review-sess_b8509876-c53d-485a-b008-f6c2c616cf02.json",
-    "history_summary": ".mimosa/history/run-20261116T160537877Z-76904-b6104ea55173.json"
+    "history_summary": ".mimosa/history/run-20261117T151924800Z-47241-39c036387a6c.json"
   }
 }

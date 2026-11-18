@@ -1,0 +1,1 @@
+{"compilerOptions":{"jsx":"preserve","target":"esnext","module":"esnext","moduleResolution":"bundler","skipLibCheck":true,"noEmit":true,"baseUrl":".","paths":{"@/*":["./*"]}},"include":["app/glossar/page.tsx",""]}
