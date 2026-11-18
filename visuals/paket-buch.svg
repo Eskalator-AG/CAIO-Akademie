@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 1024" width="1536" height="1024" font-family="Inter, Arial, sans-serif">
+  <title>CAIO Institut — Paket 1: Das Handbuch (17,50 € inkl. MwSt.)</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ECECEE"/><stop offset="1" stop-color="#DBDBDF"/>
+    </linearGradient>
+    <linearGradient id="cover" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#16283A"/><stop offset=".52" stop-color="#0D1B2A"/><stop offset="1" stop-color="#091320"/>
+    </linearGradient>
+    <linearGradient id="ruecken" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#050B13"/><stop offset=".55" stop-color="#0E1E2D"/><stop offset="1" stop-color="#142C43"/>
+    </linearGradient>
+    <linearGradient id="welle" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2E86AB" stop-opacity="0"/><stop offset="1" stop-color="#41C9FF" stop-opacity=".5"/>
+    </linearGradient>
+    <radialGradient id="schatten" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#0D1B2A" stop-opacity=".34"/><stop offset="1" stop-color="#0D1B2A" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Studio-Hintergrund -->
+  <rect width="1536" height="1024" fill="url(#bg)"/>
+
+  <!-- Kontaktschatten -->
+  <ellipse cx="420" cy="912" rx="270" ry="26" fill="url(#schatten)" filter="blur(9px)"/>
+  <ellipse cx="1000" cy="930" rx="330" ry="22" fill="url(#schatten)" filter="blur(9px)"/>
+
+  <!-- ═══ BUCH (Hardcover, gedreht) ═══ -->
+  <g transform="translate(210,196) skewY(-2)">
+    <!-- Buchblock oben/unten (Papierschnitt) -->
+    <rect x="8" y="-8" width="440" height="12" fill="#F5F1E8" transform="skewX(-40)" rx="2"/>
+    <rect x="8" y="628" width="440" height="12" fill="#EFEADA" transform="skewX(40)" rx="2"/>
+    <!-- Rücken -->
+    <g transform="skewY(12)">
+      <rect x="-30" y="6" width="34" height="620" rx="5" fill="url(#ruecken)"/>
+      <rect x="-2" y="8" width="4" height="616" fill="#FFFFFF" opacity=".14"/>
+      <text x="-13" y="52" fill="#D4A94B" font-family="'Space Grotesk', Arial" font-weight="700" font-size="15" letter-spacing="3.5" transform="rotate(90 -13 52)">DAS CAIO-HANDBUCH · CAIO INSTITUT</text>
+    </g>
+    <!-- Seitenstapel rechts -->
+    <rect x="434" y="10" width="24" height="612" rx="3" fill="#F5F1E8"/>
+    <rect x="434" y="10" width="24" height="612" rx="3" fill="#E0DACB" opacity=".5"/>
+    <!-- Cover -->
+    <rect width="450" height="630" rx="8" fill="url(#cover)"/>
+    <rect width="450" height="630" rx="8" fill="none" stroke="#FFFFFF" stroke-opacity=".06"/>
+    <!-- Marke -->
+    <g transform="translate(44,40)">
+      <rect width="34" height="34" rx="8" fill="#D4A94B"/>
+      <path d="M8.5 27V16a8.5 8.5 0 0 1 17 0v11" fill="none" stroke="#142433" stroke-width="2.4" stroke-linecap="round"/>
+      <rect x="11.3" y="22.6" width="2.8" height="4.2" fill="#142433"/><rect x="14.8" y="19.8" width="2.8" height="7" fill="#142433"/>
+      <rect x="18.3" y="17" width="2.8" height="9.8" fill="#142433"/><rect x="21.8" y="14.2" width="2.8" height="12.6" fill="#E4572E"/>
+      <text x="46" y="15" fill="#F2EEE6" font-family="'Space Grotesk', Arial" font-weight="700" font-size="14.5" letter-spacing="4.5">CAIO INSTITUT</text>
+      <rect x="46" y="22" width="44" height="3" fill="#D4A94B"/>
+    </g>
+    <!-- Titel -->
+    <text x="44" y="196" fill="#F2EEE6" font-family="'Space Grotesk', Arial" font-weight="700" font-size="55">Das <tspan fill="#D4A94B">CAIO-</tspan></text>
+    <text x="44" y="254" fill="#F2EEE6" font-family="'Space Grotesk', Arial" font-weight="700" font-size="55">Handbuch</text>
+    <text x="44" y="292" fill="#F2EEE6" opacity=".72" font-size="18.5">Vom KI-Wissen zur KI-Verantwortung</text>
+    <!-- Cyan-Datenwellen -->
+    <g transform="translate(0,400)">
+      <path d="M-20 205 C 80 158, 180 118, 430 58" stroke="url(#welle)" stroke-width="2.2" fill="none" opacity=".8"/>
+      <path d="M-20 228 C 90 184, 200 146, 430 94" stroke="#41C9FF" stroke-width="1.5" fill="none" opacity=".38" stroke-dasharray="2 7"/>
+      <circle cx="336" cy="84" r="3.2" fill="#41C9FF" opacity=".85"/>
+    </g>
+    <!-- Gold-Treppe -->
+    <g transform="translate(44,396)">
+      <rect x="6" y="188" width="58" height="38" rx="5" fill="#0A1626" stroke="#D4A94B" stroke-opacity=".5"/>
+      <rect x="72" y="152" width="58" height="74" rx="5" fill="#0C1B2E" stroke="#D4A94B" stroke-opacity=".62"/>
+      <rect x="138" y="116" width="58" height="110" rx="5" fill="#0E2036" stroke="#D4A94B" stroke-opacity=".74"/>
+      <rect x="204" y="80" width="58" height="146" rx="5" fill="#10243C" stroke="#D4A94B" stroke-opacity=".86"/>
+      <rect x="270" y="44" width="58" height="182" rx="5" fill="#132A46" stroke="#D4A94B"/>
+      <g stroke="#D4A94B" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M17 200 h10 v9 h-10 z M19 200 v-3 h6 v3"/>
+        <circle cx="87" cy="165" r="5.2"/><path d="M87 160 v5.2 l3.4 2"/>
+        <rect x="148" y="128" width="9" height="9"/><rect x="152" y="124" width="9" height="9"/>
+        <path d="M217 94 l4 3.4 6.6-6.6"/><rect x="213" y="88" width="20" height="15.5" rx="4"/>
+        <path d="M281 58 v13 M281 58 l9.4 3.6 v9.4 M281 71 l9.4-5.6"/>
+      </g>
+      <path d="M40 178 C 140 128, 240 88, 322 40" stroke="#D4A94B" stroke-width="1.3" stroke-dasharray="3 6" opacity=".45" fill="none"/>
+      <path d="M322 40 l-11 2.6 M322 40 l-2.8 10.8" stroke="#D4A94B" stroke-width="1.9" fill="none" stroke-linecap="round"/>
+    </g>
+    <!-- Statistik-Leiste -->
+    <rect y="542" width="450" height="88" fill="#060D16" opacity=".8"/>
+    <rect y="542" width="450" height="1.2" fill="#D4A94B" opacity=".4"/>
+    <g text-anchor="middle" font-family="'Space Grotesk', Arial">
+      <text x="66" y="580" fill="#D4A94B" font-weight="700" font-size="21">85</text>
+      <text x="66" y="602" fill="#F2EEE6" opacity=".78" font-size="11.5" letter-spacing="1.2">Seiten</text>
+      <text x="150" y="580" fill="#D4A94B" font-weight="700" font-size="21">18</text>
+      <text x="150" y="602" fill="#F2EEE6" opacity=".78" font-size="11.5" letter-spacing="1.2">Kapitel</text>
+      <text x="230" y="580" fill="#D4A94B" font-weight="700" font-size="21">4</text>
+      <text x="230" y="602" fill="#F2EEE6" opacity=".78" font-size="11.5" letter-spacing="1.2">Teile</text>
+      <text x="318" y="580" fill="#D4A94B" font-weight="700" font-size="21">8</text>
+      <text x="318" y="602" fill="#F2EEE6" opacity=".78" font-size="11.5" letter-spacing="1.2">Praxis-Anhänge</text>
+      <text x="408" y="580" fill="#D4A94B" font-weight="700" font-size="21">5</text>
+      <text x="408" y="602" fill="#F2EEE6" opacity=".78" font-size="11.5" letter-spacing="1.2">Vorlagen</text>
+    </g>
+  </g>
+
+  <!-- ═══ AUFGESCHLAGENE DOPPELSEITE ═══ -->
+  <g transform="translate(724,300) rotate(-1.5)">
+    <ellipse cx="320" cy="436" rx="300" ry="18" fill="url(#schatten)" filter="blur(8px)"/>
+    <rect x="20" y="20" width="640" height="448" rx="5" fill="#EFEAE0"/>
+    <rect width="640" height="448" rx="5" fill="#FDFCF9"/>
+    <!-- Mittelfalz -->
+    <rect x="297" width="46" height="448" fill="#0D1B2A" opacity=".05"/>
+    <rect x="315" width="2" height="448" fill="#0D1B2A" opacity=".14"/>
+    <!-- umgebogene Ecke -->
+    <path d="M640 0 L606 0 Q640 0 640 34 Z" fill="#DBD6C9"/>
+    <path d="M606 0 Q640 0 640 34 L640 0 Z" fill="#FDFCF9"/>
+    <path d="M606 2 Q636 4 638 32" stroke="#0D1B2A" stroke-opacity=".12" fill="none" transform="translate(2,2)"/>
+    <!-- Kolumnentitel -->
+    <text x="36" y="26" fill="#9A917F" font-family="'Space Grotesk', Arial" font-size="10" letter-spacing="2">DAS CAIO-HANDBUCH</text>
+    <text x="604" y="26" fill="#9A917F" font-family="'Space Grotesk', Arial" font-size="10" letter-spacing="2" text-anchor="end">ÜBER DIESES BUCH</text>
+    <!-- Linke Seite -->
+    <g transform="translate(36,56)">
+      <rect width="150" height="27" rx="4" fill="#142433"/>
+      <text x="12" y="18" fill="#F2EEE6" font-family="'Space Grotesk', Arial" font-weight="700" font-size="12" letter-spacing="2.4">TEIL I – DIE CHANCE</text>
+      <g font-size="13.5">
+        <rect y="20" width="25" height="25" rx="7" fill="#EAF3F9"/><text x="12.5" y="37.5" fill="#16425B" font-family="'Space Grotesk', Arial" font-weight="700" font-size="12.5" text-anchor="middle">1</text>
+        <text x="36" y="37"><tspan font-weight="700" fill="#142433">Das Zeitfenster</tspan> – warum jetzt handeln</text>
+        <rect y="49" width="25" height="25" rx="7" fill="#EAF3F9"/><text x="12.5" y="66.5" fill="#16425B" font-family="'Space Grotesk', Arial" font-weight="700" font-size="12.5" text-anchor="middle">7</text>
+        <text x="36" y="66"><tspan font-weight="700" fill="#142433">Die Beweis-Leiter</tspan> – Evidenz statt Versprechen</text>
+        <rect y="78" width="25" height="25" rx="7" fill="#EAF3F9"/><text x="12.5" y="95.5" fill="#16425B" font-family="'Space Grotesk', Arial" font-weight="700" font-size="12.5" text-anchor="middle">11</text>
+        <text x="36" y="95"><tspan font-weight="700" fill="#142433">Recht und Rahmen</tspan> – EU AI Act &amp; DSGVO</text>
+        <rect y="107" width="25" height="25" rx="7" fill="#EAF3F9"/><text x="12.5" y="124.5" fill="#16425B" font-family="'Space Grotesk', Arial" font-weight="700" font-size="12.5" text-anchor="middle">14</text>
+        <text x="36" y="124"><tspan font-weight="700" fill="#142433">Die KI-Bäckerei</tspan> – Praxis am echten Fall</text>
+      </g>
+      <text y="180" fill="#6B6258" font-size="12">Vier Teile, achtzehn Kapitel, acht Praxis-Anhänge —</text>
+      <text y="198" fill="#6B6258" font-size="12">vom KI-Wissen zur KI-Verantwortung.</text>
+      <text y="330" x="-2" fill="#8D8471" font-family="'Space Grotesk', Arial" font-weight="600" font-size="11">3</text>
+    </g>
+    <!-- Rechte Seite -->
+    <g transform="translate(360,56)">
+      <rect width="196" height="27" rx="4" fill="#D4A94B"/>
+      <text x="12" y="18" fill="#142433" font-family="'Space Grotesk', Arial" font-weight="700" font-size="12" letter-spacing="2.4">INTEGRIERTES WORKBOOK</text>
+      <g font-size="13.5" fill="#2A2521">
+        <text y="38" fill="#1E9E6A" font-weight="700">✓</text><text x="22" y="38">5 schreibfertige Vorlagen mit Ausfüllhilfen</text>
+        <text y="67" fill="#1E9E6A" font-weight="700">✓</text><text x="22" y="67">30-Tage-Fahrplan zum ersten Beweis</text>
+        <text y="96" fill="#1E9E6A" font-weight="700">✓</text><text x="22" y="96">25 Nutzenfälle nach Bereichen sortiert</text>
+        <text y="125" fill="#1E9E6A" font-weight="700">✓</text><text x="22" y="125">Reifegrad-Check für 7 Unternehmensbereiche</text>
+      </g>
+      <text y="180" fill="#6B6258" font-size="12">Datiert, gemessen, unterschrieben — die</text>
+      <text y="198" fill="#6B6258" font-size="12">Beweis-Leiter für deine Rolle.</text>
+      <text y="330" x="246" fill="#8D8471" font-family="'Space Grotesk', Arial" font-weight="600" font-size="11" text-anchor="end">4</text>
+    </g>
+  </g>
+
+  <!-- ═══ BUNDLE-BADGE ═══ -->
+  <g transform="translate(1276,66)">
+    <rect width="176" height="72" rx="18" fill="#142433" stroke="#D4A94B" stroke-opacity=".6" stroke-width="1.5"/>
+    <text x="88" y="30" fill="#F2EEE6" opacity=".65" font-size="10.5" letter-spacing="2.4" text-anchor="middle">PAKET 1 · HANDBUCH</text>
+    <text x="88" y="56" fill="#D4A94B" font-family="'Space Grotesk', Arial" font-weight="700" font-size="26" text-anchor="middle">17,50 €</text>
+  </g>
+</svg>

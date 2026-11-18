@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "mimosa-finding-ledger-batch/v1",
+  "batchId": "stop-20261118T155027002Z-92794-e99d92ae07be",
+  "runId": "20261118T155027002Z-92794-e99d92ae07be",
+  "runStatus": "inconclusive",
+  "coverage": {
+    "status": "partial",
+    "reasons": [
+      {
+        "code": "baseline_partial",
+        "stage": "baseline",
+        "target": ".",
+        "detail": "baseline capture had enumeration or snapshot errors",
+        "affectsCompletion": true
+      },
+      {
+        "code": "project_check_failed",
+        "stage": "baseline",
+        "target": ".",
+        "detail": "baseline_partial: baseline capture had enumeration or snapshot errors",
+        "affectsCompletion": true
+      }
+    ]
+  },
+  "source": {
+    "component": "zcode-hook",
+    "operationId": "Stop"
+  },
+  "revision": "27612079652f9d34dd7b4ff55d0247263118bef7",
+  "diffHash": "313872f727b2d12d56eba992fdbfa5eeea8e5b26c7ca6fc4b48ba71bd07f1cc8",
+  "rulesVersion": "unavailable",
+  "sessionHash": "bfd070c373742a541a0c2f24031abe9aef713bd0c454391aa276e52b0260348c",
+  "reportRef": ".mimosa/reports/task-review-sess_b8509876-c53d-485a-b008-f6c2c616cf02-20261118T155027002Z-92794-e99d92ae07be.json",
+  "events": [],
+  "observedFindingIds": [],
+  "verifiedFiles": [
+    {
+      "file": "web/types/custom-elements.d.ts",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "web/lib/track.ts",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "web/components/ThemeToggle.tsx",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "web/components/Consent.tsx",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "web/components/Nav.tsx",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "web/components/Footer.tsx",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "web/components/PageLayout.tsx",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "web/components/UtmBootstrap.tsx",
+      "direct": "complete",
+      "projectContext": "partial"
+    },
+    {
+      "file": "web/app/layout.tsx",
+      "direct": "complete",
+      "projectContext": "partial"
+    }
+  ],
+  "recordedAt": "2026-11-18T15:50:27.333Z"
+}

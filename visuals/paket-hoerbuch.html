@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<style>
+/* ═══ CAIO Produkt-Mockup — Paket 1: Handbuch (v2, physisch plausibel) ═══ */
+@font-face { font-family: 'Space Grotesk'; src: url('../landingpage/assets/fonts/V8mDoQDjQSkFtoMM3T6r8E7mPb94C_k3HqU.woff2') format('woff2'); }
+@font-face { font-family: 'Inter'; src: url('../landingpage/assets/fonts/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2') format('woff2'); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { width: 1536px; height: 1024px; overflow: hidden; font-family: 'Inter', sans-serif; }
+
+.stage {
+  width: 1536px; height: 1024px;
+  background: linear-gradient(180deg, #ECECEE 0%, #DBDBDF 100%);
+  position: relative; display: flex; align-items: center; justify-content: center;
+}
+
+/* ═══ Das Buch — mit Falz, Papierschnitt, Kontaktschatten ═══ */
+.buch-wrap {
+  position: relative; z-index: 6;
+  transform: perspective(1700px) rotateY(16deg) rotateX(1.5deg);
+  transform-style: preserve-3d;
+  margin-right: 46px;
+}
+.buch {
+  position: relative; width: 450px; height: 630px;
+  filter: drop-shadow(0 34px 44px rgba(13,27,42,.42));
+}
+/* Rücken: schmaler, mit Falz-Highlight */
+.buch-ruecken {
+  position: absolute; left: -30px; top: 6px;
+  width: 34px; height: 620px;
+  background: linear-gradient(90deg, #050B13 0%, #0E1E2D 55%, #142C43 100%);
+  border-radius: 5px 0 0 5px;
+  transform: rotateY(-62deg); transform-origin: right center;
+  box-shadow: -6px 10px 18px rgba(5,11,19,.5);
+}
+.buch-ruecken::after { /* helle Falzkante zum Cover */
+  content: ''; position: absolute; right: 0; top: 2px; bottom: 2px; width: 4px;
+  background: linear-gradient(90deg, rgba(255,255,255,.16), transparent);
+}
+.buch-ruecken span {
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  color: #D4A94B; font-family: 'Space Grotesk'; font-weight: 700;
+  font-size: 18px; letter-spacing: 3px; text-transform: uppercase;
+  position: absolute; top: 30px; right: 7px; white-space: nowrap;
+}
+/* Papierschnitt oben+unten (Buchblock ragt heraus) */
+.buchblock {
+  position: absolute; left: 2px; right: -10px;
+  height: 12px;
+  background: repeating-linear-gradient(90deg, #F5F1E8 0 3px, #E2DCCD 3px 5px);
+  border-radius: 2px;
+}
+.buchblock.oben { top: -8px; transform: skewX(-40deg); }
+.buchblock.unten { bottom: -8px; transform: skewX(40deg); }
+.buch-seiten {
+  position: absolute; right: -16px; top: 10px; width: 24px; height: 612px;
+  background: repeating-linear-gradient(90deg, #F5F1E8 0 2px, #E0DACB 2px 3.5px);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 6px 8px 14px rgba(13,27,42,.25);
+}
+.buch-cover {
+  position: absolute; inset: 0;
+  background: linear-gradient(158deg, #16283A 0%, #0D1B2A 52%, #091320 100%);
+  border-radius: 3px 10px 10px 3px;
+  padding: 40px 38px 0 44px; overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.07), inset -14px 0 26px rgba(0,0,0,.28);
+}
+/* dezente Material-Struktur */
+.buch-cover::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background:
+    radial-gradient(120% 60% at 18% -8%, rgba(255,255,255,.05), transparent 55%),
+    radial-gradient(80% 45% at 108% 112%, rgba(65,201,255,.06), transparent 60%);
+}
+
+.wellen { position: absolute; bottom: 122px; left: 0; width: 100%; height: 250px; opacity: .85; }
+.marke { display: flex; align-items: center; gap: 10px; }
+.marke-wort { color: #F2EEE6; font-family: 'Space Grotesk'; font-weight: 700; font-size: 14.5px; letter-spacing: 4.5px; }
+.marke-strich { width: 44px; height: 3px; background: #D4A94B; margin-top: 2px; }
+.titel { margin-top: 62px; color: #F2EEE6; font-family: 'Space Grotesk'; font-weight: 700; font-size: 55px; line-height: 1.05; }
+.titel .gold { color: #D4A94B; }
+.unter { margin-top: 20px; color: rgba(242,238,230,.72); font-size: 18.5px; letter-spacing: .3px; }
+.treppe { position: absolute; bottom: 126px; left: 44px; }
+
+.statbar {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 88px;
+  background: linear-gradient(180deg, rgba(6,13,22,.55), rgba(6,13,22,.82));
+  border-top: 1px solid rgba(212,169,75,.4);
+  display: flex; justify-content: space-around; align-items: center; padding: 0 16px;
+}
+.stat { display: flex; flex-direction: column; align-items: center; gap: 5px; }
+.stat b { color: #D4A94B; font-family: 'Space Grotesk'; font-weight: 700; font-size: 21px; }
+.stat span { color: rgba(242,238,230,.78); font-size: 11.5px; letter-spacing: 1.2px; }
+.stat + .stat { border-left: 1px solid rgba(242,238,230,.12); padding-left: 26px; }
+
+/* ═══ Aufgeschlagene Doppelseite — mit Falz, Perspektive, Paginierung ═══ */
+.seiten-wrap {
+  position: relative; z-index: 4;
+  margin-left: -60px; margin-top: 150px;
+  transform: perspective(1700px) rotateX(7deg) rotateY(-7deg) rotateZ(.4deg);
+  filter: drop-shadow(0 30px 40px rgba(13,27,42,.30));
+}
+.seite {
+  position: relative; width: 520px; height: 400px;
+  background: linear-gradient(90deg, #FBF9F4 0%, #FDFCF9 46%, #F6F2E9 54%, #FBF9F4 100%);
+  border-radius: 5px;
+  display: grid; grid-template-columns: 1fr 1fr;
+}
+/* Mittelfalz */
+.seite::before {
+  content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 46px; transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, rgba(13,27,42,.10) 42%, rgba(13,27,42,.16) 50%, rgba(13,27,42,.10) 58%, transparent);
+  z-index: 2; pointer-events: none;
+}
+/* umgebogene Ecke oben rechts */
+.seite::after {
+  content: ''; position: absolute; right: 0; top: 0;
+  width: 0; height: 0;
+  border-style: solid; border-width: 0 34px 34px 0;
+  border-color: #DBD6C9 #DBD6C9 rgba(255,255,255,.9) rgba(255,255,255,.9);
+  box-shadow: -6px 6px 10px rgba(13,27,42,.22), -2px 2px 4px rgba(13,27,42,.14);
+  border-radius: 0 5px 0 0;
+}
+/* Papierstärke an der linken Außenkante */
+.seite .links-kante {
+  position: absolute; left: 0; top: 6px; bottom: 6px; width: 5px;
+  background: linear-gradient(90deg, #E6E0D2, #FDFCF9);
+  border-radius: 5px 0 0 5px; z-index: 3;
+}
+.spalte { padding: 34px 34px 26px 36px; }
+.spalte.rechts { padding-left: 44px; }
+.banner {
+  display: inline-block; background: #142433; color: #F2EEE6;
+  font-family: 'Space Grotesk'; font-weight: 700; font-size: 12px; letter-spacing: 2.4px;
+  padding: 7px 13px; border-radius: 4px; margin-bottom: 15px;
+}
+.banner.gold { background: #D4A94B; color: #142433; }
+.s-zeile { display: flex; gap: 11px; margin-top: 12px; align-items: flex-start; }
+.s-num {
+  min-width: 25px; height: 25px; border-radius: 7px; background: #EAF3F9; color: #16425B;
+  font-family: 'Space Grotesk'; font-weight: 700; font-size: 12.5px;
+  display: flex; align-items: center; justify-content: center; margin-top: 1px;
+}
+.s-text { color: #2A2521; font-size: 13.5px; line-height: 1.42; }
+.s-text b { color: #142433; }
+.s-klein { margin-top: 18px; color: #6B6258; font-size: 12px; line-height: 1.55; }
+.haken { color: #1E9E6A; font-weight: 700; }
+/* Kolumnentitel + Paginierung */
+.kolonnen {
+  position: absolute; top: 12px; font-size: 10px; letter-spacing: 2px;
+  color: #9A917F; text-transform: uppercase; font-family: 'Space Grotesk';
+}
+.kolonnen.l { left: 36px; } .kolonnen.r { right: 40px; }
+.paginierung {
+  position: absolute; bottom: 12px; font-size: 11px; color: #8D8471;
+  font-family: 'Space Grotesk'; font-weight: 600;
+}
+.paginierung.l { left: 38px; } .paginierung.r { right: 40px; }
+
+/* Stapel dahinter mit versetzten Blättern */
+.stapel { position: absolute; inset: 0; border-radius: 5px; background: #EFEAE0; transform: translate(16px, 16px); z-index: -1; }
+.blatt { position: absolute; background: #FBF9F4; border-radius: 4px; }
+
+/* ═══ Kontaktschatten (Objekt „steht" am Boden) ═══ */
+.kontakt {
+  position: absolute; z-index: 2;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(13,27,42,.34), transparent 68%);
+  filter: blur(9px);
+}
+.k1 { width: 520px; height: 46px; bottom: 118px; left: 236px; }   /* unter Buch */
+.k2 { width: 660px; height: 38px; bottom: 96px; left: 700px; }    /* unter Doppelseite */
+
+/* ═══ HÖRBUCH: Player-Karte + Kopfhörer ═══ */
+.hoerbuch-wrap {
+  position: relative; z-index: 8; margin-left: 70px;
+  display: flex; flex-direction: column; align-items: center;
+}
+.player {
+  width: 520px;
+  background: linear-gradient(165deg, #16283A 0%, #0D1B2A 60%, #0A1520 100%);
+  border: 1px solid rgba(212,169,75,.35);
+  border-radius: 20px; padding: 26px 26px 22px;
+  box-shadow: 0 30px 54px rgba(13,27,42,.45), inset 0 1px 0 rgba(255,255,255,.06);
+  transform: perspective(1500px) rotateY(-8deg) rotateX(2deg);
+}
+.player-kopf { display: flex; gap: 14px; align-items: center; }
+.player-titel { color: #F2EEE6; font-family: 'Space Grotesk'; font-weight: 700; font-size: 21px; }
+.player-unter { color: rgba(242,238,230,.62); font-size: 12.5px; margin-top: 3px; }
+.wellen-viz { display: flex; align-items: center; gap: 5px; height: 76px; margin: 22px 0 18px; }
+.wellen-viz span { flex: 1; background: linear-gradient(180deg, #41C9FF, #2E86AB); border-radius: 3px; opacity: .9; min-height: 8%; }
+.wellen-viz span:nth-child(4n+2) { background: linear-gradient(180deg, #D4A94B, #B98F35); }
+.player-zeile { display: flex; align-items: center; gap: 12px; }
+.play {
+  width: 46px; height: 46px; border-radius: 50%; border: none;
+  background: #D4A94B; color: #142433; font-size: 17px; cursor: default;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 18px rgba(212,169,75,.35);
+}
+.zeit { color: rgba(242,238,230,.72); font-size: 12px; font-variant-numeric: tabular-nums; }
+.balken { flex: 1; height: 5px; border-radius: 3px; background: rgba(242,238,230,.16); overflow: hidden; }
+.balken i { display: block; height: 100%; background: #D4A94B; border-radius: 3px; }
+.kapitel { margin-top: 18px; display: grid; gap: 8px; }
+.kap {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+  padding: 10px 14px; border-radius: 10px;
+  background: rgba(255,255,255,.045); border: 1px solid rgba(255,255,255,.06);
+}
+.kap span { color: #D4A94B; font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; font-family: 'Space Grotesk'; font-weight: 700; }
+.kap em { color: rgba(242,238,230,.85); font-style: normal; font-size: 13.5px; text-align: right; }
+.kap.aktiv { border-color: rgba(212,169,75,.55); background: rgba(212,169,75,.10); }
+.player-fuss { margin-top: 16px; color: rgba(242,238,230,.55); font-size: 11.5px; line-height: 1.5; }
+.kophoerer-boden {
+  margin-top: 46px;
+  transform: rotate(-4deg);
+  filter: drop-shadow(0 26px 22px rgba(13,27,42,.38));
+  position: relative;
+}
+.kophoerer-boden::after {
+  content: ''; position: absolute; left: 50%; bottom: -26px; transform: translateX(-50%);
+  width: 300px; height: 34px; border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(13,27,42,.30), transparent 70%);
+  filter: blur(8px);
+}
+
+/* ═══ Bundle-Badge (statt einsamer Pille) ═══ */
+.badge {
+  position: absolute; z-index: 10; top: 66px; right: 88px;
+  background: #142433; color: #F2EEE6;
+  border: 1.5px solid rgba(212,169,75,.6);
+  border-radius: 18px; padding: 16px 24px 14px;
+  text-align: center;
+  box-shadow: 0 16px 32px rgba(13,27,42,.35);
+}
+.badge small { display: block; font-size: 10.5px; letter-spacing: 2.4px; color: rgba(242,238,230,.65); text-transform: uppercase; margin-bottom: 4px; }
+.badge b { font-family: 'Space Grotesk'; font-weight: 700; font-size: 26px; color: #D4A94B; }
+</style>
+</head>
+<body>
+<div class="stage">
+
+  <!-- Kontaktschatten -->
+  <div class="kontakt k1"></div>
+  <div class="kontakt k2"></div>
+
+  <!-- Buch -->
+  <div class="buch-wrap">
+    <div class="buch">
+      <div class="buchblock oben"></div>
+      <div class="buchblock unten"></div>
+      <div class="buch-ruecken"><span>Das CAIO-Handbuch · CAIO Institut</span></div>
+      <div class="buch-seiten"></div>
+      <div class="buch-cover">
+        <div class="marke">
+          <svg width="33" height="33" viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#D4A94B"/><path d="M12 38V22a12 12 0 0 1 24 0v16" fill="none" stroke="#142433" stroke-width="3.4" stroke-linecap="round"/><rect x="16" y="32" width="4" height="6" fill="#142433"/><rect x="21" y="28" width="4" height="10" fill="#142433"/><rect x="26" y="24" width="4" height="14" fill="#142433"/><rect x="31" y="20" width="4" height="18" fill="#E4572E"/></svg>
+          <div><div class="marke-wort">CAIO INSTITUT</div><div class="marke-strich"></div></div>
+        </div>
+        <div class="titel">Das <span class="gold">CAIO-</span><br>Handbuch</div>
+        <div class="unter">Vom KI-Wissen zur KI-Verantwortung</div>
+
+        <svg class="wellen" viewBox="0 0 420 250" preserveAspectRatio="none">
+          <defs><linearGradient id="w1" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#2E86AB" stop-opacity="0"/><stop offset="1" stop-color="#41C9FF" stop-opacity=".5"/>
+          </linearGradient></defs>
+          <path d="M-20 205 C 80 158, 180 118, 430 58" stroke="url(#w1)" stroke-width="2.2" fill="none" opacity=".8"/>
+          <path d="M-20 228 C 90 184, 200 146, 430 94" stroke="#41C9FF" stroke-width="1.5" fill="none" opacity=".38" stroke-dasharray="2 7"/>
+          <circle cx="336" cy="84" r="3.2" fill="#41C9FF" opacity=".85"/>
+        </svg>
+
+        <svg class="treppe" width="324" height="226" viewBox="0 0 330 230">
+          <g font-family="Inter" font-size="10.5" fill="rgba(242,238,230,.82)">
+            <rect x="6"   y="188" width="58" height="38" rx="5" fill="#0A1626" stroke="#D4A94B" stroke-opacity=".5"/>
+            <rect x="72"  y="152" width="58" height="74" rx="5" fill="#0C1B2E" stroke="#D4A94B" stroke-opacity=".62"/>
+            <rect x="138" y="116" width="58" height="110" rx="5" fill="#0E2036" stroke="#D4A94B" stroke-opacity=".74"/>
+            <rect x="204" y="80"  width="58" height="146" rx="5" fill="#10243C" stroke="#D4A94B" stroke-opacity=".86"/>
+            <rect x="270" y="44"  width="58" height="182" rx="5" fill="#132A46" stroke="#D4A94B"/>
+            <g stroke="#D4A94B" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 200 h10 v9 h-10 z M19 200 v-3 h6 v3"/>
+              <circle cx="87" cy="165" r="5.2"/><path d="M87 160 v5.2 l3.4 2"/>
+              <rect x="148" y="128" width="9" height="9"/><rect x="152" y="124" width="9" height="9"/>
+              <path d="M217 94 l4 3.4 6.6-6.6"/><rect x="213" y="88" width="20" height="15.5" rx="4"/>
+              <path d="M281 58 v13 M281 58 l9.4 3.6 v9.4 M281 71 l9.4-5.6"/>
+            </g>
+          </g>
+          <!-- sauber entzerter Aufwärtspfeil, oberhalb der Balken -->
+          <path d="M40 178 C 140 128, 240 88, 322 40" stroke="#D4A94B" stroke-width="1.3" stroke-dasharray="3 6" opacity=".45" fill="none"/>
+          <path d="M322 40 l-11 2.6 M322 40 l-2.8 10.8" stroke="#D4A94B" stroke-width="1.9" fill="none" stroke-linecap="round"/>
+        </svg>
+
+        <div class="statbar">
+          <div class="stat"><b>85</b><span>Seiten</span></div>
+          <div class="stat"><b>18</b><span>Kapitel</span></div>
+          <div class="stat"><b>4</b><span>Teile</span></div>
+          <div class="stat"><b>8</b><span>Praxis-Anhänge</span></div>
+          <div class="stat"><b>5</b><span>Vorlagen</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ HÖRBUCH: Player-Karte + Kopfhörer ═══ -->
+  <div class="hoerbuch-wrap">
+    <div class="player">
+      <div class="player-kopf">
+        <svg width="26" height="26" viewBox="0 0 48 48"><rect width="48" height="48" rx="10" fill="#D4A94B"/><path d="M12 38V22a12 12 0 0 1 24 0v16" fill="none" stroke="#142433" stroke-width="3.4" stroke-linecap="round"/><rect x="16" y="32" width="4" height="6" fill="#142433"/><rect x="21" y="28" width="4" height="10" fill="#142433"/><rect x="26" y="24" width="4" height="14" fill="#142433"/><rect x="31" y="20" width="4" height="18" fill="#E4572E"/></svg>
+        <div>
+          <div class="player-titel">Das CAIO-Hörbuch</div>
+          <div class="player-unter">Gleicher Inhalt · gesprochen · 18 Kapitel</div>
+        </div>
+      </div>
+      <div class="wellen-viz">
+        <span style="height:26%"></span><span style="height:52%"></span><span style="height:78%"></span>
+        <span style="height:100%"></span><span style="height:64%"></span><span style="height:38%"></span>
+        <span style="height:56%"></span><span style="height:84%"></span><span style="height:46%"></span>
+        <span style="height:70%"></span><span style="height:30%"></span><span style="height:58%"></span>
+        <span style="height:88%"></span><span style="height:42%"></span><span style="height:66%"></span>
+        <span style="height:34%"></span><span style="height:74%"></span><span style="height:50%"></span>
+        <span style="height:28%"></span><span style="height:62%"></span><span style="height:80%"></span>
+        <span style="height:44%"></span><span style="height:68%"></span><span style="height:36%"></span>
+      </div>
+      <div class="player-zeile">
+        <button class="play" aria-hidden="true">▶</button>
+        <div class="zeit">0:00</div>
+        <div class="balken"><i style="width:34%"></i></div>
+        <div class="zeit">7:42</div>
+      </div>
+      <div class="kapitel">
+        <div class="kap aktiv"><span>Kapitel 7</span><em>Die Beweis-Leiter</em></div>
+        <div class="kap"><span>Kapitel 8</span><em>Der erste Monat</em></div>
+        <div class="kap"><span>Kapitel 9</span><em>Der Schatten-Check</em></div>
+      </div>
+      <div class="player-fuss">Für Pendelzeit, Spaziergang oder nebenbei — alle Vorlagen bleiben zum Ausfüllen im Handbuch.</div>
+    </div>
+
+    <!-- Kopfhörer (SVG, Navy/Gold) -->
+    <svg class="kophoerer" width="300" height="280" viewBox="0 0 300 280">
+      <path d="M46 176 v-36 a104 104 0 0 1 208 0 v36" fill="none" stroke="#142433" stroke-width="16" stroke-linecap="round"/>
+      <path d="M52 92 a104 104 0 0 1 196 0" fill="none" stroke="#D4A94B" stroke-width="4" stroke-linecap="round" opacity=".85" transform="translate(0,4)"/>
+      <rect x="22" y="164" width="46" height="84" rx="20" fill="#142433"/>
+      <rect x="30" y="172" width="14" height="68" rx="7" fill="#1E3450"/>
+      <rect x="232" y="164" width="46" height="84" rx="20" fill="#142433"/>
+      <rect x="240" y="172" width="14" height="68" rx="7" fill="#1E3450"/>
+      <rect x="34" y="196" width="22" height="30" rx="8" fill="#D4A94B" opacity=".92"/>
+      <rect x="244" y="196" width="22" height="30" rx="8" fill="#D4A94B" opacity=".92"/>
+      <circle cx="45" cy="211" r="4" fill="#142433"/>
+      <circle cx="255" cy="211" r="4" fill="#142433"/>
+    </svg>
+  </div>
+
+  <!-- Bundle-Badge -->
+  <div class="badge"><small>Paket 2 · Handbuch + Hörbuch</small><b>27,50&nbsp;€</b></div>
+</div>
+</body>
+</html>

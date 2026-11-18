@@ -1,14 +1,14 @@
 {
   "schemaVersion": "mimosa-hook-status/v1",
-  "recordedAt": "2026-11-18T09:22:23.948Z",
+  "recordedAt": "2026-11-18T16:41:50.188Z",
   "sessionId": "sess_b8509876-c53d-485a-b008-f6c2c616cf02",
   "event": "PostToolUse",
-  "toolName": "Edit",
-  "file": "landingpage/ueber-uns.html",
+  "toolName": "Write",
+  "file": "visuals/paket-komplett.svg",
   "outcome": "clear",
   "coverage": "complete",
   "findingCount": 0,
-  "durationMs": 3,
+  "durationMs": 7,
   "hostState": "hook_complete",
   "reportHint": ".mimosa/reports/"
 }
