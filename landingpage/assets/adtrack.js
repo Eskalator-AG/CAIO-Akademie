@@ -1,45 +1,34 @@
 /**
- * CAIO Institut — Ad-Tracking für Angebots-Landingpages (/angebot-a, /angebot-b)
+ * CAIO-Institut Ad-Tracking & Reservierung (Briefing v3, 21.11.2026)
  *
- * Zentraler Konfigurationspunkt. Beim Aktivieren des Meta-Pixels hier NUR
- * META_PIXEL_ID setzen und die consent.js-Einbindung in den LP-Headern
- * einkommentieren (Pixel feuert erst nach Marketing-Einwilligung).
- *
- * Für Affilicon: CHECKOUT_URL setzen — dann leitet der Bestell-Button
- * dorthin weiter (mit UTM-Parametern) statt ein E-Mail-Programm zu öffnen.
+ * - UTM/fbclid werden NUR im Speicher gehalten (kein localStorage ohne Einwilligung).
+ * - Reservierung per fetch POST /api/reservierung (kein mailto, kein localStorage).
+ * - Meta-Browser-Pixel nur mit Marketing-Einwilligung; META_PIXEL_ID oben setzen.
+ * - lp/ad_message kommen aus window.CAIO_MM (assets/message-match.js).
  */
 (function () {
   'use strict';
 
   var CONFIG = {
-    // Z.B. 'https://caio-institut.affilicon.de/...' — leer = Reservierung per E-Mail
-    CHECKOUT_URL: '',
-    // Meta-Pixel-ID — leer = Pixel inaktiv
+    // Meta-Pixel-ID — leer = Pixel inaktiv (Abschnitt 11, Dennis)
     META_PIXEL_ID: ''
   };
 
-  // ── 1. UTM + Click-IDs erfassen und persistieren ──
   var KEYS = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid', 'gclid'];
-  function captureUtms() {
+
+  // ── UTM: nur im Speicher (Abschnitt 4.3) ──
+  var utm = (function () {
+    var state = {};
     try {
       var q = new URLSearchParams(location.search);
-      var stored = JSON.parse(localStorage.getItem('caio-utm') || '{}');
-      var changed = false;
       KEYS.forEach(function (k) {
         var v = q.get(k);
-        if (v) { stored[k] = v; changed = true; }
+        if (v) state[k] = v.slice(0, 200);
       });
-      if (!stored.ts) { stored.ts = new Date().toISOString(); changed = true; }
-      // Landingpage-Pfad merken (welche Variante konvertiert?)
-      if (!stored.lp) { stored.lp = location.pathname; changed = true; }
-      if (changed) localStorage.setItem('caio-utm', JSON.stringify(stored));
-      return stored;
-    } catch (e) { return {}; }
-  }
-  var utm = captureUtms();
+    } catch (e) {}
+    return state;
+  })();
 
-  // ── 2. Marketing-Einwilligung (aus consent.js: Kategorie 'marketing') ──
-  // consent.js speichert unter 'caio-consent-v1' als {essential, analytics, marketing}
   function marketingOk() {
     try {
       var c = JSON.parse(localStorage.getItem('caio-consent-v1') || 'null');
@@ -47,13 +36,7 @@
     } catch (e) { return false; }
   }
 
-  // ── 2b. Conversion-Signal auf der Reservierungs-Bestätigungsseite ──
-  // (Andromeda/Auktions-Ranking optimiert nur, wenn Klick→Conversion zurückfließt)
-  if (/\/danke\/buch\/?$/.test(location.pathname)) {
-    track('Lead');
-  }
-
-  // ── 3. Meta-Pixel-Stomp (inaktiv bis META_PIXEL_ID gesetzt) ──
+  // ── Meta-Browser-Pixel (nur mit Einwilligung; inaktiv ohne META_PIXEL_ID) ──
   if (CONFIG.META_PIXEL_ID && marketingOk() && !window.fbq) {
     /* eslint-disable */
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -66,59 +49,130 @@
     fbq('track', 'PageView');
   }
 
-  function track(evt) {
-    if (CONFIG.META_PIXEL_ID && window.fbq && marketingOk()) {
-      try { fbq('track', evt); } catch (e) {}
-    }
+  function track(evt, params, eventId) {
+    if (!(CONFIG.META_PIXEL_ID && window.fbq && marketingOk())) return;
+    try {
+      var opts = eventId ? { eventID: eventId } : undefined;
+      if (params) fbq('track', evt, params, opts); else fbq('track', evt, {}, opts);
+    } catch (e) {}
   }
 
-  // ── 4. Bestell-Formular übernehmen (auf beiden Angebots-LPs identisch) ──
+  // ── InitiateCheckout: Paketwechsel oder erstes Formularfeld-Fokus (Abschnitt 6) ──
+  var icGefeuert = false;
+  function fireInitiateCheckout() {
+    if (icGefeuert) return;
+    icGefeuert = true;
+    track('InitiateCheckout', { content_name: 'caio-handbuch' });
+  }
+
   var form = document.getElementById('bestell-form');
   if (!form) return;
 
-  // Klick auf Bestell-Button = InitiateCheckout (vor Validierung ok)
+  // Paket-Vorwahl ?paket=hoerbuch|komplett (Abschnitt 5.1) — nur bekannte Werte
+  try {
+    var p = new URLSearchParams(location.search).get('paket');
+    var mapPaket = { hoerbuch: 'buch_hoerbuch', komplett: 'komplett', buch: 'buch' };
+    if (p && mapPaket[p]) {
+      var r = form.querySelector('input[name="paket"][value="' + mapPaket[p] + '"]');
+      if (r) r.checked = true;
+    }
+  } catch (e) {}
+
+  form.addEventListener('change', function (e) {
+    if (e.target && e.target.name === 'paket') fireInitiateCheckout();
+  });
+  form.addEventListener('focusin', function () { fireInitiateCheckout(); }, { once: false });
+
+  // Formular-Token (Idempotenz, Abschnitt 4.2) — kryptografisch starke Zufälle
+  var tokenInput = form.querySelector('input[name="formtoken"]');
+  if (tokenInput && !tokenInput.value) {
+    try {
+      if (crypto.randomUUID) tokenInput.value = crypto.randomUUID();
+      else {
+        var bytes = new Uint8Array(16);
+        crypto.getRandomValues(bytes);
+        tokenInput.value = Array.from(bytes).map(function (b) { return b.toString(16).padStart(2, '0'); }).join('');
+      }
+    } catch (e) {
+      tokenInput.value = 't' + Date.now(); // letzte Notfall-Stufe, Server dedupliziert zusätzlich
+    }
+  }
+
+  // Nach Sprung auf #bestellen: Fokus auf Namensfeld (Abschnitt 5.1)
+  document.querySelectorAll('a[href="#bestellen"]').forEach(function (a) {
+    a.addEventListener('click', function () {
+      var name = form.querySelector('input[type="text"], input:not([type=radio]):not([type=checkbox]):not([type=hidden]):not([type=email])');
+      setTimeout(function () {
+        if (name) try { name.focus({ preventScroll: true }); } catch (e) {}
+      }, 450);
+    });
+  });
+
+  // ── Submit: fetch POST /api/reservierung (Abschnitt 4.3) ──
+  var hinweis = document.getElementById('bestell-hinweis');
+  var button = form.querySelector('button[type="submit"]');
+  var buttonText = button ? button.innerHTML : '';
+
+  function zeigeFehler(msg) {
+    if (hinweis) { hinweis.textContent = msg; hinweis.classList.remove('hidden'); }
+    if (button) { button.disabled = false; button.innerHTML = buttonText; }
+  }
+
   form.addEventListener('submit', function (e) {
     e.preventDefault();
+    if (hinweis) hinweis.classList.add('hidden');
 
-    var hinweis = document.getElementById('bestell-hinweis');
     var dsgvo = document.getElementById('bestell-dsgvo');
-    if (!dsgvo.checked) {
-      hinweis.textContent = 'Bitte bestätige die Datenschutzerklärung.';
-      hinweis.classList.remove('hidden');
-      return;
-    }
+    if (!dsgvo || !dsgvo.checked) return zeigeFehler('Bitte bestätige die Datenschutzerklärung.');
 
-    track('InitiateCheckout');
+    var nameEl = form.querySelector('input[aria-label="Dein Name"]') || form.querySelector('input[aria-label="Ihr Name"]');
+    var mailEl = form.querySelector('input[type=email]');
+    var paketEl = form.querySelector('input[name="paket"]:checked');
+    var metaOk = document.getElementById('bestell-meta');
+    var w = form.querySelector('altcha-widget');
+    var altchaHidden = w && w.querySelector('input[type=hidden]');
+    if (!altchaHidden || !altchaHidden.value) return zeigeFehler('Bitte schließe die Anti-Spam-Prüfung ab.');
 
-    var name = form.querySelector('input[aria-label="Dein Name"]').value.trim();
-    var mail = form.querySelector('input[type=email]').value.trim();
-    var paket = document.getElementById('bestell-paket').value;
+    var payload = {
+      name: (nameEl && nameEl.value || '').trim().slice(0, 120),
+      email: (mailEl && mailEl.value || '').trim().slice(0, 200),
+      paket: paketEl ? paketEl.value : 'buch',
+      datenschutz: dsgvo.checked,
+      meta_ok: !!(metaOk && metaOk.checked),
+      altcha: (altchaHidden.value || '').slice(0, 2000),
+      formtoken: (tokenInput && tokenInput.value || ''),
+      lp: (window.CAIO_MM && window.CAIO_MM.lp) || (document.body.getAttribute('data-lp') || ''),
+      ad_message: (window.CAIO_MM && window.CAIO_MM.key) || 'standard',
+      landing_ts: Date.now(),
+      utm_source: utm.utm_source || '',
+      utm_medium: utm.utm_medium || '',
+      utm_campaign: utm.utm_campaign || '',
+      utm_content: utm.utm_content || '',
+      utm_term: utm.utm_term || '',
+      fbclid: utm.fbclid || '',
+      gclid: utm.gclid || ''
+    };
 
-    // Affilicon-Checkout (sobald eingerichtet): UTM-Parameter durchreichen
-    if (CONFIG.CHECKOUT_URL) {
-      var url = CONFIG.CHECKOUT_URL
-        + (CONFIG.CHECKOUT_URL.indexOf('?') === -1 ? '?' : '&')
-        + 'name=' + encodeURIComponent(name)
-        + '&email=' + encodeURIComponent(mail)
-        + '&paket=' + encodeURIComponent(paket);
-      Object.keys(utm).forEach(function (k) { url += '&' + k + '=' + encodeURIComponent(utm[k]); });
-      location.href = url;
-      return;
-    }
+    if (button) { button.disabled = true; button.textContent = 'Wird gesendet …'; }
 
-    // Reservierung per E-Mail (bis Affilicon live ist)
-    var quelle = 'Quelle: ' + (utm.utm_source || 'direkt')
-      + (utm.utm_campaign ? ' / Kampagne: ' + utm.utm_campaign : '')
-      + (utm.utm_content ? ' / Variante: ' + utm.utm_content : '')
-      + (utm.fbclid ? ' / fbclid: ja' : '')
-      + ' / LP: ' + (utm.lp || location.pathname);
-    var body = 'Reservierung: Das CAIO-Handbuch\n\nName: ' + name
-      + '\nE-Mail: ' + mail + '\nPaket: ' + paket
-      + '\n\nBitte sendet mir den Zahlungslink, sobald das Buch erscheint.'
-      + '\n\n' + quelle;
-    location.href = 'mailto:kontakt@caio-institut.de?subject='
-      + encodeURIComponent('Reservierung CAIO-Handbuch: ' + paket)
-      + '&body=' + encodeURIComponent(body);
-    setTimeout(function () { location.href = 'danke/buch/'; }, 600);
+    fetch('/api/reservierung', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function (r) {
+      return r.json().then(function (j) { return { ok: r.ok, j: j }; });
+    }).then(function (res) {
+      if (!res.ok || !res.j.ok) {
+        return zeigeFehler((res.j && res.j.error) || 'Das hat leider nicht geklappt. Bitte versuch es erneut oder schreib an kontakt@caio-institut.de.');
+      }
+      // Server sendet Lead (event_id = Reservierungs-ID). Browser-Pixel dedupliziert:
+      if (window.fbq && CONFIG.META_PIXEL_ID && marketingOk() && res.j.id) {
+        track('Lead', { content_name: 'caio-handbuch', value: 17.5, currency: 'EUR' }, res.j.id);
+      }
+      location.href = '/danke/buch/?r=' + encodeURIComponent(res.j.id) +
+        (payload.lp ? '&lp=' + encodeURIComponent(payload.lp) : '');
+    }).catch(function () {
+      zeigeFehler('Netzwerkfehler — bitte prüfe deine Verbindung und versuch es erneut.');
+    });
   });
 })();

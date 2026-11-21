@@ -58,7 +58,7 @@ td{overflow-wrap:break-word}
 
 <!-- FÖRDER-TOPBAR -->
 <div class="bg-ofen text-mehl text-center text-xs sm:text-sm px-4 py-2">
-  Buch-Einführungspreis 17,50&nbsp;€ — inklusive Begleit-Workbook · doppelte Anrechnung (35&nbsp;€) auf Stufe 1
+  Buch-Einführungspreis 17,50&nbsp;€ — inklusive Begleit-Workbook · 35&nbsp;€ Gutschrift auf Stufe 1 (28 Tage nach Code-Erhalt)
 </div>
 
 <nav aria-label="Hauptnavigation" class="sticky top-0 z-40 bg-mehl/95 backdrop-blur border-b border-espresso/10">
@@ -355,17 +355,17 @@ td{overflow-wrap:break-word}
         <option>Komplett-Paket — 61,50 € inkl. MwSt.</option>
       </select>
       <label class="flex items-start gap-2 text-xs text-espresso/70">
-        <input type="checkbox" id="buch-widerruf" required class="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E4572E]">
-        <span>Ich habe die <a class="underline underline-offset-2" href="/widerruf">Widerrufsbelehrung</a> gelesen. Ich weiß, dass das Widerrufsrecht bei digitalen Inhalten mit dem Download erlischt.</span>
-      </label>
-      <label class="flex items-start gap-2 text-xs text-espresso/70">
         <input type="checkbox" id="buch-dsgvo" required class="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E4572E]">
         <span>Ich habe die <a class="underline underline-offset-2" href="/datenschutz">Datenschutzerklärung</a> gelesen und bin mit der Kontaktaufnahme zur Reservierung einverstanden.</span>
       </label>
-      <button type="submit" class="min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold">Kostenpflichtig bestellen</button>
+      <label class="flex items-start gap-2 text-xs text-espresso/70">
+        <input type="checkbox" id="buch-meta" class="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E4572E]">
+        <span>Ich bin einverstanden, dass meine verschlüsselte E-Mail-Adresse an Meta übermittelt wird, um die Wirksamkeit von Anzeigen zu messen. Freiwillig, jederzeit widerrufbar.</span>
+      </label>
+      <input type="hidden" name="formtoken" value="">
+      <button type="submit" class="min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold">Jetzt reservieren — 17,50&nbsp;€ erst bei Erscheinen</button>
       <p id="buch-hinweis" class="hidden text-xs text-rose-600"></p>
-      <p class="text-xs text-espresso/50">Mit Klick auf „Kostenpflichtig bestellen“ schließen Sie einen Kaufvertrag ab. Alle Pflichtinformationen finden Sie <a href="/verbraucherinformationen" style="underline">hier</a>.
-      Öffnet dein E-Mail-Programm mit vorbereiteter Reservierung an kontakt@caio-institut.de. Bezahlt wird erst mit Erscheinen (Zahlungslink per E-Mail). 30-Tage-Geld-zurück.</p>
+      <p class="text-xs text-espresso/50">Die Reservierung ist kostenlos und unverbindlich. Sobald das Buch erscheint, bekommst du den Link zum Kauf über unseren Zahlungsdienstleister Affilicon. Erst dann kommt der Kaufvertrag mit Affilicon zustande. Alle Pflichtinformationen: <a class="underline underline-offset-2" href="/verbraucherinformationen">Verbraucherinformationen</a>.</p>
     </form>
   </div>
 </section>
@@ -408,7 +408,7 @@ td{overflow-wrap:break-word}
     </details>
     <details class="bg-white rounded-2xl shadow-card p-5">
       <summary class="font-semibold">Wird der Buchpreis anderswo angerechnet?</summary>
-      <p class="mt-2 text-[15px] text-espresso/85">Zweifach: <strong>Mit der Auslieferung erhältst du einen persönlichen Gutscheincode</strong> (einfache Anrechnung 17,50 €, ohne Zeitlimit). <strong>Direkt nach der Bestellung gilt das Funnel-Angebot: doppelte Anrechnung = 35 €</strong> — einlösbar innerhalb von 14 Tagen nach Erhalt des Codes, plus ein frei buchbarer 1:1-KI-Consulting-Call während der Betreuung.</p>
+      <p class="mt-2 text-[15px] text-espresso/85">Mit dem <strong>Kauf erhältst du deinen persönlichen Gutscheincode</strong> — nicht schon mit der Reservierung: <strong>35&nbsp;€ Gutschrift auf Stufe&nbsp;1, wenn du innerhalb von <strong>28 Tagen</strong> nach Erhalt deines Codes buchst. Danach gilt dauerhaft die einfache Anrechnung von 17,50&nbsp;€. Der Code kommt mit dem Kauf (Affilicon), nicht mit der Reservierung.</strong> Plus ein frei buchbarer 1:1-KI-Consulting-Call während der Betreuung.</p>
     </details>
     <details class="bg-white rounded-2xl shadow-card p-5">
       <summary class="font-semibold">Wer steht hinter dem CAIO Institut?</summary>
@@ -472,17 +472,30 @@ document.querySelectorAll('.pakete-cta').forEach(a=>{
 
 // Reservierung (mailto — Bezahlung erst mit Erscheinen per Zahlungslink)
 const bf=document.getElementById('buch-form');
+try{const ti=bf.querySelector('input[name=formtoken]');if(ti&&!ti.value){ti.value=(crypto.randomUUID?crypto.randomUUID():Array.from(crypto.getRandomValues(new Uint8Array(16))).map(b=>b.toString(16).padStart(2,'0')).join(''));}}catch(e){}
 bf.addEventListener('submit',e=>{
   e.preventDefault();
-  const dsgvo=document.getElementById('buch-dsgvo').checked;
   const hinweis=document.getElementById('buch-hinweis');
+  const dsgvo=document.getElementById('buch-dsgvo').checked;
   if(!dsgvo){hinweis.textContent='Bitte bestätige die Datenschutzerklärung.';hinweis.classList.remove('hidden');return;}
+  const w=bf.querySelector('altcha-widget');
+  const altchaHidden=w&&w.querySelector('input[type=hidden]');
+  if(!altchaHidden||!altchaHidden.value){hinweis.textContent='Bitte schließe die Anti-Spam-Prüfung ab.';hinweis.classList.remove('hidden');return;}
   const name=bf.querySelector('input[aria-label="Dein Name"]').value.trim();
   const mail=bf.querySelector('input[type=email]').value.trim();
   const paket=document.getElementById('buch-paket').value;
-  const body='Reservierung: Das CAIO-Handbuch\n\nName: '+name+'\nE-Mail: '+mail+'\nPaket: '+paket+'\n\nBitte sendet mir den Zahlungslink, sobald das Buch erscheint.\n\n—Gesendet über die CAIO-Institut-Landingpage';
-  location.href='mailto:kontakt@caio-institut.de?subject='+encodeURIComponent('Reservierung CAIO-Handbuch: '+paket)+'&body='+encodeURIComponent(body);
-  setTimeout(function(){location.href='danke/buch/';},600);
+  const paketKey=paket.indexOf('Komplett')>-1?'komplett':(paket.indexOf('Hörbuch')>-1?'buch_hoerbuch':'buch');
+  const btn=bf.querySelector('button[type=submit]');
+  btn.disabled=true;btn.textContent='Wird gesendet …';
+  fetch('/api/reservierung',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({
+    name,email,paket:paketKey,datenschutz:dsgvo,
+    meta_ok:document.getElementById('buch-meta').checked,
+    altcha:altchaHidden.value,formtoken:bf.querySelector('input[name=formtoken]').value,
+    lp:'a',ad_message:'standard',landing_ts:Date.now()
+  })}).then(r=>r.json()).then(j=>{
+    if(!j.ok){btn.disabled=false;btn.textContent='Jetzt reservieren';hinweis.textContent=j.error||'Bitte versuch es erneut.';hinweis.classList.remove('hidden');return;}
+    location.href='/danke/buch/?r='+encodeURIComponent(j.id);
+  }).catch(()=>{btn.disabled=false;btn.textContent='Jetzt reservieren';hinweis.textContent='Netzwerkfehler — bitte erneut versuchen.';hinweis.classList.remove('hidden');});
 });
 </script>
 

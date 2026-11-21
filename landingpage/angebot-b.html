@@ -31,7 +31,7 @@
   @media (prefers-reduced-motion: reduce){ *{transition:none!important;animation:none!important} }
 </style>
 </head>
-<body class="bg-mehl text-espresso">
+<body class="bg-mehl text-espresso" data-lp="b">
 
 <!-- Mini-Header: KEINE Navigation — ein einziges Ziel -->
 <header class="max-w-[1120px] mx-auto px-5 md:px-8 py-4 flex items-center justify-between">
@@ -46,11 +46,11 @@
 <section class="max-w-[1120px] mx-auto px-5 md:px-8 pt-8 pb-10">
   <div class="max-w-[760px]">
     <p class="text-xs font-semibold tracking-wide uppercase text-ofen">Das CAIO-Handbuch · Für Verantwortliche</p>
-    <h1 class="font-head font-bold text-ofen text-[clamp(28px,6vw,44px)] leading-tight mt-3">KI-Kompetenz ist seit Februar 2025 Pflicht. Dieses Handbuch macht daraus in 30 Tagen Ihren Nachweis.</h1>
-    <p class="mt-4 text-[15px] text-espresso/85 text-base">Art. 4 des EU AI Act verlangt KI-Kompetenz in Belegschaften — Aufsichtsbehörden prüfen seit Anfang 2026. Das Handbuch liefert Geschäftsführung und Verantwortlichen den <b>Fahrplan von der Pflicht zum Nachweis</b>: 25 Nutzenfälle, Reifegrad-Check, 20 Kennzahlen, integriertes Workbook.</p>
+    <h1 data-mm="h1" class="font-head font-bold text-ofen text-[clamp(28px,6vw,44px)] leading-tight mt-3">KI-Kompetenz fördern ist Pflicht. <span class="text-orange">Dieses Handbuch macht daraus in 30 Tagen Ihren Nachweis.</span></h1>
+    <p data-mm="sub" class="mt-4 text-[15px] text-espresso/85 text-base">Art. 4 AI Act verpflichtet Unternehmen, die KI einsetzen, die KI-Kompetenz ihres Personals zu fördern. Das Handbuch liefert Geschäftsführung und Verantwortlichen den Fahrplan dafür, dokumentiert und prüfbar: 25 Nutzenfälle, Reifegrad-Check, 20 Kennzahlen, integriertes Workbook.</p>
     <div class="mt-6 flex flex-col sm:flex-row gap-3 items-start sm:items-center">
-      <a href="#bestellen" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold text-lg shadow-card">Handbuch sichern — 17,50&nbsp;€ inkl.&nbsp;MwSt.</a>
-      <span class="text-xs text-espresso/60">30 Tage Geld-zurück · inkl. MwSt. · sofort nutzbar</span>
+      <a href="#bestellen" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold text-lg shadow-card">Jetzt reservieren — 17,50&nbsp;€ erst bei Erscheinen</a>
+      <span class="text-xs text-espresso/60">Kostenlos reservieren · 30 Tage Geld-zurück nach dem Kauf · 35&nbsp;€ Gutschrift auf Stufe&nbsp;1</span>
     </div>
   </div>
   <figure class="mt-8 max-w-[640px]">
@@ -60,6 +60,9 @@
     </picture>
   </figure>
 </section>
+
+<script src="/assets/messages.js"></script>
+<script src="/assets/message-match.js"></script>
 
 <!-- BEWEIS: Zahlen mit Quellen -->
 <section class="max-w-[1120px] mx-auto px-5 md:px-8 py-10">
@@ -87,7 +90,7 @@
     </div>
   </div>
   <div class="mt-8 text-center">
-    <a href="#bestellen" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold text-lg shadow-card">Jetzt Handbuch sichern — 17,50&nbsp;€ inkl.&nbsp;MwSt.</a>
+    <a href="#bestellen" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold text-lg shadow-card">Jetzt reservieren — 17,50&nbsp;€ erst bei Erscheinen</a>
   </div>
 </section>
 
@@ -133,10 +136,10 @@
     </div>
   </div>
   <div class="mt-4 bg-white rounded-2xl shadow-card p-5">
-    <p class="text-[15px] text-espresso/85"><b class="text-ofen">Plus:</b> Ihre 17,50&nbsp;€ werden als <b>35&nbsp;€ Gutschrift auf Stufe&nbsp;1 (AI Professional)</b> angerechnet — ideal, um einen Verantwortlichen qualifizieren zu lassen (bis 90 % Förderung). 30 Tage Geld-zurück inklusive.</p>
+    <p class="text-[15px] text-espresso/85"><b class="text-ofen">Plus:</b> Ihre 17,50&nbsp;€ werden als <b>35&nbsp;€ Gutschrift auf Stufe&nbsp;1 (AI Professional)</b> angerechnet, wenn Sie innerhalb von 28 Tagen nach Erhalt Ihres Codes buchen. Danach gilt dauerhaft die einfache Anrechnung von 17,50&nbsp;€. Der Code kommt mit dem Kauf. 30 Tage Geld-zurück nach dem Kauf inklusive. Und ideal, um einen Verantwortlichen qualifizieren zu lassen — die Qualifizierung ist förderfähig (zum Beispiel über INQA-Coaching).</p>
   </div>
   <div class="mt-8 text-center">
-    <a href="#bestellen" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold text-lg shadow-card">Alles sichern — 17,50&nbsp;€ inkl.&nbsp;MwSt.</a>
+    <a href="#bestellen" class="inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-orange text-espresso font-head font-bold text-lg shadow-card">Jetzt reservieren — 17,50&nbsp;€ erst bei Erscheinen</a>
   </div>
 </section>
 
@@ -145,28 +148,36 @@
   <div class="bg-white rounded-2xl shadow-card p-5">
     <h2 class="font-head font-bold text-ofen text-[clamp(22px,4vw,32px)]">Handbuch für Ihr Unternehmen reservieren</h2>
     <p class="mt-1 text-sm text-espresso/70">17,50&nbsp;€ inkl.&nbsp;MwSt. · 30 Tage Geld-zurück · 35&nbsp;€ Gutschrift auf Stufe&nbsp;1</p>
-    <form id="bestell-form" class="mt-4 grid gap-3">
-      <div class="grid sm:grid-cols-2 gap-3">
-        <input required placeholder="Dein Name" aria-label="Dein Name" class="w-full min-h-[48px] px-4 rounded-xl border border-espresso/20 bg-mehl text-base">
-        <input required type="email" placeholder="Deine E-Mail" aria-label="Deine E-Mail" class="w-full min-h-[48px] px-4 rounded-xl border border-espresso/20 bg-mehl text-base">
-      </div>
-      <label for="bestell-paket" class="text-sm font-semibold text-espresso/70">Dein Paket</label>
-      <select id="bestell-paket" class="w-full min-h-[48px] px-4 rounded-xl border border-espresso/20 bg-mehl text-base">
-        <option>Buch — 17,50 € inkl. MwSt.</option>
-        <option>Team-Paket: 5× Buch — 61,50 € inkl. MwSt.</option>
-        <option>Buch + Hörbuch — 27,50 € inkl. MwSt.</option>
-      </select>
-      <label class="flex items-start gap-2 text-xs text-espresso/70">
-        <input type="checkbox" id="bestell-widerruf" required class="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E4572E]">
-        <span>Ich habe die <a class="underline underline-offset-2" href="/widerruf">Widerrufsbelehrung</a> gelesen. Ich weiß, dass das Widerrufsrecht bei digitalen Inhalten mit dem Download erlischt.</span>
-      </label>
+    <form id="bestell-form" class="mt-4 grid gap-3" novalidate>
+      <fieldset>
+        <legend class="text-sm font-semibold text-espresso/70 mb-2">Ihr Paket</legend>
+        <div class="grid gap-2">
+          <label class="flex items-center gap-3 min-h-[48px] px-4 rounded-xl border border-espresso/20 bg-mehl text-[15px] cursor-pointer">
+            <input type="radio" name="paket" value="buch" checked required class="accent-[#E4572E]">
+            <span><b>Buch</b> — 17,50 € inkl. MwSt.</span>
+          </label>
+          <label class="flex items-center gap-3 min-h-[48px] px-4 rounded-xl border border-espresso/20 bg-mehl text-[15px] cursor-pointer">
+            <input type="radio" name="paket" value="buch_hoerbuch" class="accent-[#E4572E]">
+            <span><b>Buch + Hörbuch</b> — 27,50 € inkl. MwSt.</span>
+          </label>
+          <label class="flex items-center gap-3 min-h-[48px] px-4 rounded-xl border border-espresso/20 bg-mehl text-[15px] cursor-pointer">
+            <input type="radio" name="paket" value="komplett" class="accent-[#E4572E]">
+            <span><b>Komplett-Paket</b> — 61,50 € inkl. MwSt.</span>
+          </label>
+        </div>
+      </fieldset>
       <label class="flex items-start gap-2 text-xs text-espresso/70">
         <input type="checkbox" id="bestell-dsgvo" required class="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E4572E]">
         <span>Ich habe die <a class="underline underline-offset-2" href="/datenschutz">Datenschutzerklärung</a> gelesen und bin mit der Kontaktaufnahme zur Reservierung einverstanden.</span>
       </label>
-      <button type="submit" class="min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold text-lg">Kostenpflichtig bestellen</button>
+      <label class="flex items-start gap-2 text-xs text-espresso/70">
+        <input type="checkbox" id="bestell-meta" class="mt-0.5 h-4 w-4 flex-shrink-0 accent-[#E4572E]">
+        <span>Ich bin einverstanden, dass meine verschlüsselte E-Mail-Adresse an Meta übermittelt wird, um die Wirksamkeit von Anzeigen zu messen. Freiwillig, jederzeit widerrufbar.</span>
+      </label>
+      <input type="hidden" name="formtoken" value="">
+      <button type="submit" class="min-h-[48px] rounded-xl bg-orange text-espresso font-head font-bold text-lg">Jetzt reservieren — 17,50&nbsp;€ erst bei Erscheinen</button>
       <p id="bestell-hinweis" class="hidden text-xs text-rose-600"></p>
-      <p class="text-xs text-espresso/50">Mit Klick auf „Kostenpflichtig bestellen“ schließen Sie einen Kaufvertrag ab. Alle Pflichtinformationen finden Sie in den <a class="underline underline-offset-2" href="/verbraucherinformationen">Verbraucherinformationen</a>. Die Reservierung öffnet Ihr E-Mail-Programm; bezahlt wird erst mit Lieferung per Zahlungslink.</p>
+      <p class="text-xs text-espresso/50">Die Reservierung ist kostenlos und unverbindlich. Sobald das Buch erscheint, bekommen Sie den Link zum Kauf über unseren Zahlungsdienstleister Affilicon. Erst dann kommt der Kaufvertrag mit Affilicon zustande.</p>
     </form>
   </div>
 </section>
@@ -211,7 +222,7 @@
   <div class="bg-orange rounded-2xl p-5 text-center text-espresso">
     <h2 class="font-head font-bold text-espresso text-[clamp(22px,4vw,32px)]">In 30 Tagen haben Sie den Nachweis auf dem Tisch.</h2>
     <p class="mt-2 text-[15px] text-espresso/85">85 Seiten · 25 Nutzenfälle · Reifegrad-Check · 20 Kennzahlen · KI-Richtlinie als Vorlage.</p>
-    <a href="#bestellen" class="mt-4 inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-espresso text-mehl font-head font-bold text-lg">Nachweis sichern — 17,50&nbsp;€ inkl.&nbsp;MwSt.</a>
+    <a href="#bestellen" class="mt-4 inline-flex items-center justify-center min-h-[48px] px-6 rounded-xl bg-espresso text-mehl font-head font-bold text-lg">Jetzt reservieren — 17,50&nbsp;€ erst bei Erscheinen</a>
     <p class="mt-3 text-xs text-espresso/70">30 Tage Geld-zurück · inkl. MwSt. · Kontakt: kontakt@caio-institut.de</p>
   </div>
 </section>

@@ -1,0 +1,168 @@
+{
+  "schemaVersion": "mimosa-finding-ledger-batch/v1",
+  "batchId": "pretooluse-652f092fc08ec4d524c542f8b5938f07",
+  "runId": null,
+  "runStatus": "completed",
+  "coverage": {
+    "status": "complete",
+    "reasons": []
+  },
+  "source": {
+    "component": "zcode-hook",
+    "operationId": "PreToolUse"
+  },
+  "revision": null,
+  "diffHash": null,
+  "rulesVersion": null,
+  "sessionHash": "bfd070c373742a541a0c2f24031abe9aef713bd0c454391aa276e52b0260348c",
+  "reportRef": null,
+  "events": [
+    {
+      "eventId": "hook-fae913ad1edd01e1044941e534dfac4d",
+      "findingId": "mimosa-24793cd92adf0b4885d49e9f",
+      "type": "finding_blocked",
+      "at": "2026-11-21T09:58:22.766Z",
+      "identity": {
+        "projectRelativeFile": "api/reservierung.js",
+        "ruleId": "security",
+        "codeEvidenceHash": "841d504255d7bbcabd5d51c82f2b0a46cfce438b8d5af4cd919bb326ada9eeef",
+        "confidence": "stable"
+      },
+      "scope": "direct",
+      "line": 294,
+      "endLine": 294,
+      "reasonCode": "deny",
+      "reportedToAgent": true,
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "evidenceHash": "841d504255d7bbcabd5d51c82f2b0a46cfce438b8d5af4cd919bb326ada9eeef"
+      },
+      "sequence": 0
+    },
+    {
+      "eventId": "hook-04000aa7bdaa5de71c6376af836f4c23",
+      "findingId": "mimosa-933793aeb4da5edc5e6dca28",
+      "type": "finding_blocked",
+      "at": "2026-11-21T09:58:22.766Z",
+      "identity": {
+        "projectRelativeFile": "api/reservierung.js",
+        "ruleId": "security",
+        "codeEvidenceHash": "a65e367efd2375cecef9ac1a9d78d6c7a03eb71903e1d2168c0d45e52dee3854",
+        "confidence": "stable"
+      },
+      "scope": "direct",
+      "line": 350,
+      "endLine": 350,
+      "reasonCode": "deny",
+      "reportedToAgent": true,
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "evidenceHash": "a65e367efd2375cecef9ac1a9d78d6c7a03eb71903e1d2168c0d45e52dee3854"
+      },
+      "sequence": 1
+    },
+    {
+      "eventId": "hook-7aafc9906b7455621cb880f3d306c6f5",
+      "findingId": "mimosa-55a5668833d788688610baea",
+      "type": "finding_blocked",
+      "at": "2026-11-21T09:58:22.766Z",
+      "identity": {
+        "projectRelativeFile": "api/reservierung.js",
+        "ruleId": "security",
+        "codeEvidenceHash": "29cda158e3bb31678e4c2bae5f30b03351532c7a42ec395bd1df191d2e14137a",
+        "confidence": "stable"
+      },
+      "scope": "direct",
+      "line": 352,
+      "endLine": 352,
+      "reasonCode": "deny",
+      "reportedToAgent": true,
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "evidenceHash": "29cda158e3bb31678e4c2bae5f30b03351532c7a42ec395bd1df191d2e14137a"
+      },
+      "sequence": 2
+    },
+    {
+      "eventId": "hook-b7b9498a97fcdca3c38e48266eea706a",
+      "findingId": "mimosa-0f62692ccfaec1bb3a2e236a",
+      "type": "finding_blocked",
+      "at": "2026-11-21T09:58:22.766Z",
+      "identity": {
+        "projectRelativeFile": "api/reservierung.js",
+        "ruleId": "security",
+        "codeEvidenceHash": "8c2f2b214a6d7603c8e0263aa50d337c862e25073ace2e874aa555b5f8e085eb",
+        "confidence": "stable"
+      },
+      "scope": "direct",
+      "line": 365,
+      "endLine": 365,
+      "reasonCode": "deny",
+      "reportedToAgent": true,
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "evidenceHash": "8c2f2b214a6d7603c8e0263aa50d337c862e25073ace2e874aa555b5f8e085eb"
+      },
+      "sequence": 3
+    },
+    {
+      "eventId": "hook-57d16cd25ca042365c1c60ce2151ba12",
+      "findingId": "mimosa-2b8565e1f7f68df2b1a59ba9",
+      "type": "finding_blocked",
+      "at": "2026-11-21T09:58:22.766Z",
+      "identity": {
+        "projectRelativeFile": "api/reservierung.js",
+        "ruleId": "security",
+        "codeEvidenceHash": "839c8a522d3be93bba481c756c747d5ba6effd55010657241c66f6eb8f3e95c0",
+        "confidence": "stable"
+      },
+      "scope": "direct",
+      "line": 426,
+      "endLine": 426,
+      "reasonCode": "deny",
+      "reportedToAgent": true,
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "evidenceHash": "839c8a522d3be93bba481c756c747d5ba6effd55010657241c66f6eb8f3e95c0"
+      },
+      "sequence": 4
+    },
+    {
+      "eventId": "hook-e5fdf882e65712164627193dd3cf454d",
+      "findingId": "mimosa-2b8565e1f7f68df2b1a59ba9",
+      "type": "finding_blocked",
+      "at": "2026-11-21T09:58:22.767Z",
+      "identity": {
+        "projectRelativeFile": "api/reservierung.js",
+        "ruleId": "security",
+        "codeEvidenceHash": "839c8a522d3be93bba481c756c747d5ba6effd55010657241c66f6eb8f3e95c0",
+        "confidence": "stable"
+      },
+      "scope": "direct",
+      "line": 426,
+      "endLine": 426,
+      "reasonCode": "deny",
+      "reportedToAgent": true,
+      "evidence": {
+        "kind": "source",
+        "boundary": "candidate",
+        "producer": "deterministic",
+        "evidenceHash": "839c8a522d3be93bba481c756c747d5ba6effd55010657241c66f6eb8f3e95c0"
+      },
+      "sequence": 5
+    }
+  ],
+  "observedFindingIds": [],
+  "verifiedFiles": [],
+  "recordedAt": "2026-11-21T09:58:23.007Z"
+}
